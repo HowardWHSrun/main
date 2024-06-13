@@ -6,22 +6,26 @@
     <title>Howard Wang</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
+            background: black;
+            color: white;
+            transition: all 0.3s ease;
         }
         header {
-            background: #333;
+            background: #1a1a1a;
             color: white;
             padding: 1em 0;
             text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
         }
         nav ul {
             list-style: none;
             padding: 0;
             display: flex;
             justify-content: center;
-            background: #444;
+            background: #333;
         }
         nav ul li {
             margin: 0 1em;
@@ -29,25 +33,36 @@
         nav ul li a {
             color: white;
             text-decoration: none;
+            padding: 0.5em;
+            display: block;
+            transition: all 0.3s ease;
+        }
+        nav ul li a:hover {
+            background: #555;
+            border-radius: 4px;
         }
         .content {
             padding: 2em;
         }
         .section {
             margin-bottom: 2em;
+            transition: all 0.3s ease;
         }
         .section h2 {
-            border-bottom: 2px solid #444;
+            border-bottom: 2px solid #555;
             padding-bottom: 0.5em;
         }
         .project, .documentary, .track, .art, .poster {
             margin-bottom: 1.5em;
         }
         footer {
-            background: #333;
+            background: #1a1a1a;
             color: white;
             text-align: center;
             padding: 1em 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
         }
         .profile-picture {
             display: block;
@@ -56,16 +71,45 @@
             height: 150px;
             border-radius: 50%;
             object-fit: cover;
+            border: 2px solid #444;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
         }
         .file-link {
             display: block;
             margin: 1em 0;
             text-align: center;
             text-decoration: none;
-            color: #333;
+            color: #aaa;
             font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        .file-link:hover {
+            color: #ccc;
+        }
+        .page {
+            display: none;
+            padding: 2em;
+        }
+        .page.active {
+            display: block;
         }
     </style>
+    <script>
+        function showPage(pageId) {
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => page.classList.remove('active'));
+            document.getElementById(pageId).classList.add('active');
+        }
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('nav a').forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    showPage(link.getAttribute('href').substring(1));
+                });
+            });
+            showPage('about');
+        });
+    </script>
 </head>
 <body>
     <header>
@@ -84,94 +128,109 @@
         </ul>
     </nav>
     <div class="content">
-        <section id="about" class="section">
-            <h2>About Me</h2>
-            <img src="Howard Wang.jpg" alt="Howard Wang" class="profile-picture">
-            <p>Hello! I'm Howard Wang, an engineering student at Swarthmore College, majoring in Engineering and Neuroscience. I have a keen interest in combining engineering principles with biological systems to solve complex problems. My work spans various domains, including biomechanics, molecular dynamics, and EEG data analysis. In my free time, I enjoy ultra running, creating art, and practicing calligraphy.</p>
-            <p>I'm currently a researcher at Swarthmore, where I developed a thumb-tip tracking system using MATLAB, which enhances insights into thumb rehabilitation. My passion for research extends to biomechanics and neuroscience, aiming to integrate these fields for innovative solutions.</p>
-        </section>
-        <section id="projects" class="section">
-            <h2>Projects</h2>
-            <div class="project">
-                <h3>1. Thumb Movement Analysis Using Cadaveric Specimens</h3>
-                <p><strong>Objective:</strong> To quantify thumb tip trajectories produced by thumb muscles, contributing to the understanding of musculoskeletal biomechanics and potential improvements in surgical outcomes.</p>
-                <p><strong>Methods:</strong> Developed a motion tracking system and an arm fixation device. Conducted experiments using cadaveric specimens to measure muscle-induced movements. Analyzed the trajectory and path length of thumb tip movements caused by various muscles.</p>
-                <p><strong>Results:</strong> Identified specific movement patterns for different thumb muscles. Highlighted the complex interaction between muscle function and thumb movement. Contributed data for refining models of thumb mechanics and potential applications in surgical procedures.</p>
-                <p><strong>Documentation:</strong> <a href="NCUR Final Poster.pdf" target="_blank">View Project Poster</a></p>
-            </div>
-            <div class="project">
-                <h3>2. EEG Data Analysis Project</h3>
-                <p><strong>Objective:</strong> To analyze EEG data for extracting frequency bands and understanding brain activity patterns.</p>
-                <p><strong>Methods:</strong> Developed MATLAB scripts for calculating band powers and analyzing frequency spectrums. Applied signal processing techniques to interpret EEG data.</p>
-                <p><strong>Code Files:</strong> <a href="#">calculate_band_powers.m</a>, <a href="#">print_trial_band_power.m</a>, <a href="#">get_frequency_spectrum.m</a></p>
-            </div>
-            <div class="project">
-                <h3>3. Molecular Dynamic Simulation of Covalently Modified Protein Tyrosine Phosphatase</h3>
-                <p><strong>Objective:</strong> To analyze the physical movements of atoms and molecules through computer simulations, focusing on protein tyrosine phosphatase and its interaction with a ligand.</p>
-                <p><strong>Methods:</strong> Used Gaussian software for ligand construction. Performed molecular dynamics simulations to study protein-ligand interactions.</p>
-                <p><strong>Results:</strong> Found that the modified protein showed different stability and regional mobility compared to the wild type. Provided insights into the molecular stability of the protein-ligand complex.</p>
-                <p><strong>Documentation:</strong> <a href="Molecular Dynamic Simulation of Tyrosine Phosphatase.pdf" target="_blank">View Project Poster</a></p>
-            </div>
-        </section>
-        <section id="skills" class="section">
-            <h2>Skills</h2>
-            <ul>
-                <li><strong>Software:</strong> Gaussian, MATLAB, Python, Java, C, C++, R-Studio, LabVIEW</li>
-                <li><strong>Techniques:</strong> Molecular dynamics simulation, motion capture system development, EEG data analysis</li>
-                <li><strong>Programming Languages:</strong> Python, C, C++, Java</li>
-                <li><strong>Other Skills:</strong> Multivariate Calculus, Linear Algebra, Statistics, Advanced Geometry, Number Theory, Group Theory</li>
-                <li><strong>Languages:</strong> Native in Chinese and English</li>
-            </ul>
-        </section>
-        <section id="documentary" class="section">
-            <h2>Documentary: The Youngest Runner in the Grand Slam of Ultrarunning</h2>
-            <p>As the youngest runner to complete the Grand Slam of Ultrarunning, I have documented my journey through a series of videos and blog posts. The Grand Slam involves running four of the most prestigious 100-mile trail races in the United States within a single calendar year. This documentary captures my challenges, achievements, and the preparation involved in this extraordinary feat.</p>
-            <p>You can watch the documentary on YouTube: <a href="https://youtu.be/CgYqw3gE0VA?si=ILNlRleg_d4iXwxX" target="_blank">Watch Documentary</a>.</p>
-            <p>Follow my running journey on Strava: <a href="https://www.strava.com/athletes/35107207" target="_blank">Strava Profile</a>.</p>
-            <p>See my race results on Ultrasignup: <a href="https://ultrasignup.com/results_participant.aspx?fname=Howard&lname=Wang" target="_blank">Ultrasignup Profile</a>.</p>
-        </section>
-        <section id="track" class="section">
-            <h2>Track Team: Swarthmore College</h2>
-            <p>I am also a member of the Swarthmore College track team, where I specialize in running the 10k. Being part of the team has been an incredible experience that has helped me develop my endurance and speed. You can find more information and view the team roster here:</p>
-            <p>Swarthmore College Track Team Roster: <a href="https://swarthmoreathletics.com/sports/mens-track-and-field/roster" target="_blank">View Roster</a>.</p>
-        </section>
-        <section id="art" class="section">
-            <h2>Art Portfolio</h2>
-            <div class="art">
-                <h3>High School Art Portfolio</h3>
-                <a href="Art Portfolio .pdf" target="_blank" class="file-link">View High School Art Portfolio</a>
-                <p>This portfolio showcases my high school artwork, which includes various media and techniques. From oil paintings capturing the grandeur of landscapes to delicate watercolors portraying moments of tranquility, this collection reflects my growth as an artist during my high school years.</p>
-            </div>
-            <div class="art">
-                <h3>Freshman Year Art Portfolio</h3>
-                <a href="Art 33 Final Project.pdf" target="_blank" class="file-link">View Freshman Year Art Portfolio</a>
-                <p>This collection features my freshman year artwork, where I explored themes of nature, humanity, and introspection. The portfolio highlights my progress in using different techniques and my journey in finding my artistic voice during my first year of college.</p>
-            </div>
-        </section>
-        <section id="posters" class="section">
-            <h2>Scientific Posters</h2>
-            <div class="poster">
-                <h3>Molecular Dynamic Simulation of Covalently Modified Protein Tyrosine Phosphatase</h3>
-                <a href="Molecular Dynamic Simulation of Tyrosine Phosphatase.pdf" target="_blank" class="file-link">View "Molecular Dynamic Simulation of Covalently Modified Protein Tyrosine Phosphatase"</a>
-                <p>This poster showcases my work on the molecular dynamic simulation of protein tyrosine phosphatase with a focus on covalent modifications and their impact on protein stability and function. View the full poster for detailed methodology and results.</p>
-            </div>
-            <div class="poster">
-                <h3>Quantifying Thumb Tip Trajectories Generated by Extrinsic Muscles</h3>
-                <a href="NCUR Final Poster.pdf" target="_blank" class="file-link">View "Quantifying Thumb Tip Trajectories Generated by Extrinsic Muscles"</a>
-                <p>This project aimed to quantify the thumb tip trajectories produced by extrinsic thumb muscles, providing insights into musculoskeletal biomechanics and potential applications in surgical procedures. View the detailed poster for complete information.</p>
-            </div>
-        </section>
-        <section id="contact" class="section">
-            <h2>Contact</h2>
-            <p><strong>Email:</strong> <a href="mailto:howardwhsrun@gmail.com">howardwhsrun@gmail.com</a></p>
-            <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/howard-wang-00758320a">linkedin.com/in/howard-wang-00758320a</a></p>
-            <p><strong>Phone:</strong> <a href="tel:+16032855188">+1 - 603-285-5188</a></p>
-        </section>
+        <div id="about" class="page">
+            <section class="section">
+                <h2>About Me</h2>
+                <img src="Howard Wang.jpg" alt="Howard Wang" class="profile-picture">
+                <p>Hello! I'm Howard Wang, an engineering student at Swarthmore College, majoring in Engineering and Neuroscience. I have a keen interest in combining engineering principles with biological systems to solve complex problems. My work spans various domains, including biomechanics, molecular dynamics, and EEG data analysis. In my free time, I enjoy ultra running, creating art, and practicing calligraphy.</p>
+                <p>I'm currently a researcher at Swarthmore, where I developed a thumb-tip tracking system using MATLAB, which enhances insights into thumb rehabilitation. My passion for research extends to biomechanics and neuroscience, aiming to integrate these fields for innovative solutions.</p>
+            </section>
+        </div>
+        <div id="projects" class="page">
+            <section class="section">
+                <h2>Projects</h2>
+                <div class="project">
+                    <h3>1. Thumb Movement Analysis Using Cadaveric Specimens</h3>
+                    <p><strong>Objective:</strong> To quantify thumb tip trajectories produced by thumb muscles, contributing to the understanding of musculoskeletal biomechanics and potential improvements in surgical outcomes.</p>
+                    <p><strong>Methods:</strong> Developed a motion tracking system and an arm fixation device. Conducted experiments using cadaveric specimens to measure muscle-induced movements. Analyzed the trajectory and path length of thumb tip movements caused by various muscles.</p>
+                    <p><strong>Results:</strong> Identified specific movement patterns for different thumb muscles. Highlighted the complex interaction between muscle function and thumb movement. Contributed data for refining models of thumb mechanics and potential applications in surgical procedures.</p>
+                    <p><strong>Documentation:</strong> <a href="NCUR Final Poster.pdf" target="_blank">View Project Poster</a></p>
+                </div>
+                <div class="project">
+                    <h3>2. EEG Data Analysis Project</h3>
+                    <p><strong>Objective:</strong> To analyze EEG data for extracting frequency bands and understanding brain activity patterns.</p>
+                    <p><strong>Methods:</strong> Developed MATLAB scripts for calculating band powers and analyzing frequency spectrums. Applied signal processing techniques to interpret EEG data.</p>
+                    <p><strong>Code Files:</strong> <a href="#">calculate_band_powers.m</a>, <a href="#">print_trial_band_power.m</a>, <a href="#">get_frequency_spectrum.m</a></p>
+                </div>
+                <div class="project">
+                    <h3>3. Molecular Dynamic Simulation of Covalently Modified Protein Tyrosine Phosphatase</h3>
+                    <p><strong>Objective:</strong> To analyze the physical movements of atoms and molecules through computer simulations, focusing on protein tyrosine phosphatase and its interaction with a ligand.</p>
+                    <p><strong>Methods:</strong> Used Gaussian software for ligand construction. Performed molecular dynamics simulations to study protein-ligand interactions.</p>
+                    <p><strong>Results:</strong> Found that the modified protein showed different stability and regional mobility compared to the wild type. Provided insights into the molecular stability of the protein-ligand complex.</p>
+                    <p><strong>Documentation:</strong> <a href="Molecular Dynamic Simulation of Tyrosine Phosphatase.pdf" target="_blank">View Project Poster</a></p>
+                </div>
+            </section>
+        </div>
+        <div id="skills" class="page">
+            <section class="section">
+                <h2>Skills</h2>
+                <ul>
+                    <li><strong>Software:</strong> Gaussian, MATLAB, Python, Java, C, C++, R-Studio, LabVIEW</li>
+                    <li><strong>Techniques:</strong> Molecular dynamics simulation, motion capture system development, EEG data analysis</li>
+                    <li><strong>Programming Languages:</strong> Python, C, C++, Java</li>
+                    <li><strong>Other Skills:</strong> Multivariate Calculus, Linear Algebra, Statistics, Advanced Geometry, Number Theory, Group Theory</li>
+                    <li><strong>Languages:</strong> Native in Chinese and English</li>
+                </ul>
+            </section>
+        </div>
+        <div id="documentary" class="page">
+            <section class="section">
+                <h2>Documentary: The Youngest Runner in the Grand Slam of Ultrarunning</h2>
+                <p>As the youngest runner to complete the Grand Slam of Ultrarunning, I have documented my journey through a series of videos and blog posts. The Grand Slam involves running four of the most prestigious 100-mile trail races in the United States within a single calendar year. This documentary captures my challenges, achievements, and the preparation involved in this extraordinary feat.</p>
+                <p>You can watch the documentary on YouTube: <a href="https://youtu.be/CgYqw3gE0VA?si=ILNlRleg_d4iXwxX" target="_blank">Watch Documentary</a>.</p>
+                <p>Follow my running journey on Strava: <a href="https://www.strava.com/athletes/35107207" target="_blank">Strava Profile</a>.</p>
+                <p>See my race results on Ultrasignup: <a href="https://ultrasignup.com/results_participant.aspx?fname=Howard&lname=Wang" target="_blank">Ultrasignup Profile</a>.</p>
+            </section>
+        </div>
+        <div id="track" class="page">
+            <section class="section">
+                <h2>Track Team: Swarthmore College</h2>
+                <p>I am also a member of the Swarthmore College track team, where I specialize in running the 10k. Being part of the team has been an incredible experience that has helped me develop my endurance and speed. You can find more information and view the team roster here:</p>
+                <p>Swarthmore College Track Team Roster: <a href="https://swarthmoreathletics.com/sports/mens-track-and-field/roster" target="_blank">View Roster</a>.</p>
+            </section>
+        </div>
+        <div id="art" class="page">
+            <section class="section">
+                <h2>Art Portfolio</h2>
+                <div class="art">
+                    <h3>High School Art Portfolio</h3>
+                    <a href="Art Portfolio .pdf" target="_blank" class="file-link">View High School Art Portfolio</a>
+                    <p>This portfolio showcases my high school artwork, which includes various media and techniques. From oil paintings capturing the grandeur of landscapes to delicate watercolors portraying moments of tranquility, this collection reflects my growth as an artist during my high school years.</p>
+                </div>
+                <div class="art">
+                    <h3>Freshman Year Art Portfolio</h3>
+                    <a href="Art 33 Final Project.pdf" target="_blank" class="file-link">View Freshman Year Art Portfolio</a>
+                    <p>This collection features my freshman year artwork, where I explored themes of nature, humanity, and introspection. The portfolio highlights my progress in using different techniques and my journey in finding my artistic voice during my first year of college.</p>
+                </div>
+            </section>
+        </div>
+        <div id="posters" class="page">
+            <section class="section">
+                <h2>Scientific Posters</h2>
+                <div class="poster">
+                    <h3>Molecular Dynamic Simulation of Covalently Modified Protein Tyrosine Phosphatase</h3>
+                    <a href="Molecular Dynamic Simulation of Tyrosine Phosphatase.pdf" target="_blank" class="file-link">View "Molecular Dynamic Simulation of Covalently Modified Protein Tyrosine Phosphatase"</a>
+                    <p>This poster showcases my work on the molecular dynamic simulation of protein tyrosine phosphatase with a focus on covalent modifications and their impact on protein stability and function. View the full poster for detailed methodology and results.</p>
+                </div>
+                <div class="poster">
+                    <h3>Quantifying Thumb Tip Trajectories Generated by Extrinsic Muscles</h3>
+                    <a href="NCUR Final Poster.pdf" target="_blank" class="file-link">View "Quantifying Thumb Tip Trajectories Generated by Extrinsic Muscles"</a>
+                    <p>This project aimed to quantify the thumb tip trajectories produced by extrinsic thumb muscles, providing insights into musculoskeletal biomechanics and potential applications in surgical procedures. View the detailed poster for complete information.</p>
+                </div>
+            </section>
+        </div>
+        <div id="contact" class="page">
+            <section class="section">
+                <h2>Contact</h2>
+                <p><strong>Email:</strong> <a href="mailto:howardwhsrun@gmail.com" style="color: #aaa;">howardwhsrun@gmail.com</a></p>
+                <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/howard-wang-00758320a" target="_blank" style="color: #aaa;">linkedin.com/in/howard-wang-00758320a</a></p>
+                <p><strong>Phone:</strong> <a href="tel:+16032855188" style="color: #aaa;">+1 - 603-285-5188</a></p>
+            </section>
+        </div>
     </div>
     <footer>
         <p>&copy; 2024 Howard Wang. All rights reserved.</p>
     </footer>
 </body>
 </html>
-
 
