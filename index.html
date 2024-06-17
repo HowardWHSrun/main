@@ -93,6 +93,18 @@
         .page.active {
             display: block;
         }
+        .language-toggle {
+            cursor: pointer;
+            color: #ccc;
+            border: none;
+            background: none;
+            font-size: 1em;
+            margin: 1em;
+            transition: color 0.3s ease;
+        }
+        .language-toggle:hover {
+            color: white;
+        }
     </style>
     <script>
         function showPage(pageId) {
@@ -100,11 +112,28 @@
             pages.forEach(page => page.classList.remove('active'));
             document.getElementById(pageId).classList.add('active');
         }
+
+        function switchLanguage(language) {
+            const elements = document.querySelectorAll('[data-en], [data-zh]');
+            elements.forEach(element => {
+                if (language === 'en') {
+                    element.innerHTML = element.getAttribute('data-en');
+                } else {
+                    element.innerHTML = element.getAttribute('data-zh');
+                }
+            });
+        }
+
         document.addEventListener('DOMContentLoaded', () => {
             document.querySelectorAll('nav a').forEach(link => {
                 link.addEventListener('click', (e) => {
                     e.preventDefault();
                     showPage(link.getAttribute('href').substring(1));
+                });
+            });
+            document.querySelectorAll('.language-toggle').forEach(button => {
+                button.addEventListener('click', () => {
+                    switchLanguage(button.getAttribute('data-lang'));
                 });
             });
             showPage('about');
@@ -113,175 +142,178 @@
 </head>
 <body>
     <header>
-        <h1>Howard Wang</h1>
+        <h1 data-en="Howard Wang" data-zh="王浩文">Howard Wang</h1>
+        <button class="language-toggle" data-lang="en">English</button>
+        <button class="language-toggle" data-lang="zh">中文</button>
     </header>
     <nav>
         <ul>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#documentary">Documentary</a></li>
-            <li><a href="#track">Track Team</a></li>
-            <li><a href="#art">Art Portfolio</a></li>
-            <li><a href="#posters">Scientific Posters</a></li>
-            <li><a href="#classes">Classes Taken</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about" data-en="About Me" data-zh="关于我">About Me</a></li>
+            <li><a href="#projects" data-en="Projects" data-zh="项目">Projects</a></li>
+            <li><a href="#skills" data-en="Skills" data-zh="技能">Skills</a></li>
+            <li><a href="#documentary" data-en="Documentary" data-zh="纪录片">Documentary</a></li>
+            <li><a href="#track" data-en="Track Team" data-zh="田径队">Track Team</a></li>
+            <li><a href="#art" data-en="Art Portfolio" data-zh="艺术作品">Art Portfolio</a></li>
+            <li><a href="#posters" data-en="Scientific Posters" data-zh="科学海报">Scientific Posters</a></li>
+            <li><a href="#classes" data-en="Classes Taken" data-zh="课程">Classes Taken</a></li>
+            <li><a href="#contact" data-en="Contact" data-zh="联系">Contact</a></li>
         </ul>
     </nav>
     <div class="content">
         <div id="about" class="page">
             <section class="section">
-                <h2>About Me</h2>
+                <h2 data-en="About Me" data-zh="关于我">About Me</h2>
                 <img src="Howard Wang.jpg" alt="Howard Wang" class="profile-picture">
-               <p>Hello! I'm Howard Wang, an engineering student at Swarthmore College, majoring in Engineering and Neuroscience. I have a keen interest in merging engineering principles with biological systems to tackle complex, real-world problems. My academic journey and research experience span various domains, including biomechanics, molecular dynamics, and EEG data analysis. In my free time, I not only enjoy ultra running, creating art, and practicing calligraphy, but I am also an avid reader. Some of my favorite books are *Les Misérables*, *Wuthering Heights*, *The Sorrows of Young Werther*, *Strait is the Gate*, and *The Conquest of Happiness*. These literary works provide a diverse range of perspectives and have significantly influenced my outlook on life and learning.</p>
-               <p>I'm currently engaged in research at Swarthmore, where I developed a thumb-tip tracking system using MATLAB. This system has enhanced insights into thumb rehabilitation, showcasing my ability to integrate technical skills with biological applications. My passion for research extends to the fascinating realms of biomechanics and neuroscience, where I aim to create innovative solutions by integrating these fields. Presently, I am delving into an EEG data analysis project that employs advanced machine learning techniques to identify and differentiate the neural activity patterns between infants and adults. This work not only reflects my commitment to advancing our understanding of brain function across different stages of life but also highlights my dedication to interdisciplinary research.</p>
+                <p data-en="Hello! I'm Howard Wang, an engineering student at Swarthmore College, majoring in Engineering and Neuroscience. I have a keen interest in merging engineering principles with biological systems to tackle complex, real-world problems. My academic journey and research experience span various domains, including biomechanics, molecular dynamics, and EEG data analysis. In my free time, I not only enjoy ultra running, creating art, and practicing calligraphy, but I am also an avid reader. Some of my favorite books are Les Misérables, Wuthering Heights, The Sorrows of Young Werther, Strait is the Gate, and The Conquest of Happiness. These literary works provide a diverse range of perspectives and have significantly influenced my outlook on life and learning." data-zh="你好！我是王浩文，斯沃斯莫尔学院的工程专业学生，主修工程和神经科学。我对将工程原理与生物系统结合起来解决复杂的实际问题有着浓厚的兴趣。我的学术旅程和研究经验涉及多个领域，包括生物力学、分子动力学和脑电数据分析。业余时间里，我不仅喜欢超长跑、绘画和练习书法，而且也是一个热爱阅读的人。我最喜欢的几本书是《悲惨世界》、《呼啸山庄》、《少年维特的烦恼》、《窄门》和《幸福的征服》。这些文学作品提供了多种多样的视角，深刻影响了我对生活和学习的看法。"></p>
+                <p data-en="I'm currently engaged in research at Swarthmore, where I developed a thumb-tip tracking system using MATLAB. This system has enhanced insights into thumb rehabilitation, showcasing my ability to integrate technical skills with biological applications. My passion for research extends to the fascinating realms of biomechanics and neuroscience, where I aim to create innovative solutions by integrating these fields. Presently, I am delving into an EEG data analysis project that employs advanced machine learning techniques to identify and differentiate the neural activity patterns between infants and adults. This work not only reflects my commitment to advancing our understanding of brain function across different stages of life but also highlights my dedication to interdisciplinary research." data-zh="目前，我在斯沃斯莫尔进行研究，使用MATLAB开发了一套拇指尖追踪系统。这个系统提高了对拇指康复的理解，展示了我将技术技能与生物应用结合的能力。我的研究兴趣延伸到生物力学和神经科学这两个迷人的领域，在这些领域中，我致力于通过整合不同领域来创造创新解决方案。目前，我正在进行一个脑电数据分析项目，使用先进的机器学习技术来识别和区分婴儿和成人的神经活动模式。这项工作不仅体现了我对推进大脑功能在不同生命阶段理解的承诺，也突显了我对跨学科研究的热情。"></p>
             </section>
         </div>
         <div id="projects" class="page">
             <section class="section">
-                <h2>Projects</h2>
+                <h2 data-en="Projects" data-zh="项目">Projects</h2>
                 <div class="project">
-                    <h3>1. Thumb Movement Analysis Using Cadaveric Specimens</h3>
-                    <p><strong>Objective:</strong> To quantify thumb tip trajectories produced by thumb muscles, contributing to the understanding of musculoskeletal biomechanics and potential improvements in surgical outcomes.</p>
-                    <p><strong>Methods:</strong> Developed a motion tracking system and an arm fixation device. Conducted experiments using cadaveric specimens to measure muscle-induced movements. Analyzed the trajectory and path length of thumb tip movements caused by various muscles.</p>
-                    <p><strong>Results:</strong> Identified specific movement patterns for different thumb muscles. Highlighted the complex interaction between muscle function and thumb movement. Contributed data for refining models of thumb mechanics and potential applications in surgical procedures.</p>
-                    <p><strong>Documentation:</strong> <a href="NCUR Final Poster.pdf" target="_blank">View Project Poster</a></p>
+                    <h3 data-en="1. Thumb Movement Analysis Using Cadaveric Specimens" data-zh="1. 使用尸体标本进行拇指运动分析">1. Thumb Movement Analysis Using Cadaveric Specimens</h3>
+                    <p data-en="Objective: To quantify thumb tip trajectories produced by thumb muscles, contributing to the understanding of musculoskeletal biomechanics and potential improvements in surgical outcomes." data-zh="目标：量化由拇指肌肉产生的拇指尖轨迹，有助于理解肌肉骨骼生物力学，并可能改善手术结果。"></p>
+                    <p data-en="Methods: Developed a motion tracking system and an arm fixation device. Conducted experiments using cadaveric specimens to measure muscle-induced movements. Analyzed the trajectory and path length of thumb tip movements caused by various muscles." data-zh="方法：开发了一套运动跟踪系统和手臂固定装置。使用尸体标本进行实验，测量肌肉引起的运动。分析了各种肌肉引起的拇指尖运动的轨迹和路径长度。"></p>
+                    <p data-en="Results: Identified specific movement patterns for different thumb muscles. Highlighted the complex interaction between muscle function and thumb movement. Contributed data for refining models of thumb mechanics and potential applications in surgical procedures." data-zh="结果：识别了不同拇指肌肉的特定运动模式。强调了肌肉功能与拇指运动之间的复杂互动。提供了改进拇指机械模型的数据，并在手术过程中可能应用。"></p>
+                    <p data-en="Documentation: <a href='NCUR Final Poster.pdf' target='_blank'>View Project Poster</a>" data-zh="文档：<a href='NCUR Final Poster.pdf' target='_blank'>查看项目海报</a>"></p>
                 </div>
                 <div class="project">
-                    <h3>2. EEG Data Analysis Project</h3>
-                    <p><strong>Objective:</strong> To analyze EEG data for extracting frequency bands and understanding brain activity patterns.</p>
-                    <p><strong>Methods:</strong> Developed MATLAB scripts for calculating band powers and analyzing frequency spectrums. Applied signal processing techniques to interpret EEG data.</p>
-                    <p><strong>Code Files:</strong> <a href="#">calculate_band_powers.m</a>, <a href="#">print_trial_band_power.m</a>, <a href="#">get_frequency_spectrum.m</a></p>
+                    <h3 data-en="2. EEG Data Analysis Project" data-zh="2. 脑电数据分析项目">2. EEG Data Analysis Project</h3>
+                    <p data-en="Objective: To analyze EEG data for extracting frequency bands and understanding brain activity patterns." data-zh="目标：分析脑电数据以提取频率带，并理解大脑活动模式。"></p>
+                    <p data-en="Methods: Developed MATLAB scripts for calculating band powers and analyzing frequency spectrums. Applied signal processing techniques to interpret EEG data." data-zh="方法：开发了MATLAB脚本用于计算频带功率和分析频率谱。应用信号处理技术解释脑电数据。"></p>
+                    <p data-en="Code Files: <a href='#'>calculate_band_powers.m</a>, <a href='#'>print_trial_band_power.m</a>, <a href='#'>get_frequency_spectrum.m</a>" data-zh="代码文件：<a href='#'>calculate_band_powers.m</a>，<a href='#'>print_trial_band_power.m</a>，<a href='#'>get_frequency_spectrum.m</a>"></p>
                 </div>
                 <div class="project">
-                    <h3>3. Molecular Dynamic Simulation of Covalently Modified Protein Tyrosine Phosphatase</h3>
-                    <p><strong>Objective:</strong> To analyze the physical movements of atoms and molecules through computer simulations, focusing on protein tyrosine phosphatase and its interaction with a ligand.</p>
-                    <p><strong>Methods:</strong> Used Gaussian software for ligand construction. Performed molecular dynamics simulations to study protein-ligand interactions.</p>
-                    <p><strong>Results:</strong> Found that the modified protein showed different stability and regional mobility compared to the wild type. Provided insights into the molecular stability of the protein-ligand complex.</p>
-                    <p><strong>Documentation:</strong> <a href="Molecular Dynamic Simulation of Tyrosine Phosphatase.pdf" target="_blank">View Project Poster</a></p>
+                    <h3 data-en="3. Molecular Dynamic Simulation of Covalently Modified Protein Tyrosine Phosphatase" data-zh="3. 共价修饰的蛋白酪氨酸磷酸酶的分子动力学模拟">3. Molecular Dynamic Simulation of Covalently Modified Protein Tyrosine Phosphatase</h3>
+                    <p data-en="Objective: To analyze the physical movements of atoms and molecules through computer simulations, focusing on protein tyrosine phosphatase and its interaction with a ligand." data-zh="目标：通过计算机模拟分析原子和分子的物理运动，重点研究蛋白酪氨酸磷酸酶及其与配体的相互作用。"></p>
+                    <p data-en="Methods: Used Gaussian software for ligand construction. Performed molecular dynamics simulations to study protein-ligand interactions." data-zh="方法：使用Gaussian软件进行配体构建。进行了分子动力学模拟以研究蛋白质与配体的相互作用。"></p>
+                    <p data-en="Results: Found that the modified protein showed different stability and regional mobility compared to the wild type. Provided insights into the molecular stability of the protein-ligand complex." data-zh="结果：发现修饰后的蛋白质与野生型相比，表现出不同的稳定性和区域流动性。提供了对蛋白质-配体复合物分子稳定性的见解。"></p>
+                    <p data-en="Documentation: <a href='Molecular Dynamic Simulation of Tyrosine Phosphatase.pdf' target='_blank'>View Project Poster</a>" data-zh="文档：<a href='Molecular Dynamic Simulation of Tyrosine Phosphatase.pdf' target='_blank'>查看项目海报</a>"></p>
                 </div>
             </section>
         </div>
         <div id="skills" class="page">
             <section class="section">
-                <h2>Skills</h2>
+                <h2 data-en="Skills" data-zh="技能">Skills</h2>
                 <ul>
-                    <li><strong>Software:</strong> Gaussian, MATLAB, Python, Java, C, C++, R-Studio, LabVIEW</li>
-                    <li><strong>Techniques:</strong> Molecular dynamics simulation, motion capture system development, EEG data analysis</li>
-                    <li><strong>Programming Languages:</strong> Python, C, C++, Java</li>
-                    <li><strong>Other Skills:</strong> Multivariate Calculus, Linear Algebra, Statistics, Advanced Geometry, Number Theory, Group Theory</li>
-                    <li><strong>Languages:</strong> Native in Chinese and English</li>
+                    <li data-en="Software: Gaussian, MATLAB, Python, Java, C, C++, R-Studio, LabVIEW" data-zh="软件：Gaussian, MATLAB, Python, Java, C, C++, R-Studio, LabVIEW"></li>
+                    <li data-en="Techniques: Molecular dynamics simulation, motion capture system development, EEG data analysis" data-zh="技术：分子动力学模拟、运动捕捉系统开发、脑电数据分析"></li>
+                    <li data-en="Programming Languages: Python, C, C++, Java" data-zh="编程语言：Python, C, C++, Java"></li>
+                    <li data-en="Other Skills: Multivariate Calculus, Linear Algebra, Statistics, Advanced Geometry, Number Theory, Group Theory" data-zh="其他技能：多元微积分、线性代数、统计学、高级几何学、数论、群论"></li>
+                    <li data-en="Languages: Native in Chinese and English" data-zh="语言：中文和英语母语"></li>
                 </ul>
             </section>
         </div>
         <div id="documentary" class="page">
             <section class="section">
-                <h2>Documentary: The Youngest Runner in the Grand Slam of Ultrarunning</h2>
-                <p>As the youngest runner to complete the Grand Slam of Ultrarunning, I have documented my journey through a series of videos and blog posts. The Grand Slam involves running four of the most prestigious 100-mile trail races in the United States within a single calendar year. This documentary captures my challenges, achievements, and the preparation involved in this extraordinary feat.</p>
-                <p>You can watch the documentary on YouTube: <a href="https://youtu.be/CgYqw3gE0VA?si=ILNlRleg_d4iXwxX" target="_blank">Watch Documentary</a>.</p>
-                <p>Follow my running journey on Strava: <a href="https://www.strava.com/athletes/35107207" target="_blank">Strava Profile</a>.</p>
-                <p>See my race results on Ultrasignup: <a href="https://ultrasignup.com/results_participant.aspx?fname=Howard&lname=Wang" target="_blank">Ultrasignup Profile</a>.</p>
+                <h2 data-en="Documentary: The Youngest Runner in the Grand Slam of Ultrarunning" data-zh="纪录片：超级马拉松大满贯中最年轻的跑者">Documentary: The Youngest Runner in the Grand Slam of Ultrarunning</h2>
+                <p data-en="As the youngest runner to complete the Grand Slam of Ultrarunning, I have documented my journey through a series of videos and blog posts. The Grand Slam involves running four of the most prestigious 100-mile trail races in the United States within a single calendar year. This documentary captures my challenges, achievements, and the preparation involved in this extraordinary feat." data-zh="作为完成超级马拉松大满贯的最年轻跑者，我通过一系列视频和博客记录了我的旅程。大满贯包括在一年内完成美国四个最著名的100英里越野赛跑。这个纪录片记录了我的挑战、成就和参与这一非凡壮举的准备工作。"></p>
+                <p data-en="You can watch the documentary on YouTube: <a href='https://youtu.be/CgYqw3gE0VA?si=ILNlRleg_d4iXwxX' target='_blank'>Watch Documentary</a>." data-zh="你可以在YouTube上观看纪录片：<a href='https://youtu.be/CgYqw3gE0VA?si=ILNlRleg_d4iXwxX' target='_blank'>观看纪录片</a>。"></p>
+                <p data-en="Follow my running journey on Strava: <a href='https://www.strava.com/athletes/35107207' target='_blank'>Strava Profile</a>." data-zh="在Strava上关注我的跑步旅程：<a href='https://www.strava.com/athletes/35107207' target='_blank'>Strava 个人资料</a>。"></p>
+                <p data-en="See my race results on Ultrasignup: <a href='https://ultrasignup.com/results_participant.aspx?fname=Howard&lname=Wang' target='_blank'>Ultrasignup Profile</a>." data-zh="在Ultrasignup上查看我的比赛成绩：<a href='https://ultrasignup.com/results_participant.aspx?fname=Howard&lname=Wang' target='_blank'>Ultrasignup 个人资料</a>。"></p>
             </section>
         </div>
         <div id="track" class="page">
             <section class="section">
-                <h2>Track Team: Swarthmore College</h2>
-                <p>I am also a member of the Swarthmore College track team, where I specialize in running the 10k. Being part of the team has been an incredible experience that has helped me develop my endurance and speed. You can find more information and view the team roster here:</p>
-                <p>Swarthmore College Track Team Roster: <a href="https://swarthmoreathletics.com/sports/mens-track-and-field/roster" target="_blank">View Roster</a>.</p>
+                <h2 data-en="Track Team: Swarthmore College" data-zh="田径队：斯沃斯莫尔学院">Track Team: Swarthmore College</h2>
+                <p data-en="I am also a member of the Swarthmore College track team, where I specialize in running the 10k. Being part of the team has been an incredible experience that has helped me develop my endurance and speed. You can find more information and view the team roster here:" data-zh="我也是斯沃斯莫尔学院田径队的一员，专攻10公里跑。成为球队的一员是一次令人难以置信的经历，帮助我提高了耐力和速度。你可以在这里找到更多信息并查看球队名单："></p>
+                <p data-en="Swarthmore College Track Team Roster: <a href='https://swarthmoreathletics.com/sports/mens-track-and-field/roster' target='_blank'>View Roster</a>." data-zh="斯沃斯莫尔学院田径队名单：<a href='https://swarthmoreathletics.com/sports/mens-track-and-field/roster' target='_blank'>查看名单</a>。"></p>
             </section>
         </div>
-            <div id="art" class="page">
-                <section class="section">
-                    <h2>Art Portfolio</h2>
-                    <div class="art">
-                        <h3>High School Art Portfolio</h3>
-                        <a href="Art Portfolio .pdf" target="_blank" class="file-link">View High School Art Portfolio</a>
-                        <p>This portfolio showcases my high school artwork, which includes various media and techniques. From oil paintings capturing the grandeur of landscapes to delicate watercolors portraying moments of tranquility, this collection reflects my growth as an artist during my high school years.</p>
-                    </div>
-                    <div class="art">
-                        <h3>Freshman Year Art Portfolio</h3>
-                        <a href="Art 33 Final Project.pdf" target="_blank" class="file-link">View Freshman Year Art Portfolio</a>
-                        <p>This collection features my freshman year artwork, where I explored themes of nature, humanity, and introspection. The portfolio highlights my progress in using different techniques and my journey in finding my artistic voice during my first year of college.</p>
-                    </div>
-                    <div class="art">
-                        <h3>Photography Work</h3>
-                        <p>In addition to my artwork, I am also the photo editor for Swarthmore's newspaper, <a href="https://swarthmorephoenix.com/" target="_blank" style="color: #aaa;">The Phoenix</a>. My role allows me to capture the essence of campus life and contribute to the visual storytelling of the newspaper. You can view some of my personal photography work on my <a href="https://unsplash.com/@howardwhs" target="_blank" style="color: #aaa;">Unsplash profile</a>.</p>
-                    </div>
-                    <div class="art">
-                        <h3>Calligraphy Work</h3>
-                        <a href="calligraphy portfolio.pdf" target="_blank" class="file-link">View Calligraphy Work</a>
-                        <p>I also have a passion for calligraphy, where I express my artistic skills through the beauty of handwritten art. My calligraphy work ranges from traditional scripts to modern styles, reflecting my interest in the art of beautiful writing.</p>
-                    </div>
-                </section>
-            </div>
+        <div id="art" class="page">
+            <section class="section">
+                <h2 data-en="Art Portfolio" data-zh="艺术作品">Art Portfolio</h2>
+                <div class="art">
+                    <h3 data-en="High School Art Portfolio" data-zh="高中艺术作品">High School Art Portfolio</h3>
+                    <a href="Art Portfolio .pdf" target="_blank" class="file-link" data-en="View High School Art Portfolio" data-zh="查看高中艺术作品">View High School Art Portfolio</a>
+                    <p data-en="This portfolio showcases my high school artwork, which includes various media and techniques. From oil paintings capturing the grandeur of landscapes to delicate watercolors portraying moments of tranquility, this collection reflects my growth as an artist during my high school years." data-zh="这个作品集展示了我的高中艺术作品，包括各种媒介和技术。从捕捉风景壮丽的油画到描绘宁静时刻的精致水彩画，这个系列反映了我在高中时期作为艺术家的成长。"></p>
+                </div>
+                <div class="art">
+                    <h3 data-en="Freshman Year Art Portfolio" data-zh="大一艺术作品">Freshman Year Art Portfolio</h3>
+                    <a href="Art 33 Final Project.pdf" target="_blank" class="file-link" data-en="View Freshman Year Art Portfolio" data-zh="查看大一艺术作品">View Freshman Year Art Portfolio</a>
+                    <p data-en="This collection features my freshman year artwork, where I explored themes of nature, humanity, and introspection. The portfolio highlights my progress in using different techniques and my journey in finding my artistic voice during my first year of college." data-zh="这个系列展示了我的大一艺术作品，在这里我探索了自然、人类和自省的主题。作品集突出了我在使用不同技术方面的进步，以及我在大学第一年找到自己艺术声音的旅程。"></p>
+                </div>
+                <div class="art">
+                    <h3 data-en="Photography Work" data-zh="摄影作品">Photography Work</h3>
+                    <p data-en="In addition to my artwork, I am also the photo editor for Swarthmore's newspaper, <a href='https://swarthmorephoenix.com/' target='_blank' style='color: #aaa;'>The Phoenix</a>. My role allows me to capture the essence of campus life and contribute to the visual storytelling of the newspaper. You can view some of my personal photography work on my <a href='https://unsplash.com/@howardwhs' target='_blank' style='color: #aaa;'>Unsplash profile</a>." data-zh="除了我的艺术作品，我还是斯沃斯莫尔报纸《The Phoenix》的摄影编辑。我的角色使我能够捕捉校园生活的精髓，并为报纸的视觉叙事做出贡献。你可以在我的<a href='https://unsplash.com/@howardwhs' target='_blank' style='color: #aaa;'>Unsplash 个人资料</a>上查看一些我的个人摄影作品。"></p>
+                </div>
+                <div class="art">
+                    <h3 data-en="Calligraphy Work" data-zh="书法作品">Calligraphy Work</h3>
+                    <a href="calligraphy portfolio.pdf" target="_blank" class="file-link" data-en="View Calligraphy Work" data-zh="查看书法作品">View Calligraphy Work</a>
+                    <p data-en="I also have a passion for calligraphy, where I express my artistic skills through the beauty of handwritten art. My calligraphy work ranges from traditional scripts to modern styles, reflecting my interest in the art of beautiful writing." data-zh="我对书法也充满热情，通过美丽的手写艺术来表达我的艺术技能。我的书法作品从传统字体到现代风格不等，反映了我对美丽书写艺术的兴趣。"></p>
+                </div>
+            </section>
+        </div>
         <div id="posters" class="page">
             <section class="section">
-                <h2>Scientific Posters</h2>
+                <h2 data-en="Scientific Posters" data-zh="科学海报">Scientific Posters</h2>
                 <div class="poster">
-                    <h3>Molecular Dynamic Simulation of Covalently Modified Protein Tyrosine Phosphatase</h3>
-                    <a href="Molecular Dynamic Simulation of Tyrosine Phosphatase.pdf" target="_blank" class="file-link">View "Molecular Dynamic Simulation of Covalently Modified Protein Tyrosine Phosphatase"</a>
-                    <p>This poster showcases my work on the molecular dynamic simulation of protein tyrosine phosphatase with a focus on covalent modifications and their impact on protein stability and function. View the full poster for detailed methodology and results.</p>
+                    <h3 data-en="Molecular Dynamic Simulation of Covalently Modified Protein Tyrosine Phosphatase" data-zh="共价修饰的蛋白酪氨酸磷酸酶的分子动力学模拟">Molecular Dynamic Simulation of Covalently Modified Protein Tyrosine Phosphatase</h3>
+                    <a href="Molecular Dynamic Simulation of Tyrosine Phosphatase.pdf" target="_blank" class="file-link" data-en="View 'Molecular Dynamic Simulation of Covalently Modified Protein Tyrosine Phosphatase'" data-zh="查看“共价修饰的蛋白酪氨酸磷酸酶的分子动力学模拟”">View "Molecular Dynamic Simulation of Covalently Modified Protein Tyrosine Phosphatase"</a>
+                    <p data-en="This poster showcases my work on the molecular dynamic simulation of protein tyrosine phosphatase with a focus on covalent modifications and their impact on protein stability and function. View the full poster for detailed methodology and results." data-zh="这个海报展示了我关于蛋白酪氨酸磷酸酶的分子动力学模拟的工作，重点研究了共价修饰及其对蛋白质稳定性和功能的影响。查看完整海报以了解详细的方法和结果。"></p>
                 </div>
                 <div class="poster">
-                    <h3>Quantifying Thumb Tip Trajectories Generated by Extrinsic Muscles</h3>
-                    <a href="NCUR Final Poster.pdf" target="_blank" class="file-link">View "Quantifying Thumb Tip Trajectories Generated by Extrinsic Muscles"</a>
-                    <p>This project aimed to quantify the thumb tip trajectories produced by extrinsic thumb muscles, providing insights into musculoskeletal biomechanics and potential applications in surgical procedures. View the detailed poster for complete information.</p>
+                    <h3 data-en="Quantifying Thumb Tip Trajectories Generated by Extrinsic Muscles" data-zh="量化外在肌肉产生的拇指尖轨迹">Quantifying Thumb Tip Trajectories Generated by Extrinsic Muscles</h3>
+                    <a href="NCUR Final Poster.pdf" target="_blank" class="file-link" data-en="View 'Quantifying Thumb Tip Trajectories Generated by Extrinsic Muscles'" data-zh="查看“量化外在肌肉产生的拇指尖轨迹”">View "Quantifying Thumb Tip Trajectories Generated by Extrinsic Muscles"</a>
+                    <p data-en="This project aimed to quantify the thumb tip trajectories produced by extrinsic thumb muscles, providing insights into musculoskeletal biomechanics and potential applications in surgical procedures. View the detailed poster for complete information." data-zh="该项目旨在量化外在拇指肌肉产生的拇指尖轨迹，为肌肉骨骼生物力学提供见解，并可能应用于手术程序。查看详细海报以了解完整信息。"></p>
                 </div>
             </section>
         </div>
         <div id="classes" class="page">
             <section class="section">
-                <h2>Classes Taken</h2>
+                <h2 data-en="Classes Taken" data-zh="课程">Classes Taken</h2>
                 <ul>
-                    <li>PSYC 131B 01 - Seminar Affective Neuroscience (Spring 2024)</li>
-                    <li>CHEM 022 01 - Organic Chemistry I (Spring 2024)</li>
-                    <li>ENGR 012 01 - Linear Physical Systems Analysis (Spring 2024)</li>
-                    <li>MATH 043 01 - Basic Differential Equations (Spring 2024)</li>
-                    <li>PHED 087V 01 - Indoor Track & Field (Men) (Spring 2024)</li>
-                    <li>PHED 098V 01 - Outdoor Track & Field (Men) (Spring 2024)</li>
-                    <li>PHYS 004L 01 - General Physics II: Biomedical Applications - E&M (Spring 2024)</li>
-                    <li>PSYC XXX - Social Psychology (Spring 2024)</li>
-                    <li>PSYC 031A 01 - Social & Affective Neuroscience (Fall 2023)</li>
-                    <li>PHYS 003 01 - General Physics I (Fall 2023)</li>
-                    <li>CHIN 055 01 - Contemporary Chinese Cinema (Fall 2023)</li>
-                    <li>ENGR 011 01 - Electrical Circuit Analysis (Fall 2023)</li>
-                    <li>ENGR 065 01 - Introduction to Biomechanics (Fall 2023)</li>
-                    <li>ENGR 093 01 - Directed Reading (Fall 2023)</li>
-                    <li>MUSI 043 02 - Performance: Chorus (Fall 2023)</li>
-                    <li>PHED 078V 01 - Cross Country (Men) (Fall 2023)</li>
-                    <li>PSYC 001 01 - Introduction to Psychology (Spring 2023)</li>
-                    <li>PHED 087V 01 - Indoor Track & Field (Men) (Spring 2023)</li>
-                    <li>MATH 034 01 - Several Variable Calculus (Spring 2023)</li>
-                    <li>ENGR 006 01 - Mechanics (Spring 2023)</li>
-                    <li>CPSC 021 02 - Introduction to Computer Science (Spring 2023)</li>
-                    <li>CHIN 021 01 - Reading & Writing in Modern Chinese (W) (Spring 2023)</li>
-                    <li>ARTT 033B 01 - Painting II: Figure Composition (Spring 2023)</li>
-                    <li>ARTH 001G 01 - FYS: Art & Animation in East Asia (W) (Spring 2023)</li>
-                    <li>PHED 098V 01 - Outdoor Track & Field (Men) (Spring 2023)</li>
-                    <li>MATH 028 01 - Linear Algebra with Theory (Fall 2022)</li>
-                    <li>LING 040 01 - Semantics (W) (Fall 2022)</li>
-                    <li>CHEM 010 01 - Foundations of Chemical Principles (Fall 2022)</li>
-                    <li>ARTT 003A 03 - Painting I: Drawing Into Painting (Fall 2022)</li>
-                    <li>STAT 021 01 - Statistical Methods II (Fall 2022)</li>
-                    <li>STAT 011 - Statistical Methods I (Spring 2022)</li>
-                    <li>MATH 025 - Further Topics in Single Variable Calculus (Spring 2022)</li>
-                    <li>MATH 015 - Single-Variable Calculus I (Spring 2022)</li>
+                    <li data-en="PSYC 131B 01 - Seminar Affective Neuroscience (Spring 2024)" data-zh="PSYC 131B 01 - 情感神经科学研讨会（2024年春季）"></li>
+                    <li data-en="CHEM 022 01 - Organic Chemistry I (Spring 2024)" data-zh="CHEM 022 01 - 有机化学I（2024年春季）"></li>
+                    <li data-en="ENGR 012 01 - Linear Physical Systems Analysis (Spring 2024)" data-zh="ENGR 012 01 - 线性物理系统分析（2024年春季）"></li>
+                    <li data-en="MATH 043 01 - Basic Differential Equations (Spring 2024)" data-zh="MATH 043 01 - 基本微分方程（2024年春季）"></li>
+                    <li data-en="PHED 087V 01 - Indoor Track & Field (Men) (Spring 2024)" data-zh="PHED 087V 01 - 室内田径（男子）（2024年春季）"></li>
+                    <li data-en="PHED 098V 01 - Outdoor Track & Field (Men) (Spring 2024)" data-zh="PHED 098V 01 - 室外田径（男子）（2024年春季）"></li>
+                    <li data-en="PHYS 004L 01 - General Physics II: Biomedical Applications - E&M (Spring 2024)" data-zh="PHYS 004L 01 - 普通物理II：生物医学应用 - 电磁（2024年春季）"></li>
+                    <li data-en="PSYC XXX - Social Psychology (Spring 2024)" data-zh="PSYC XXX - 社会心理学（2024年春季）"></li>
+                    <li data-en="PSYC 031A 01 - Social & Affective Neuroscience (Fall 2023)" data-zh="PSYC 031A 01 - 社会与情感神经科学（2023年秋季）"></li>
+                    <li data-en="PHYS 003 01 - General Physics I (Fall 2023)" data-zh="PHYS 003 01 - 普通物理I（2023年秋季）"></li>
+                    <li data-en="CHIN 055 01 - Contemporary Chinese Cinema (Fall 2023)" data-zh="CHIN 055 01 - 当代中国电影（2023年秋季）"></li>
+                    <li data-en="ENGR 011 01 - Electrical Circuit Analysis (Fall 2023)" data-zh="ENGR 011 01 - 电路分析（2023年秋季）"></li>
+                    <li data-en="ENGR 065 01 - Introduction to Biomechanics (Fall 2023)" data-zh="ENGR 065 01 - 生物力学导论（2023年秋季）"></li>
+                    <li data-en="ENGR 093 01 - Directed Reading (Fall 2023)" data-zh="ENGR 093 01 - 指导阅读（2023年秋季）"></li>
+                    <li data-en="MUSI 043 02 - Performance: Chorus (Fall 2023)" data-zh="MUSI 043 02 - 表演：合唱（2023年秋季）"></li>
+                    <li data-en="PHED 078V 01 - Cross Country (Men) (Fall 2023)" data-zh="PHED 078V 01 - 越野（男子）（2023年秋季）"></li>
+                    <li data-en="PSYC 001 01 - Introduction to Psychology (Spring 2023)" data-zh="PSYC 001 01 - 心理学导论（2023年春季）"></li>
+                    <li data-en="PHED 087V 01 - Indoor Track & Field (Men) (Spring 2023)" data-zh="PHED 087V 01 - 室内田径（男子）（2023年春季）"></li>
+                    <li data-en="MATH 034 01 - Several Variable Calculus (Spring 2023)" data-zh="MATH 034 01 - 多变量微积分（2023年春季）"></li>
+                    <li data-en="ENGR 006 01 - Mechanics (Spring 2023)" data-zh="ENGR 006 01 - 力学（2023年春季）"></li>
+                    <li data-en="CPSC 021 02 - Introduction to Computer Science (Spring 2023)" data-zh="CPSC 021 02 - 计算机科学导论（2023年春季）"></li>
+                    <li data-en="CHIN 021 01 - Reading & Writing in Modern Chinese (W) (Spring 2023)" data-zh="CHIN 021 01 - 现代中文阅读与写作（W）（2023年春季）"></li>
+                    <li data-en="ARTT 033B 01 - Painting II: Figure Composition (Spring 2023)" data-zh="ARTT 033B 01 - 绘画II：人物构图（2023年春季）"></li>
+                    <li data-en="ARTH 001G 01 - FYS: Art & Animation in East Asia (W) (Spring 2023)" data-zh="ARTH 001G 01 - FYS：东亚艺术与动画（W）（2023年春季）"></li>
+                    <li data-en="PHED 098V 01 - Outdoor Track & Field (Men) (Spring 2023)" data-zh="PHED 098V 01 - 室外田径（男子）（2023年春季）"></li>
+                    <li data-en="MATH 028 01 - Linear Algebra with Theory (Fall 2022)" data-zh="MATH 028 01 - 理论线性代数（2022年秋季）"></li>
+                    <li data-en="LING 040 01 - Semantics (W) (Fall 2022)" data-zh="LING 040 01 - 语义学（W）（2022年秋季）"></li>
+                    <li data-en="CHEM 010 01 - Foundations of Chemical Principles (Fall 2022)" data-zh="CHEM 010 01 - 化学原理基础（2022年秋季）"></li>
+                    <li data-en="ARTT 003A 03 - Painting I: Drawing Into Painting (Fall 2022)" data-zh="ARTT 003A 03 - 绘画I：从素描到绘画（2022年秋季）"></li>
+                    <li data-en="STAT 021 01 - Statistical Methods II (Fall 2022)" data-zh="STAT 021 01 - 统计方法II（2022年秋季）"></li>
+                    <li data-en="STAT 011 - Statistical Methods I (Spring 2022)" data-zh="STAT 011 - 统计方法I（2022年春季）"></li>
+                    <li data-en="MATH 025 - Further Topics in Single Variable Calculus (Spring 2022)" data-zh="MATH 025 - 单变量微积分进阶（2022年春季）"></li>
+                    <li data-en="MATH 015 - Single-Variable Calculus I (Spring 2022)" data-zh="MATH 015 - 单变量微积分I（2022年春季）"></li>
                 </ul>
             </section>
         </div>
         <div id="contact" class="page">
             <section class="section">
-                <h2>Contact</h2>
-                <p><strong>Email:</strong> <a href="mailto:howardwhsrun@gmail.com" style="color: #aaa;">howardwhsrun@gmail.com</a></p>
-                <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/howard-wang-00758320a" target="_blank" style="color: #aaa;">linkedin.com/in/howard-wang-00758320a</a></p>
-                <p><strong>Phone:</strong> <a href="tel:+16032855188" style="color: #aaa;">+1 - 603-285-5188</a></p>
+                <h2 data-en="Contact" data-zh="联系">Contact</h2>
+                <p data-en="Email: <a href='mailto:howardwhsrun@gmail.com' style='color: #aaa;'>howardwhsrun@gmail.com</a>" data-zh="电子邮件：<a href='mailto:howardwhsrun@gmail.com' style='color: #aaa;'>howardwhsrun@gmail.com</a>"></p>
+                <p data-en="LinkedIn: <a href='https://www.linkedin.com/in/howard-wang-00758320a' target='_blank' style='color: #aaa;'>linkedin.com/in/howard-wang-00758320a</a>" data-zh="LinkedIn：<a href='https://www.linkedin.com/in/howard-wang-00758320a' target='_blank' style='color: #aaa;'>linkedin.com/in/howard-wang-00758320a</a>"></p>
+                <p data-en="Phone: <a href='tel:+16032855188' style='color: #aaa;'>+1 - 603-285-5188</a>" data-zh="电话：<a href='tel:+16032855188' style='color: #aaa;'>+1 - 603-285-5188</a>"></p>
             </section>
         </div>
     </div>
     <footer>
-        <p>&copy; 2024 Howard Wang. All rights reserved.</p>
+        <p data-en="&copy; 2024 Howard Wang. All rights reserved." data-zh="&copy; 2024 王浩文。版权所有。"></p>
     </footer>
 </body>
 </html>
+
 
 
