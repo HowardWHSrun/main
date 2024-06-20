@@ -87,11 +87,7 @@
             color: #ccc;
         }
         .page {
-            display: none;
             padding: 2em;
-        }
-        .page.active {
-            display: block;
         }
         .language-toggle {
             cursor: pointer;
@@ -107,12 +103,6 @@
         }
     </style>
     <script>
-        function showPage(pageId) {
-            const pages = document.querySelectorAll('.page');
-            pages.forEach(page => page.classList.remove('active'));
-            document.getElementById(pageId).classList.add('active');
-        }
-
         function switchLanguage(language) {
             const elements = document.querySelectorAll('[data-en], [data-zh]');
             elements.forEach(element => {
@@ -125,10 +115,14 @@
         }
 
         document.addEventListener('DOMContentLoaded', () => {
+            // Automatically set to English on load
+            switchLanguage('en');
+            
             document.querySelectorAll('nav a').forEach(link => {
                 link.addEventListener('click', (e) => {
                     e.preventDefault();
-                    showPage(link.getAttribute('href').substring(1));
+                    const pageId = link.getAttribute('href').substring(1);
+                    document.getElementById(pageId).scrollIntoView({behavior: 'smooth'});
                 });
             });
             document.querySelectorAll('.language-toggle').forEach(button => {
@@ -136,7 +130,6 @@
                     switchLanguage(button.getAttribute('data-lang'));
                 });
             });
-            showPage('about');
         });
     </script>
 </head>
