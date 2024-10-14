@@ -287,18 +287,24 @@
                 </ul>
             </section>
         </div>
-        <div id="thoughts" class="page">
-            <section class="section">
-                <h2 data-en="Collection of My Thoughts" data-zh="我的思考">Collection of My Thoughts</h2>
-                <ul>
-                    <li data-en="Free Will" data-zh="自由意志">Free Will</li>
-                    <li data-en="Randomness" data-zh="随机性">Randomness</li>
-                    <li data-en="Human Rights" data-zh="人权">Human Rights</li>
-                    <li data-en="Fairness" data-zh="公平">Fairness</li>
-                    <li data-en="AI and Consciousness" data-zh="人工智能与意识">AI and Consciousness</li>
-                </ul>
-            </section>
-        </div>
+            <div id="thoughts" class="page">
+                <section class="section">
+                    <h2 data-en="Collection of My Thoughts" data-zh="我的思考">Collection of My Thoughts</h2>
+                    <ul>
+                        <li data-en="Free Will" data-zh="自由意志">Free Will</li>
+                        <li data-en="Randomness" data-zh="随机性">Randomness</li>
+                        <li data-en="Human Rights" data-zh="人权">Human Rights</li>
+                        <li data-en="Fairness" data-zh="公平">Fairness</li>
+                        <li data-en="AI and Consciousness" data-zh="人工智能与意识">AI and Consciousness</li>
+                        <li data-en="Why Should Every Freshman Take 5 Credits?" data-zh="为什么每个大一新生都应该选五门课？">
+                            <a href="/path/to/Maximizing Your College Experience_ The Case for Taking Five Classes.pdf" target="_blank">Read the full document</a>
+                        </li>
+                        <li data-en="Why is the Ultimate Form of Love Not Pain?" data-zh="为什么爱的终极形式不是痛苦？">
+                            <a href="/path/to/Beyond Pain_ Rethinking the True Essence of Love.pdf" target="_blank">Read the full document</a>
+                        </li>
+                    </ul>
+                </section>
+            </div>
         <div id="classes" class="page">
             <section class="section">
                 <h2 data-en="Classes Taken" data-zh="课程">Classes Taken</h2>
@@ -344,15 +350,23 @@
                 </ul>
             </section>
         </div>
-        <div id="contact" class="page">
+               <div id="contact" class="page">
             <section class="section">
-                <h2 data-en="Contact" data-zh="联系">Contact</h2>
-                <p data-en="Email: <a href='mailto:howardwhsrun@gmail.com' style='color: #aaa;'>howardwhsrun@gmail.com</a>" data-zh="电子邮件：<a href='mailto:howardwhsrun@gmail.com' style='color: #aaa;'>howardwhsrun@gmail.com</a>"></p>
-                <p data-en="LinkedIn: <a href='https://www.linkedin.com/in/howard-wang-00758320a' target='_blank' style='color: #aaa;'>linkedin.com/in/howard-wang-00758320a</a>" data-zh="LinkedIn：<a href='https://www.linkedin.com/in/howard-wang-00758320a' target='_blank' style='color: #aaa;'>linkedin.com/in/howard-wang-00758320a</a>"></p>
-                <p data-en="Phone: <a href='tel:+16032855188' style='color: #aaa;'>+1 - 603-285-5188</a>" data-zh="电话：<a href='tel:+16032855188' style='color: #aaa;'>+1 - 603-285-5188</a>"></p>
+                <h2 data-en="Contact Me" data-zh="联系我">Contact Me</h2>
+                <form action="mailto:howardwhsrun@gmail.com" method="post" enctype="text/plain">
+                    <label for="name" data-en="Name" data-zh="姓名">Name:</label><br>
+                    <input type="text" id="name" name="name" required><br><br>
+        
+                    <label for="email" data-en="Email" data-zh="电子邮件">Email:</label><br>
+                    <input type="email" id="email" name="email" required><br><br>
+        
+                    <label for="message" data-en="Message" data-zh="留言">Message:</label><br>
+                    <textarea id="message" name="message" rows="6" required></textarea><br><br>
+        
+                    <input type="submit" value="Send" data-en="Send" data-zh="发送">
+                </form>
             </section>
         </div>
-    </div>
     <footer>
         <p data-en="&copy; 2024 Howard Wang. All rights reserved." data-zh="&copy; 2024 王淏生。版权所有。"></p>
     </footer>
