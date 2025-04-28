@@ -5,66 +5,476 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Howard Wang - Engineering and Neuroscience student at Swarthmore College, ultra runner, artist, and researcher." />
   <title>Howard Wang</title>
-  <!-- Google Fonts for refined typography -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <!-- Link to external CSS file -->
   <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <img src="Howard Wang.jpg" alt="Howard Wang" class="hero-image" />
+        <div class="hero-text">
+          <h1 data-en="Howard Wang" data-zh="王淏生">Howard Wang</h1>
+          <p class="tagline" data-en="Engineering & Neuroscience | Ultra Runner | Artist | Researcher" data-zh="工程与神经科学 | 超级马拉松运动员 | 艺术家 | 研究者">Engineering & Neuroscience | Ultra Runner | Artist | Researcher</p>
+          <div class="social-links">
+            <a href="https://www.instagram.com/howardwhs" target="_blank" class="social-icon" title="Instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="https://www.strava.com/athletes/35107207" target="_blank" class="social-icon" title="Strava">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22l-4.38-8.3-1.5 2.76L6 12.27l4.5-8.5 5.25 9.91L18 9.5h3z"/></svg>
+            </a>
+            <a href="https://unsplash.com/@howardwhs" target="_blank" class="social-icon" title="Unsplash">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+            </a>
+            <a href="https://github.com/HowardWHSrun" target="_blank" class="social-icon" title="GitHub">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="language-switcher">
+        <button class="language-toggle active" data-lang="en">English</button>
+        <button class="language-toggle" data-lang="zh">中文</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav class="main-nav">
+    <div class="container">
+      <ul>
+        <li><a href="#about" data-en="About" data-zh="关于">About</a></li>
+        <li class="dropdown">
+          <a href="#research" data-en="Research" data-zh="研究">Research</a>
+          <div class="dropdown-content">
+            <a href="#research-projects" data-en="Projects" data-zh="项目">Projects</a>
+            <a href="#publications" data-en="Publications" data-zh="出版物">Publications</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a href="#portfolio" data-en="Portfolio" data-zh="作品集">Portfolio</a>
+          <div class="dropdown-content">
+            <a href="#art" data-en="Art" data-zh="艺术">Art</a>
+            <a href="#photography" data-en="Photography" data-zh="摄影">Photography</a>
+            <a href="#calligraphy" data-en="Calligraphy" data-zh="书法">Calligraphy</a>
+          </div>
+        </li>
+        <li><a href="#athletics" data-en="Athletics" data-zh="体育">Athletics</a></li>
+        <li><a href="#writings" data-en="Writings" data-zh="写作">Writings</a></li>
+        <li><a href="#education" data-en="Education" data-zh="教育">Education</a></li>
+        <li><a href="#contact" data-en="Contact" data-zh="联系">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- About Section -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2 data-en="About Me" data-zh="关于我">About Me</h2>
+      <div class="about-content">
+        <div class="about-text">
+          <p data-en="I'm a dual-major student at Swarthmore College, pursuing Engineering and Neuroscience. My passion lies in merging engineering principles with biological systems to tackle complex, real-world problems. My academic journey spans biomechanics, molecular dynamics, and EEG data analysis, reflecting my commitment to interdisciplinary research." data-zh="我是斯沃斯莫尔学院的双专业学生，主修工程和神经科学。我的热情在于将工程原理与生物系统结合起来解决复杂的实际问题。我的学术旅程涵盖生物力学、分子动力学和脑电数据分析，反映了我对跨学科研究的承诺。"></p>
+          <p data-en="Beyond academics, I'm recognized as the youngest runner to complete the Grand Slam of Ultrarunning. I find balance through my artistic pursuits in painting, calligraphy, and photography, where I serve as photo editor for The Phoenix, Swarthmore's newspaper." data-zh="在学术之外，我被公认为完成超级马拉松大满贯的最年轻跑者。我通过绘画、书法和摄影等艺术追求找到平衡，并担任斯沃斯莫尔报纸《The Phoenix》的摄影编辑。"></p>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <h3 data-en="Programming" data-zh="编程">Programming</h3>
+            <p>Python, MATLAB, JavaScript, C/C++, R, React, LabVIEW</p>
+          </div>
+          <div class="skill-card">
+            <h3 data-en="Research" data-zh="研究">Research</h3>
+            <p>Molecular dynamics, Motion capture, EEG analysis</p>
+          </div>
+          <div class="skill-card">
+            <h3 data-en="Mathematics" data-zh="数学">Mathematics</h3>
+            <p>PDEs, Linear Algebra, Statistics, Advanced Geometry</p>
+          </div>
+          <div class="skill-card">
+            <h3 data-en="Languages" data-zh="语言">Languages</h3>
+            <p>Native in English and Chinese</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Research Section -->
+  <section id="research" class="section bg-alt">
+    <div class="container">
+      <h2 data-en="Research" data-zh="研究">Research</h2>
+      
+      <div id="research-projects" class="research-grid">
+        <div class="research-card featured">
+          <div class="research-image">
+            <img src="hiv-research.jpg" alt="HIV Research" onerror="this.src='placeholder-research.jpg'" />
+          </div>
+          <div class="research-content">
+            <h3 data-en="HIV Dynamics and ART in Lymph Nodes" data-zh="淋巴结中HIV动力学与抗逆转录病毒治疗">HIV Dynamics and ART in Lymph Nodes</h3>
+            <p class="research-collab" data-en="Collaboration with Prof. Ryan Zurakowski, University of Delaware" data-zh="与特拉华大学Ryan Zurakowski教授合作">Collaboration with Prof. Ryan Zurakowski, University of Delaware</p>
+            <p data-en="Developing computational models to simulate HIV infection dynamics and antiretroviral therapy distribution in lymph nodes, addressing viral reservoir persistence." data-zh="开发计算模型来模拟淋巴结中HIV感染动力学和抗逆转录病毒治疗分布，解决病毒储库持续性问题。"></p>
+          </div>
+        </div>
+
+        <div class="research-card">
+          <div class="research-content">
+            <h3 data-en="EEG Data Analysis" data-zh="EEG数据分析">EEG Data Analysis</h3>
+            <p data-en="Employing machine learning to differentiate neural activity patterns between infants and adults." data-zh="使用机器学习区分婴儿和成人的神经活动模式。"></p>
+            <div class="research-links">
+              <a href="https://github.com/HowardWHSrun/EEGanalysis.git" target="_blank" class="link-button">GitHub</a>
+              <a href="EEG Poster.pdf" target="_blank" class="link-button">Poster</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="research-card">
+          <div class="research-content">
+            <h3 data-en="Thumb Biomechanics" data-zh="拇指生物力学">Thumb Biomechanics</h3>
+            <p data-en="Quantifying thumb tip trajectories using cadaveric specimens to improve surgical outcomes." data-zh="使用尸体标本量化拇指尖轨迹以改善手术效果。"></p>
+            <div class="research-links">
+              <a href="NCUR Final Poster.pdf" target="_blank" class="link-button">NCUR Poster</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="research-card">
+          <div class="research-content">
+            <h3 data-en="Molecular Dynamics" data-zh="分子动力学">Molecular Dynamics</h3>
+            <p data-en="Analyzing protein tyrosine phosphatase and ligand interactions through computational simulation." data-zh="通过计算模拟分析蛋白酪氨酸磷酸酶与配体的相互作用。"></p>
+            <div class="research-links">
+              <a href="Molecular Dynamic Simulation of Tyrosine Phosphatase.pdf" target="_blank" class="link-button">Poster</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="section">
+    <div class="container">
+      <h2 data-en="Creative Portfolio" data-zh="创意作品集">Creative Portfolio</h2>
+      
+      <div class="portfolio-nav">
+        <button class="portfolio-filter active" data-filter="all" data-en="All" data-zh="全部">All</button>
+        <button class="portfolio-filter" data-filter="art" data-en="Art" data-zh="艺术">Art</button>
+        <button class="portfolio-filter" data-filter="photography" data-en="Photography" data-zh="摄影">Photography</button>
+        <button class="portfolio-filter" data-filter="calligraphy" data-en="Calligraphy" data-zh="书法">Calligraphy</button>
+      </div>
+
+      <div class="portfolio-grid">
+        <div class="portfolio-item art">
+          <div class="portfolio-image">
+            <img src="art-thumbnail1.jpg" alt="Art Portfolio" onerror="this.src='placeholder-art.jpg'" />
+          </div>
+          <div class="portfolio-info">
+            <h3 data-en="High School Art Portfolio" data-zh="高中艺术作品">High School Art Portfolio</h3>
+            <p data-en="Oil paintings and watercolors capturing landscapes and moments" data-zh="捕捉风景和时刻的油画和水彩画"></p>
+            <a href="Art Portfolio .pdf" target="_blank" class="view-button" data-en="View Portfolio" data-zh="查看作品集">View Portfolio</a>
+          </div>
+        </div>
+
+        <div class="portfolio-item art">
+          <div class="portfolio-image">
+            <img src="art-thumbnail2.jpg" alt="Freshman Art" onerror="this.src='placeholder-art.jpg'" />
+          </div>
+          <div class="portfolio-info">
+            <h3 data-en="Freshman Year Art" data-zh="大一艺术作品">Freshman Year Art</h3>
+            <p data-en="Exploring themes of nature, humanity, and introspection" data-zh="探索自然、人类和自省的主题"></p>
+            <a href="Art 33 Final Project.pdf" target="_blank" class="view-button" data-en="View Portfolio" data-zh="查看作品集">View Portfolio</a>
+          </div>
+        </div>
+
+        <div class="portfolio-item photography">
+          <div class="portfolio-image">
+            <img src="photo-thumbnail.jpg" alt="Photography" onerror="this.src='placeholder-photo.jpg'" />
+          </div>
+          <div class="portfolio-info">
+            <h3 data-en="Photography" data-zh="摄影">Photography</h3>
+            <p data-en="Photo editor for The Phoenix & personal photography work" data-zh="The Phoenix的摄影编辑及个人摄影作品"></p>
+            <a href="https://unsplash.com/@howardwhs" target="_blank" class="view-button" data-en="View on Unsplash" data-zh="在Unsplash上查看">View on Unsplash</a>
+          </div>
+        </div>
+
+        <div class="portfolio-item calligraphy">
+          <div class="portfolio-image">
+            <img src="calligraphy-thumbnail.jpg" alt="Calligraphy" onerror="this.src='placeholder-calli.jpg'" />
+          </div>
+          <div class="portfolio-info">
+            <h3 data-en="Calligraphy" data-zh="书法">Calligraphy</h3>
+            <p data-en="Traditional and modern calligraphy styles" data-zh="传统与现代书法风格"></p>
+            <a href="calligraphy portfolio.pdf" target="_blank" class="view-button" data-en="View Portfolio" data-zh="查看作品集">View Portfolio</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Athletics Section -->
+  <section id="athletics" class="section bg-alt">
+    <div class="container">
+      <h2 data-en="Athletics" data-zh="体育">Athletics</h2>
+      
+      <div class="athletics-grid">
+        <div class="athletics-card featured">
+          <div class="athletics-image">
+            <img src="ultrarunning.jpg" alt="Ultra Running" onerror="this.src='placeholder-running.jpg'" />
+          </div>
+          <div class="athletics-content">
+            <h3 data-en="Youngest Grand Slam Finisher" data-zh="最年轻的大满贯完赛者">Youngest Grand Slam Finisher</h3>
+            <p data-en="Completed the Grand Slam of Ultrarunning - four 100-mile races in one calendar year - as the youngest finisher in history." data-zh="作为历史上最年轻的完赛者，在一年内完成了超级马拉松大满贯——四场100英里比赛。"></p>
+            <div class="athletics-links">
+              <a href="https://youtu.be/CgYqw3gE0VA?si=ILNlRleg_d4iXwxX" target="_blank" class="link-button">Documentary</a>
+              <a href="https://www.strava.com/athletes/35107207" target="_blank" class="link-button">Strava</a>
+              <a href="https://ultrasignup.com/results_participant.aspx?fname=Howard&lname=Wang" target="_blank" class="link-button">Race Results</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="athletics-card">
+          <div class="athletics-content">
+            <h3 data-en="Swarthmore Track Team" data-zh="斯沃斯莫尔田径队">Swarthmore Track Team</h3>
+            <p data-en="10k specialist on the Swarthmore College track team, developing endurance and speed at the collegiate level." data-zh="斯沃斯莫尔学院田径队10公里专项运动员，在大学水平上发展耐力和速度。"></p>
+            <a href="https://swarthmoreathletics.com/sports/mens-track-and-field/roster" target="_blank" class="link-button">Team Roster</a>
+          </div>
+        </div>
+
+        <div class="athletics-card">
+          <div class="athletics-content">
+            <h3 data-en="Speedland Ambassador" data-zh="Speedland代言人">Speedland Ambassador</h3>
+            <p data-en="Brand ambassador for Speedland, representing their innovative running shoes and gear." data-zh="Speedland品牌代言人，代表其创新跑鞋和装备。"></p>
+            <a href="https://www.runspeedland.com/pages/athletes" target="_blank" class="link-button">Speedland Athletes</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Writings Section -->
+  <section id="writings" class="section">
+    <div class="container">
+      <h2 data-en="Writings & Reflections" data-zh="写作与思考">Writings & Reflections</h2>
+      
+      <div class="writings-grid">
+        <div class="writings-card">
+          <h3 data-en="Essays" data-zh="论文">Essays</h3>
+          <ul class="writings-list">
+            <li>
+              <a href="/mnt/data/Maximizing Your College Experience_ The Case for Taking Five Classes.pdf" target="_blank">
+                <span data-en="Why Should Every Freshman Take 5 Credits?" data-zh="为什么每个大一新生都应该选五门课？">Why Should Every Freshman Take 5 Credits?</span>
+              </a>
+            </li>
+            <li>
+              <a href="/mnt/data/Beyond Pain_ Rethinking the True Essence of Love.pdf" target="_blank">
+                <span data-en="Why is the Ultimate Form of Love Not Pain?" data-zh="为什么爱的终极形式不是痛苦？">Why is the Ultimate Form of Love Not Pain?</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="writings-card">
+          <h3 data-en="Thoughts & Philosophy" data-zh="思考与哲学">Thoughts & Philosophy</h3>
+          <ul class="writings-list">
+            <li data-en="Free Will" data-zh="自由意志">Free Will</li>
+            <li data-en="Randomness" data-zh="随机性">Randomness</li>
+            <li data-en="Human Rights" data-zh="人权">Human Rights</li>
+            <li data-en="Fairness" data-zh="公平">Fairness</li>
+            <li data-en="AI and Consciousness" data-zh="人工智能与意识">AI and Consciousness</li>
+          </ul>
+        </div>
+
+        <div class="writings-card">
+          <h3 data-en="Reading List" data-zh="阅读清单">Reading List</h3>
+          <div class="books-carousel">
+            <div class="book-item">
+              <span data-en="Les Misérables by Victor Hugo" data-zh="雨果的《悲惨世界》">Les Misérables by Victor Hugo</span>
+            </div>
+            <div class="book-item">
+              <span data-en="Thinking, Fast and Slow by Daniel Kahneman" data-zh="丹尼尔·卡尼曼的《思考，快与慢》">Thinking, Fast and Slow by Daniel Kahneman</span>
+            </div>
+            <div class="book-item">
+              <span data-en="Beyond Good and Evil by Friedrich Nietzsche" data-zh="尼采的《超越善恶》">Beyond Good and Evil by Friedrich Nietzsche</span>
+            </div>
+          </div>
+          <button class="view-all-books" data-en="View Full List (26 books)" data-zh="查看完整列表（26本书）">View Full List (26 books)</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education" class="section bg-alt">
+    <div class="container">
+      <h2 data-en="Education" data-zh="教育">Education</h2>
+      
+      <div class="education-content">
+        <div class="degree-info">
+          <h3 data-en="Swarthmore College" data-zh="斯沃斯莫尔学院">Swarthmore College</h3>
+          <p class="degree" data-en="Double Major: Engineering & Neuroscience" data-zh="双专业：工程与神经科学">Double Major: Engineering & Neuroscience</p>
+          <p class="years" data-en="Class of 2026" data-zh="2026届">Class of 2026</p>
+        </div>
+
+        <div class="courses-container">
+          <h3 data-en="Course History" data-zh="课程历史">Course History</h3>
+          <div class="semester-grid">
+            <div class="semester-card" data-semester="spring2025">
+              <h4>Spring 2025</h4>
+              <ul>
+                <li>ARTT 032 - Landscape Painting</li>
+                <li>ENGR 078 - Signal Processing</li>
+                <li>ENGR 091 - Nonlinear Systems and Chaos</li>
+                <li>MATH 054 - Partial Differential Equations</li>
+                <li>STAT 051 - Probability</li>
+              </ul>
+            </div>
+            <!-- Add more semester cards with a collapsible view -->
+          </div>
+          <button class="view-all-courses" data-en="View All Courses" data-zh="查看所有课程">View All Courses</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2 data-en="Let's Connect" data-zh="联系我">Let's Connect</h2>
+      
+      <div class="contact-grid">
+        <div class="contact-form-container">
+          <form action="mailto:howardwhsrun@gmail.com" method="post" enctype="text/plain">
+            <div class="form-group">
+              <label for="name" data-en="Name" data-zh="姓名">Name</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+            
+            <div class="form-group">
+              <label for="email" data-en="Email" data-zh="电子邮件">Email</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            
+            <div class="form-group">
+              <label for="message" data-en="Message" data-zh="留言">Message</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            
+            <button type="submit" class="submit-button" data-en="Send Message" data-zh="发送消息">Send Message</button>
+          </form>
+        </div>
+        
+        <div class="contact-info">
+          <div class="contact-card">
+            <h3 data-en="Direct Contact" data-zh="直接联系">Direct Contact</h3>
+            <div class="contact-links">
+              <a href="mailto:howardwhsrun@gmail.com" class="contact-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                howardwhsrun@gmail.com
+              </a>
+              <a href="tel:+16032855188" class="contact-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                +1 603-285-5188
+              </a>
+            </div>
+          </div>
+          
+          <div class="contact-card">
+            <h3 data-en="Social Media" data-zh="社交媒体">Social Media</h3>
+            <div class="social-grid">
+              <a href="https://www.instagram.com/howardwhs" target="_blank" class="social-link">Instagram</a>
+              <a href="https://www.strava.com/athletes/35107207" target="_blank" class="social-link">Strava</a>
+              <a href="https://unsplash.com/@howardwhs" target="_blank" class="social-link">Unsplash</a>
+              <a href="https://github.com/HowardWHSrun" target="_blank" class="social-link">GitHub</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 Howard Wang. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" onclick="scrollToTop()" title="Back to top">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
+  </button>
+
   <script>
+    // Language switching
     function switchLanguage(language) {
       const elements = document.querySelectorAll('[data-en], [data-zh]');
       elements.forEach(element => {
         if (language === 'en') {
-          element.innerHTML = element.getAttribute('data-en');
+          element.textContent = element.getAttribute('data-en');
         } else {
-          element.innerHTML = element.getAttribute('data-zh');
+          element.textContent = element.getAttribute('data-zh');
         }
       });
     }
 
-    document.addEventListener('DOMContentLoaded', () => {
-      // Automatically set to English on load
-      switchLanguage('en');
-      
-      // Smooth scrolling for navigation
-      document.querySelectorAll('nav a').forEach(link => {
-        link.addEventListener('click', (e) => {
-          e.preventDefault();
-          const pageId = link.getAttribute('href').substring(1);
-          document.getElementById(pageId).scrollIntoView({behavior: 'smooth'});
-        });
+    // Portfolio filtering
+    function filterPortfolio(filter) {
+      const items = document.querySelectorAll('.portfolio-item');
+      items.forEach(item => {
+        if (filter === 'all' || item.classList.contains(filter)) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
       });
+    }
+
+    // Initialize on load
+    document.addEventListener('DOMContentLoaded', () => {
+      // Set English as default
+      switchLanguage('en');
       
       // Language toggle functionality
       document.querySelectorAll('.language-toggle').forEach(button => {
         button.addEventListener('click', () => {
+          document.querySelectorAll('.language-toggle').forEach(btn => btn.classList.remove('active'));
+          button.classList.add('active');
           switchLanguage(button.getAttribute('data-lang'));
-          // Update active state
-          document.querySelectorAll('.language-toggle').forEach(btn => {
-            btn.style.background = btn === button ? 'var(--accent)' : 'var(--card-bg)';
-            btn.style.color = btn === button ? 'var(--primary-text)' : 'var(--secondary-text)';
+        });
+      });
+
+      // Portfolio filter buttons
+      document.querySelectorAll('.portfolio-filter').forEach(button => {
+        button.addEventListener('click', () => {
+          document.querySelectorAll('.portfolio-filter').forEach(btn => btn.classList.remove('active'));
+          button.classList.add('active');
+          filterPortfolio(button.getAttribute('data-filter'));
+        });
+      });
+
+      // Smooth scrolling for navigation
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
           });
         });
       });
-      
-      // Initialize reveal animations
-      const revealElements = document.querySelectorAll('.section, .card');
-      revealElements.forEach(el => el.classList.add('reveal'));
-      
-      const revealOnScroll = () => {
-        const windowHeight = window.innerHeight;
-        revealElements.forEach(el => {
-          const elementTop = el.getBoundingClientRect().top;
-          if (elementTop < windowHeight - 100) {
-            el.classList.add('active');
-          }
-        });
-      };
-      
-      window.addEventListener('scroll', revealOnScroll);
-      revealOnScroll(); // Initial check
+
+      // View all books modal
+      document.querySelector('.view-all-books').addEventListener('click', () => {
+        // Create and show modal with full book list
+        showBooksModal();
+      });
+
+      // View all courses modal
+      document.querySelector('.view-all-courses').addEventListener('click', () => {
+        // Create and show modal with full course list
+        showCoursesModal();
+      });
     });
 
-    // Show/hide Back to Top button on scroll
+    // Back to top button
     window.addEventListener('scroll', () => {
       const btn = document.getElementById('backToTop');
       if (window.scrollY > 300) {
@@ -74,346 +484,18 @@
       }
     });
 
-    // Smooth scroll to top when button is clicked
     function scrollToTop() {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
+
+    // Modal functions (to be implemented)
+    function showBooksModal() {
+      // Implementation for books modal
+    }
+
+    function showCoursesModal() {
+      // Implementation for courses modal
+    }
   </script>
-</head>
-<body>
-  <header>
-    <div class="header-container">
-      <h1 data-en="Howard Wang" data-zh="王淏生">Howard Wang</h1>
-      <div class="language-switcher">
-        <button class="language-toggle" data-lang="en">English</button>
-        <button class="language-toggle" data-lang="zh">中文</button>
-      </div>
-      <div class="social-links">
-        <a href="https://www.instagram.com/howardwhs" target="_blank" class="social-icon" title="Instagram">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-        </a>
-        <a href="https://www.strava.com/athletes/35107207" target="_blank" class="social-icon" title="Strava">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22l-4.38-8.3-1.5 2.76L6 12.27l4.5-8.5 5.25 9.91L18 9.5h3z"/></svg>
-        </a>
-        <a href="https://unsplash.com/@howardwhs" target="_blank" class="social-icon" title="Unsplash">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
-        </a>
-      </div>
-    </div>
-    <nav>
-      <ul>
-        <li><a href="#about" data-en="About Me" data-zh="关于我">About Me</a></li>
-        <li><a href="#projects" data-en="Projects" data-zh="项目">Projects</a></li>
-        <li><a href="#sports" data-en="Sports" data-zh="体育">Sports</a></li>
-        <li><a href="#art" data-en="Art Portfolio" data-zh="艺术作品">Art Portfolio</a></li>
-        <li><a href="#books" data-en="Books" data-zh="书籍">Books</a></li>
-        <li><a href="#thoughts" data-en="Collection of My Thoughts" data-zh="我的思考">Collection of My Thoughts</a></li>
-        <li><a href="#classes" data-en="Classes Taken" data-zh="课程">Classes Taken</a></li>
-        <li><a href="#contact" data-en="Contact" data-zh="联系">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <!-- BACK TO TOP BUTTON -->
-  <button id="backToTop" onclick="scrollToTop()" title="Back to top">
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
-  </button>
-
-  <div class="container">
-    <div class="content">
-      <!-- About Section -->
-      <div id="about" class="page">
-        <section class="section fade-in">
-          <h2 data-en="About Me" data-zh="关于我">About Me</h2>
-          <img src="Howard Wang.jpg" alt="Howard Wang" class="profile-picture" />
-          <p data-en="Hello! I'm Howard Wang, a humble engineering student at Swarthmore College, majoring in Engineering and Neuroscience. I have a keen interest in merging engineering principles with biological systems to tackle complex, real-world problems. My academic journey and research experience span various domains, including biomechanics, molecular dynamics, and EEG data analysis. In my free time, I not only enjoy ultra running, creating art, and practicing calligraphy, but I am also an avid reader. Some of my favorite books have significantly influenced my outlook on life and learning." data-zh="你好！我是王淏生，斯沃斯莫尔学院的工程专业学生，主修工程和神经科学。我对将工程原理与生物系统结合起来解决复杂的实际问题有着浓厚的兴趣。我的学术旅程和研究经验涉及多个领域，包括生物力学、分子动力学和脑电数据分析。业余时间里，我不仅喜欢超长跑、绘画和练习书法，而且也是一个热爱阅读的人。我最喜欢的几本书深刻影响了我对生活和学习的看法。"></p>
-          <p data-en="I'm currently engaged in research at Swarthmore, where I developed a thumb-tip tracking system using MATLAB. This system has enhanced insights into thumb rehabilitation, showcasing my ability to integrate technical skills with biological applications. My passion for research extends to the fascinating realms of biomechanics and neuroscience, where I aim to create innovative solutions by integrating these fields. Presently, I am delving into an EEG data analysis project that employs advanced machine learning techniques to identify and differentiate the neural activity patterns between infants and adults. This work not only reflects my commitment to advancing our understanding of brain function across different stages of life but also highlights my dedication to interdisciplinary research." data-zh="目前，我在斯沃斯莫尔进行研究，使用MATLAB开发了一套拇指尖追踪系统。这个系统提高了对拇指康复的理解，展示了我将技术技能与生物应用结合的能力。我的研究兴趣延伸到生物力学和神经科学这两个迷人的领域，在这些领域中，我致力于通过整合不同领域来创造创新解决方案。目前，我正在进行一个脑电数据分析项目，使用先进的机器学习技术来识别和区分婴儿和成人的神经活动模式。这项工作不仅体现了我对推进大脑功能在不同生命阶段理解的承诺，也突显了我对跨学科研究的热情。"></p>
-          <section class="section inner-section">
-            <h2 data-en="Skills" data-zh="技能">Skills</h2>
-            <ul>
-              <li data-en="Programming Languages: Python, MATLAB, JavaScript, C, C++, R-Studio, LabVIEW, React" data-zh="软件：Python, MATLAB, JavaScript, C, C++, R-Studio, LabVIEW, React, LabVIEW"></li>
-              <li data-en="Techniques: Molecular dynamics simulation, motion capture system development, EEG data analysis" data-zh="技术：分子动力学模拟、运动捕捉系统开发、脑电数据分析"></li>
-              <li data-en="Other Skills: Partial Differential Equations, Calculus, Linear Algebra, Statistics, Advanced Geometry, Number Theory, Group Theory" data-zh="其他技能：微积分、线性代数、统计学、高级几何学、数论、群论"></li>
-              <li data-en="Languages: Native in Chinese and English" data-zh="语言：中文和英语母语"></li>
-            </ul>
-          </section>
-        </section>
-      </div>
-
-      <!-- Projects Section -->
-      <div id="projects" class="page">
-        <section class="section fade-in">
-          <h2 data-en="Research Projects" data-zh="科研项目">Projects</h2>
-          <div class="project card">
-            <h3 data-en="HIV Dynamics and ART in Lymph Nodes" data-zh="淋巴结中HIV动力学与抗逆转录病毒治疗">1. HIV Dynamics and ART in Lymph Nodes</h3>
-            <p data-en="Objective: To explore the dynamics of HIV within lymph nodes (LNs) and address the challenges of viral reservoirs that persist despite antiretroviral therapy (ART)." 
-               data-zh="目标：研究淋巴结（LNs）中HIV的动力学，并解决尽管使用抗逆转录病毒治疗（ART），病毒储库仍持续存在的问题。"></p>
-            <p data-en="Methods: Leveraged three-dimensional anatomical reconstructions of LNs to evaluate HIV infection dynamics, ART distribution, and the role of follicular dendritic cells (FDCs) in harboring the virus. Key innovations include computational modeling of localized lymphocyte-mediated drug transport and refined meshing techniques to simulate ART penetration in LNs." 
-               data-zh="方法：利用淋巴结的三维解剖重建评估HIV感染动力学、ART分布，以及滤泡树突状细胞（FDCs）在病毒储存中的作用。主要创新包括局部淋巴细胞介导药物传输的计算建模，以及模拟ART渗透的改进网格技术。"></p>
-            <p data-en="Results: Highlighted spatial heterogeneity in drug distribution, limitations of current models in addressing viral persistence, and proposed improvements in drug delivery strategies to target viral reservoirs effectively." 
-               data-zh="结果：强调了药物分布的空间异质性、当前模型在解决病毒持续性问题中的局限性，并提出了针对病毒储库的药物递送策略改进建议。"></p>
-            <p data-en="Collaboration: This project is being conducted in collaboration with Professor Ryan Zurakowski at the University of Delaware." 
-               data-zh="合作：该项目正在与特拉华大学的Ryan Zurakowski教授合作进行。"></p>
-          </div>
-
-          <div class="project card">
-            <h3 data-en="EEG Data Analysis Project" data-zh="EEG数据分析项目">1. EEG Data Analysis Project</h3>
-            <p data-en="Objective: To analyze EEG data for extracting frequency bands and understanding brain activity patterns." data-zh="目标：分析EEG数据，提取频率波段并理解脑活动模式。"></p>
-            <p data-en="Methods: Developed MATLAB scripts for calculating band powers and analyzing frequency spectrums. Applied signal processing techniques to interpret EEG data." data-zh="方法：开发了用于计算频段功率和分析频谱的MATLAB脚本。应用信号处理技术解释EEG数据。"></p>
-            <p data-en="Results: Successfully extracted and analyzed frequency bands, revealing specific patterns in brain activity. Insights into brain wave behavior were gathered, which may have potential applications in cognitive neuroscience." data-zh="结果：成功提取并分析了频率波段，揭示了脑活动中的特定模式。获取了脑波行为的见解，可能在认知神经科学中具有潜在应用。"></p>
-            <p data-en="Code Repository: <a href='https://github.com/HowardWHSrun/EEGanalysis.git' target='_blank'>GitHub - EEG Analysis Project</a>" data-zh="代码仓库：<a href='https://github.com/HowardWHSrun/EEGanalysis.git' target='_blank'>GitHub - EEG分析项目</a>"></p>
-            <p data-en="Documentation: <a href='EEG Poster.pdf' target='_blank'>View Project Poster</a>" data-zh="文档：<a href='EEG Poster.pdf' target='_blank'>查看项目海报</a>"></p>
-          </div>
-
-          <div class="project card">
-            <h3 data-en="Thumb Movement Analysis Using Cadaveric Specimens" data-zh="使用尸体标本进行拇指运动分析">2. Thumb Movement Analysis Using Cadaveric Specimens</h3>
-            <p data-en="Objective: To quantify thumb tip trajectories produced by thumb muscles, contributing to the understanding of musculoskeletal biomechanics and potential improvements in surgical outcomes." data-zh="目标：量化由拇指肌肉产生的拇指尖轨迹，有助于理解肌肉骨骼生物力学，并可能改善手术结果。"></p>
-            <p data-en="Methods: Developed a motion tracking system and an arm fixation device. Conducted experiments using cadaveric specimens to measure muscle-induced movements. Analyzed the trajectory and path length of thumb tip movements caused by various muscles." data-zh="方法：开发了一套运动跟踪系统和手臂固定装置。使用尸体标本进行实验，测量肌肉引起的运动。分析了各种肌肉引起的拇指尖运动的轨迹和路径长度。"></p>
-            <p data-en="Results: Identified specific movement patterns for different thumb muscles. Highlighted the complex interaction between muscle function and thumb movement. Contributed data for refining models of thumb mechanics and potential applications in surgical procedures." data-zh="结果：识别了不同拇指肌肉的特定运动模式。强调了肌肉功能与拇指运动之间的复杂互动。提供了改进拇指机械模型的数据，并在手术过程中可能应用。"></p>
-            <p data-en="Documentation: <a href='NCUR Final Poster.pdf' target='_blank'>View Project Poster</a>" data-zh="文档：<a href='NCUR Final Poster.pdf' target='_blank'>查看项目海报</a>"></p>
-          </div>
-
-          <div class="project card">
-            <h3 data-en="Molecular Dynamic Simulation of Covalently Modified Protein Tyrosine Phosphatase" data-zh="共价修饰的蛋白酪氨酸磷酸酶的分子动力学模拟">3. Molecular Dynamic Simulation of Covalently Modified Protein Tyrosine Phosphatase</h3>
-            <p data-en="Objective: To analyze the physical movements of atoms and molecules through computer simulations, focusing on protein tyrosine phosphatase and its interaction with a ligand." data-zh="目标：通过计算机模拟分析原子和分子的物理运动，重点研究蛋白酪氨酸磷酸酶及其与配体的相互作用。"></p>
-            <p data-en="Methods: Used Gaussian software for ligand construction. Performed molecular dynamics simulations to study protein-ligand interactions." data-zh="方法：使用Gaussian软件进行配体构建。进行了分子动力学模拟以研究蛋白质与配体的相互作用。"></p>
-            <p data-en="Results: Found that the modified protein showed different stability and regional mobility compared to the wild type. Provided insights into the molecular stability of the protein-ligand complex." data-zh="结果：发现修饰后的蛋白质与野生型相比，表现出不同的稳定性和区域流动性。提供了对蛋白质-配体复合物分子稳定性的见解。"></p>
-            <p data-en="Documentation: <a href='Molecular Dynamic Simulation of Tyrosine Phosphatase.pdf' target='_blank'>View Project Poster</a>" data-zh="文档：<a href='Molecular Dynamic Simulation of Tyrosine Phosphatase.pdf' target='_blank'>查看项目海报</a>"></p>
-          </div>
-
-          <div class="project card">
-            <h3 data-en="Scientific Posters" data-zh="科学海报">4. Scientific Posters</h3>
-            <p data-en="Documentation of my research projects is available through the following scientific posters:" data-zh="我的研究项目的文档可通过以下科学海报获得："></p>
-            <p data-en="Molecular Dynamic Simulation of Covalently Modified Protein Tyrosine Phosphatase: <a href='Molecular Dynamic Simulation of Tyrosine Phosphatase.pdf' target='_blank'>View Poster</a>" data-zh="共价修饰的蛋白酪氨酸磷酸酶的分子动力学模拟：<a href='Molecular Dynamic Simulation of Tyrosine Phosphatase.pdf' target='_blank'>查看海报</a>"></p>
-            <p data-en="Quantifying Thumb Tip Trajectories Generated by Extrinsic Muscles: <a href='NCUR Final Poster.pdf' target='_blank'>View Poster</a>" data-zh="量化外在肌肉产生的拇指尖轨迹：<a href='NCUR Final Poster.pdf' target='_blank'>查看海报</a>"></p>
-          </div>
-        </section>
-      </div>
-
-      <!-- Sports Section -->
-      <div id="sports" class="page">
-        <section class="section fade-in">
-          <h2 data-en="Sports" data-zh="体育">Sports</h2>
-          <div class="documentary card">
-            <h3 data-en="Documentary: The Youngest Runner in the Grand Slam of Ultrarunning" data-zh="纪录片：超级马拉松大满贯中最年轻的跑者">Documentary: The Youngest Runner in the Grand Slam of Ultrarunning</h3>
-            <p data-en="As the youngest runner to complete the Grand Slam of Ultrarunning, I have documented my journey through a series of videos and blog posts. The Grand Slam involves running four of the most prestigious 100-mile trail races in the United States within a single calendar year. This documentary captures my challenges, achievements, and the preparation involved in this extraordinary feat." data-zh="作为完成超级马拉松大满贯的最年轻跑者，我通过一系列视频和博客记录了我的旅程。大满贯包括在一年内完成美国四个最著名的100英里越野赛跑。这个纪录片记录了我的挑战、成就和参与这一非凡壮举的准备工作。"></p>
-            <p data-en="You can watch the documentary on YouTube: <a href='https://youtu.be/CgYqw3gE0VA?si=ILNlRleg_d4iXwxX' target='_blank'>Watch Documentary</a>." data-zh="你可以在YouTube上观看纪录片：<a href='https://youtu.be/CgYqw3gE0VA?si=ILNlRleg_d4iXwxX' target='_blank'>观看纪录片</a>。"></p>
-            <p data-en="Follow my running journey on Strava: <a href='https://www.strava.com/athletes/35107207' target='_blank'>Strava Profile</a>." data-zh="在Strava上关注我的跑步旅程：<a href='https://www.strava.com/athletes/35107207' target='_blank'>Strava 个人资料</a>。"></p>
-            <p data-en="See my race results on Ultrasignup: <a href='https://ultrasignup.com/results_participant.aspx?fname=Howard&lname=Wang' target='_blank'>Ultrasignup Profile</a>." data-zh="在Ultrasignup上查看我的比赛成绩：<a href='https://ultrasignup.com/results_participant.aspx?fname=Howard&lname=Wang' target='_blank'>Ultrasignup 个人资料</a>。"></p>
-          </div>
-          <div class="track card">
-            <h3 data-en="Track Team: Swarthmore College" data-zh="田径队：斯沃斯莫尔学院">Track Team: Swarthmore College</h3>
-            <p data-en="I am also a member of the Swarthmore College track team, where I specialize in running the 10k. Being part of the team has been an incredible experience that has helped me develop my endurance and speed. You can find more information and view the team roster here:" data-zh="我也是斯沃斯莫尔学院田径队的一员，专攻10公里跑。成为球队的一员是一次令人难以置信的经历，帮助我提高了耐力和速度。你可以在这里找到更多信息并查看球队名单："></p>
-            <p data-en="Swarthmore College Track Team Roster: <a href='https://swarthmoreathletics.com/sports/mens-track-and-field/roster' target='_blank'>View Roster</a>." data-zh="斯沃斯莫尔学院田径队名单：<a href='https://swarthmoreathletics.com/sports/mens-track-and-field/roster' target='_blank'>查看名单</a>。"></p>
-            <p data-en="I am also an ambassador for Speedland, a brand known for its innovative running shoes. You can learn more about Speedland and their athletes here: <a href='https://www.runspeedland.com/pages/athletes' target='_blank'>Speedland Athletes</a>." data-zh="我也是Speedland的代言人，Speedland是一家以创新跑鞋闻名的品牌。你可以在这里了解更多关于Speedland及其运动员的信息：<a href='https://www.runspeedland.com/pages/athletes' target='_blank'>Speedland 运动员</a>。"></p>
-          </div>
-        </section>
-      </div>
-
-      <!-- Art Portfolio Section -->
-      <div id="art" class="page">
-        <section class="section fade-in">
-          <h2 data-en="Art Portfolio" data-zh="艺术作品">Art Portfolio</h2>
-          <div class="art card">
-            <h3 data-en="High School Art Portfolio" data-zh="高中艺术作品">High School Art Portfolio</h3>
-            <a href="Art Portfolio .pdf" target="_blank" class="file-link" data-en="View High School Art Portfolio" data-zh="查看高中艺术作品">View High School Art Portfolio</a>
-            <p data-en="This portfolio showcases my high school artwork, which includes various media and techniques. From oil paintings capturing the grandeur of landscapes to delicate watercolors portraying moments of tranquility, this collection reflects my growth as an artist during my high school years." data-zh="这个作品集展示了我的高中艺术作品，包括各种媒介和技术。从捕捉风景壮丽的油画到描绘宁静时刻的精致水彩画，这个系列反映了我在高中时期作为艺术家的成长。"></p>
-          </div>
-          <div class="art card">
-            <h3 data-en="Freshman Year Art Portfolio" data-zh="大一艺术作品">Freshman Year Art Portfolio</h3>
-            <a href="Art 33 Final Project.pdf" target="_blank" class="file-link" data-en="View Freshman Year Art Portfolio" data-zh="查看大一艺术作品">View Freshman Year Art Portfolio</a>
-            <p data-en="This collection features my freshman year artwork, where I explored themes of nature, humanity, and introspection. The portfolio highlights my progress in using different techniques and my journey in finding my artistic voice during my first year of college." data-zh="这个系列展示了我的大一艺术作品，在这里我探索了自然、人类和自省的主题。作品集突出了我在使用不同技术方面的进步，以及我在大学第一年找到自己艺术声音的旅程。"></p>
-          </div>
-          <div class="art card">
-            <h3 data-en="Photography Work" data-zh="摄影作品">Photography Work</h3>
-            <p data-en="In addition to my artwork, I am also the photo editor for Swarthmore's newspaper, <a href='https://swarthmorephoenix.com/' target='_blank' class='inline-link'>The Phoenix</a>. My role allows me to capture the essence of campus life and contribute to the visual storytelling of the newspaper. You can view some of my personal photography work on my <a href='https://unsplash.com/@howardwhs' target='_blank' class='inline-link'>Unsplash profile</a>." data-zh="除了我的艺术作品，我还是斯沃斯莫尔报纸《The Phoenix》的摄影编辑。我的角色使我能够捕捉校园生活的精髓，并为报纸的视觉叙事做出贡献。你可以在我的<a href='https://unsplash.com/@howardwhs' target='_blank' class='inline-link'>Unsplash 个人资料</a>上查看一些我的个人摄影作品。"></p>
-          </div>
-          <div class="art card">
-            <h3 data-en="Calligraphy Work" data-zh="书法作品">Calligraphy Work</h3>
-            <a href="calligraphy portfolio.pdf" target="_blank" class="file-link" data-en="View Calligraphy Work" data-zh="查看书法作品">View Calligraphy Work</a>
-            <p data-en="I also have a passion for calligraphy, where I express my artistic skills through the beauty of handwritten art. My calligraphy work ranges from traditional scripts to modern styles, reflecting my interest in the art of beautiful writing." data-zh="我对书法也充满热情，通过美丽的手写艺术来表达我的艺术技能。我的书法作品从传统字体到现代风格不等，反映了我对美丽书写艺术的兴趣。"></p>
-          </div>
-        </section>
-      </div>
-
-      <!-- Books Section -->
-      <div id="books" class="page">
-        <section class="section fade-in">
-          <h2 data-en="Books" data-zh="书籍">Books</h2>
-          <ul class="books-list">
-            <li data-en="Les Misérables by Victor Hugo" data-zh="雨果的《悲惨世界》"></li>
-            <li data-en="The Conquest of Happiness by Bertrand Russell" data-zh="罗素的《幸福的征服》"></li>
-            <li data-en="Against Empathy by Paul Bloom" data-zh="保罗·布鲁姆的《反对同情》"></li>
-            <li data-en="The Selfish Gene by Richard Dawkins" data-zh="理查德·道金斯的《自私的基因》"></li>
-            <li data-en="Night, Day, Dawn by Elie Wiesel" data-zh="埃利·威塞尔的《夜》、《日》、《黎明》"></li>
-            <li data-en="High Output Management by Andrew S. Grove" data-zh="安德鲁·S·格罗夫的《高效能管理》"></li>
-            <li data-en="Affective Neuroscience by Jaak Panksepp" data-zh="雅克·潘克赛普的《情感神经科学》"></li>
-            <li data-en="Thinking, Fast and Slow by Daniel Kahneman" data-zh="丹尼尔·卡尼曼的《思考，快与慢》"></li>
-            <li data-en="Behave by Robert M. Sapolsky" data-zh="罗伯特·萨波尔斯基的《行为》"></li>
-            <li data-en="Beyond Good and Evil by Friedrich Nietzsche" data-zh="尼采的《超越善恶》"></li>
-            <li data-en="The Alchemist by Paulo Coelho" data-zh="保罗·柯艾略的《炼金术士》"></li>
-            <li data-en="呼兰河传 by 萧红 (Xiao Hong)" data-zh="萧红的《呼兰河传》"></li>
-            <li data-en="The Psychology of Money by Morgan Housel" data-zh="摩根·豪瑟尔的《金钱心理学》"></li>
-            <li data-en="Sapiens: A Brief History of Humankind by Yuval Noah Harari" data-zh="尤瓦尔·赫拉利的《人类简史》"></li>
-            <li data-en="Intimate Relationships by Rowland Miller" data-zh="罗兰·米勒的《亲密关系》"></li>
-            <li data-en="Ikigai by Hector Garcia and Francesc Miralles" data-zh="赫克托·加西亚和弗朗西斯克·米拉列斯的《生存的意义》"></li>
-            <li data-en="What Life Could Mean to You by Alfred Adler" data-zh="阿尔弗雷德·阿德勒的《生活对你的意义》"></li>
-            <li data-en="To the Lighthouse by Virginia Woolf" data-zh="弗吉尼亚·伍尔夫的《到灯塔去》"></li>
-            <li data-en="Their Eyes Were Watching God by Zora Neale Hurston" data-zh="佐拉·尼尔·赫斯顿的《他们眼望上苍》"></li>
-            <li data-en="The Picture of Dorian Gray by Oscar Wilde" data-zh="奥斯卡·王尔德的《道林·格雷的画像》"></li>
-            <li data-en="The Underground Railroad by Colson Whitehead" data-zh="科尔森·怀特黑德的《地下铁路》"></li>
-            <li data-en="Nonviolent Communication by Marshall B. Rosenberg" data-zh="马歇尔·B·罗森伯格的《非暴力沟通》"></li>
-            <li data-en="How to Take Smart Notes by Sönke Ahrens" data-zh="桑科·阿伦斯的《如何做好笔记》"></li>
-            <li data-en="Love Medicine by Louise Erdrich" data-zh="路易丝·厄德里奇的《爱药》"></li>
-            <li data-en="Beloved by Toni Morrison" data-zh="托尼·莫里森的《宠儿》"></li>
-            <li data-en="Yellow Birds by Kevin Powers" data-zh="凯文·鲍尔斯的《黄鸟》"></li>
-          </ul>
-        </section>
-      </div>
-
-      <!-- Collection of My Thoughts Section -->
-      <div id="thoughts" class="page">
-        <section class="section fade-in">
-          <h2 data-en="Collection of My Thoughts" data-zh="我的思考">Collection of My Thoughts</h2>
-          <ul>
-            <li data-en="Free Will" data-zh="自由意志">Free Will</li>
-            <li data-en="Randomness" data-zh="随机性">Randomness</li>
-            <li data-en="Human Rights" data-zh="人权">Human Rights</li>
-            <li data-en="Fairness" data-zh="公平">Fairness</li>
-            <li data-en="AI and Consciousness" data-zh="人工智能与意识">AI and Consciousness</li>
-            <li data-en="Why Should Every Freshman Take 5 Credits?" data-zh="为什么每个大一新生都应该选五门课？">
-              <a href="/mnt/data/Maximizing Your College Experience_ The Case for Taking Five Classes.pdf" target="_blank">Read the full document</a>
-            </li>
-            <li data-en="Why is the Ultimate Form of Love Not Pain?" data-zh="为什么爱的终极形式不是痛苦？">
-              <a href="/mnt/data/Beyond Pain_ Rethinking the True Essence of Love.pdf" target="_blank">Read the full document</a>
-            </li>
-          </ul>
-        </section>
-      </div>
-
-      <!-- Classes Taken Section -->
-      <div id="classes" class="page">
-        <section class="section fade-in">
-          <h2 data-en="Classes Taken" data-zh="课程">Classes Taken</h2>
-          <ul class="classes-list">
-            <li><strong data-en="Fall 2022" data-zh="2022年秋季">Fall 2022:</strong>
-              <ul>
-                <li data-en="ARTT 003A - Painting I: Drawing Into Paint" data-zh="ARTT 003A - 绘画 I：从素描到绘画">ARTT 003A - Painting I: Drawing Into Paint</li>
-                <li data-en="CHEM 010 - Foundations of Chemical Principles" data-zh="CHEM 010 - 化学原理基础">CHEM 010 - Foundations of Chemical Principles</li>
-                <li data-en="LING 040 - Semantics (W)" data-zh="LING 040 - 语义学（W）">LING 040 - Semantics (W)</li>
-                <li data-en="MATH 028 - Linear Algebra with Theory" data-zh="MATH 028 - 理论线性代数">MATH 028 - Linear Algebra with Theory</li>
-                <li data-en="STAT 021 - Statistical Methods II" data-zh="STAT 021 - 统计方法 II">STAT 021 - Statistical Methods II</li>
-              </ul>
-            </li>
-            <li><strong data-en="Spring 2023" data-zh="2023年春季">Spring 2023:</strong>
-              <ul>
-                <li data-en="ARTH 001G - FYS: Art Animation in East Asia (W)" data-zh="ARTH 001G - FYS：东亚艺术与动画（W）">ARTH 001G - FYS: Art Animation in East Asia (W)</li>
-                <li data-en="ARTT 033B - Painting II: Figure Composition" data-zh="ARTT 033B - 绘画 II：人物构图">ARTT 033B - Painting II: Figure Composition</li>
-                <li data-en="CHIN 021 - Reading & Writing in Modern Chinese (W)" data-zh="CHIN 021 - 现代中文阅读与写作（W）">CHIN 021 - Reading & Writing in Modern Chinese (W)</li>
-                <li data-en="CPSC 021 - Introduction to Computer Science" data-zh="CPSC 021 - 计算机科学导论">CPSC 021 - Introduction to Computer Science</li>
-                <li data-en="ENGR 006 - Mechanics" data-zh="ENGR 006 - 力学">ENGR 006 - Mechanics</li>
-                <li data-en="MATH 034 - Several Variable Calculus" data-zh="MATH 034 - 多变量微积分">MATH 034 - Several Variable Calculus</li>
-                <li data-en="PSYC 001 - Introduction to Psychology" data-zh="PSYC 001 - 心理学导论">PSYC 001 - Introduction to Psychology</li>
-              </ul>
-            </li>
-            <li><strong data-en="Fall 2023" data-zh="2023年秋季">Fall 2023:</strong>
-              <ul>
-                <li data-en="CHIN 055 - Contemporary Chinese Cinema" data-zh="CHIN 055 - 当代中国电影">CHIN 055 - Contemporary Chinese Cinema</li>
-                <li data-en="ENGR 011 - Electrical Circuit Analysis" data-zh="ENGR 011 - 电路分析">ENGR 011 - Electrical Circuit Analysis</li>
-                <li data-en="ENGR 065 - Introduction to Biomechanics" data-zh="ENGR 065 - 生物力学导论">ENGR 065 - Introduction to Biomechanics</li>
-                <li data-en="ENGR 093 - Directed Reading" data-zh="ENGR 093 - 指导阅读">ENGR 093 - Directed Reading</li>
-                <li data-en="MUSI 043 - Performance: Chorus" data-zh="MUSI 043 - 表演：合唱">MUSI 043 - Performance: Chorus</li>
-                <li data-en="PHYS 003 - General Physics I" data-zh="PHYS 003 - 普通物理 I">PHYS 003 - General Physics I</li>
-                <li data-en="PSYC 031A - Social & Affective Neuroscience" data-zh="PSYC 031A - 社会与情感神经科学">PSYC 031A - Social & Affective Neuroscience</li>
-              </ul>
-            </li>
-            <li><strong data-en="Spring 2024" data-zh="2024年春季">Spring 2024:</strong>
-              <ul>
-                <li data-en="CHEM 022 - Organic Chemistry I" data-zh="CHEM 022 - 有机化学 I">CHEM 022 - Organic Chemistry I</li>
-                <li data-en="ENGR 012 - Linear Physical Systems Analysis" data-zh="ENGR 012 - 线性物理系统分析">ENGR 012 - Linear Physical Systems Analysis</li>
-                <li data-en="MATH 043 - Basic Differential Equations" data-zh="MATH 043 - 基本微分方程">MATH 043 - Basic Differential Equations</li>
-                <li data-en="PHYS 004L - General Physics II: Biomedical Applications - E&M" data-zh="PHYS 004L - 普通物理 II：生物医学应用 - 电磁">PHYS 004L - General Physics II: Biomedical Applications - E&M</li>
-                <li data-en="PSYC 131B - Seminar Affective Neuroscience" data-zh="PSYC 131B - 情感神经科学研讨会">PSYC 131B - Seminar Affective Neuroscience</li>
-              </ul>
-            </li>
-            <li><strong data-en="Fall 2024" data-zh="2024年秋季">Fall 2024:</strong>
-              <ul>
-                <li data-en="ENGR 021 - Computer Engineering Fundamentals" data-zh="ENGR 021 - 计算机工程基础">ENGR 021 - Computer Engineering Fundamentals</li>
-                <li data-en="ENGR 041 - Thermofluid Mechanics" data-zh="ENGR 041 - 热流体力学">ENGR 041 - Thermofluid Mechanics</li>
-                <li data-en="ENGR 051 - Biomedical Signals" data-zh="ENGR 051 - 生物医学信号">ENGR 051 - Biomedical Signals</li>
-                <li data-en="ENGR 076 - Waves & Physical Optics" data-zh="ENGR 076 - 波与物理光学">ENGR 076 - Waves & Physical Optics</li>
-                <li data-en="MATH 066 - Stochastic and Numerical Methods" data-zh="MATH 066 - 随机与数值方法">MATH 066 - Stochastic and Numerical Methods</li>
-                <li data-en="MUSI 049 - Performance: Balinese Gamelan" data-zh="MUSI 049 - 表演：巴厘岛甘美兰">MUSI 049 - Performance: Balinese Gamelan</li>
-                <li data-en="PSYC 135 - Seminar in Social Psychology" data-zh="PSYC 135 - 社会心理学研讨会">PSYC 135 - Seminar in Social Psychology</li>
-              </ul>
-            </li>
-            <li><strong data-en="Spring 2025" data-zh="2025年春季">Spring 2025:</strong>
-              <ul>
-                <li data-en="ARTT 032 - Landscape Painting" data-zh="ARTT 032 - 风景绘画">ARTT 032 - Landscape Painting</li>
-                <li data-en="ENGR 078 - Signal Processing" data-zh="ENGR 078 - 信号处理">ENGR 078 - Signal Processing</li>
-                <li data-en="ENGR 091 - Nonlinear Systems and Chaos" data-zh="ENGR 091 - 非线性系统与混沌">ENGR 091 - Nonlinear Systems and Chaos</li>
-                <li data-en="ENGR 091 - Directed Reading" data-zh="ENGR 091 - 指导阅读">ENGR 091 - Directed Reading</li>
-                <li data-en="MATH 054 - Partial Differential Equations" data-zh="MATH 054 - 偏微分方程">MATH 054 - Partial Differential Equations</li>
-                <li data-en="STAT 051 - Probability" data-zh="STAT 051 - 概率">STAT 051 - Probability</li>
-              </ul>
-            </li>
-          </ul>
-        </section>
-      </div>
-
-      <!-- Contact Section -->
-      <div id="contact" class="page">
-        <section class="section fade-in">
-          <h2 data-en="Contact Me" data-zh="联系我">Contact Me</h2>
-          <div class="contact-container">
-            <form action="mailto:howardwhsrun@gmail.com" method="post" enctype="text/plain">
-              <label for="name" data-en="Name" data-zh="姓名">Name:</label>
-              <input type="text" id="name" name="name" required />
-
-              <label for="email" data-en="Email" data-zh="电子邮件">Email:</label>
-              <input type="email" id="email" name="email" required />
-
-              <label for="message" data-en="Message" data-zh="留言">Message:</label>
-              <textarea id="message" name="message" rows="6" required></textarea>
-
-              <input type="submit" value="Send" data-en="Send" data-zh="发送" />
-            </form>
-            
-            <div class="contact-info">
-              <h3 data-en="Get in Touch" data-zh="联系方式">Get in Touch</h3>
-              <p data-en="Feel free to reach out through any of these channels:" data-zh="欢迎通过以下渠道联系我：">Feel free to reach out through any of these channels:</p>
-              
-              <div class="contact-links">
-                <a href="mailto:howardwhsrun@gmail.com" class="contact-link">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                  howardwhsrun@gmail.com
-                </a>
-                <a href="tel:+16032855188" class="contact-link">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-                  +1 603-285-5188
-                </a>
-              </div>
-              
-              <div class="social-footer">
-                <a href="https://www.instagram.com/howardwhs" target="_blank" class="social-icon-footer" title="Instagram">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-                </a>
-                <a href="https://www.strava.com/athletes/35107207" target="_blank" class="social-icon-footer" title="Strava">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22l-4.38-8.3-1.5 2.76L6 12.27l4.5-8.5 5.25 9.91L18 9.5h3z"/></svg>
-                </a>
-                <a href="https://unsplash.com/@howardwhs" target="_blank" class="social-icon-footer" title="Unsplash">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-    </div>
-  </div>
-
-  <footer>
-    <p data-en="&copy; 2024 Howard Wang. All rights reserved." data-zh="&copy; 2024 王淏生。版权所有。"></p>
-  </footer>
 </body>
 </html>
