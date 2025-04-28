@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Howard Wang - Engineering and Neuroscience student at Swarthmore College, ultra runner, artist, and researcher." />
   <title>Howard Wang</title>
   <!-- Google Fonts for refined typography -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <!-- Link to external CSS file -->
   <link rel="stylesheet" href="style.css" />
   <script>
@@ -24,6 +25,7 @@
       // Automatically set to English on load
       switchLanguage('en');
       
+      // Smooth scrolling for navigation
       document.querySelectorAll('nav a').forEach(link => {
         link.addEventListener('click', (e) => {
           e.preventDefault();
@@ -31,11 +33,35 @@
           document.getElementById(pageId).scrollIntoView({behavior: 'smooth'});
         });
       });
+      
+      // Language toggle functionality
       document.querySelectorAll('.language-toggle').forEach(button => {
         button.addEventListener('click', () => {
           switchLanguage(button.getAttribute('data-lang'));
+          // Update active state
+          document.querySelectorAll('.language-toggle').forEach(btn => {
+            btn.style.background = btn === button ? 'var(--accent)' : 'var(--card-bg)';
+            btn.style.color = btn === button ? 'var(--primary-text)' : 'var(--secondary-text)';
+          });
         });
       });
+      
+      // Initialize reveal animations
+      const revealElements = document.querySelectorAll('.section, .card');
+      revealElements.forEach(el => el.classList.add('reveal'));
+      
+      const revealOnScroll = () => {
+        const windowHeight = window.innerHeight;
+        revealElements.forEach(el => {
+          const elementTop = el.getBoundingClientRect().top;
+          if (elementTop < windowHeight - 100) {
+            el.classList.add('active');
+          }
+        });
+      };
+      
+      window.addEventListener('scroll', revealOnScroll);
+      revealOnScroll(); // Initial check
     });
 
     // Show/hide Back to Top button on scroll
@@ -62,6 +88,17 @@
         <button class="language-toggle" data-lang="en">English</button>
         <button class="language-toggle" data-lang="zh">中文</button>
       </div>
+      <div class="social-links">
+        <a href="https://www.instagram.com/howardwhs" target="_blank" class="social-icon" title="Instagram">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+        </a>
+        <a href="https://www.strava.com/athletes/35107207" target="_blank" class="social-icon" title="Strava">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22l-4.38-8.3-1.5 2.76L6 12.27l4.5-8.5 5.25 9.91L18 9.5h3z"/></svg>
+        </a>
+        <a href="https://unsplash.com/@howardwhs" target="_blank" class="social-icon" title="Unsplash">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+        </a>
+      </div>
     </div>
     <nav>
       <ul>
@@ -78,7 +115,9 @@
   </header>
 
   <!-- BACK TO TOP BUTTON -->
-  <button id="backToTop" onclick="scrollToTop()" title="Back to top">↑</button>
+  <button id="backToTop" onclick="scrollToTop()" title="Back to top">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
+  </button>
 
   <div class="container">
     <div class="content">
@@ -326,21 +365,48 @@
       <div id="contact" class="page">
         <section class="section fade-in">
           <h2 data-en="Contact Me" data-zh="联系我">Contact Me</h2>
-          <form action="mailto:howardwhsrun@gmail.com" method="post" enctype="text/plain">
-            <label for="name" data-en="Name" data-zh="姓名">Name:</label><br>
-            <input type="text" id="name" name="name" required /><br><br>
+          <div class="contact-container">
+            <form action="mailto:howardwhsrun@gmail.com" method="post" enctype="text/plain">
+              <label for="name" data-en="Name" data-zh="姓名">Name:</label>
+              <input type="text" id="name" name="name" required />
 
-            <label for="email" data-en="Email" data-zh="电子邮件">Email:</label><br>
-            <input type="email" id="email" name="email" required /><br><br>
+              <label for="email" data-en="Email" data-zh="电子邮件">Email:</label>
+              <input type="email" id="email" name="email" required />
 
-            <label for="message" data-en="Message" data-zh="留言">Message:</label><br>
-            <textarea id="message" name="message" rows="6" required></textarea><br><br>
+              <label for="message" data-en="Message" data-zh="留言">Message:</label>
+              <textarea id="message" name="message" rows="6" required></textarea>
 
-            <input type="submit" value="Send" data-en="Send" data-zh="发送" />
-          </form>
-          <p data-en="You can also contact me directly at" data-zh="你也可以直接联系我">You can also contact me directly at:</p>
-          <p>Email: <a href="mailto:howardwhsrun@gmail.com">howardwhsrun@gmail.com</a></p>
-          <p>Phone: <a href="tel:+16032855188">+1 603-285-5188</a></p>
+              <input type="submit" value="Send" data-en="Send" data-zh="发送" />
+            </form>
+            
+            <div class="contact-info">
+              <h3 data-en="Get in Touch" data-zh="联系方式">Get in Touch</h3>
+              <p data-en="Feel free to reach out through any of these channels:" data-zh="欢迎通过以下渠道联系我：">Feel free to reach out through any of these channels:</p>
+              
+              <div class="contact-links">
+                <a href="mailto:howardwhsrun@gmail.com" class="contact-link">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                  howardwhsrun@gmail.com
+                </a>
+                <a href="tel:+16032855188" class="contact-link">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                  +1 603-285-5188
+                </a>
+              </div>
+              
+              <div class="social-footer">
+                <a href="https://www.instagram.com/howardwhs" target="_blank" class="social-icon-footer" title="Instagram">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                </a>
+                <a href="https://www.strava.com/athletes/35107207" target="_blank" class="social-icon-footer" title="Strava">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22l-4.38-8.3-1.5 2.76L6 12.27l4.5-8.5 5.25 9.91L18 9.5h3z"/></svg>
+                </a>
+                <a href="https://unsplash.com/@howardwhs" target="_blank" class="social-icon-footer" title="Unsplash">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+                </a>
+              </div>
+            </div>
+          </div>
         </section>
       </div>
     </div>
