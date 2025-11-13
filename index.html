@@ -20,23 +20,23 @@
 
   <!-- Floating Contact Button -->
   <div class="floating-contact">
-    <button class="contact-fab" id="contactFab">
+    <button class="contact-fab" id="contactFab" aria-label="Open contact options" aria-expanded="false">
       <i class="fas fa-envelope"></i>
     </button>
     <div class="contact-options" id="contactOptions">
-      <a href="mailto:howardwhsrun@gmail.com" class="contact-option">
+      <a href="mailto:howardwhsrun@gmail.com" class="contact-option" aria-label="Send email">
         <i class="fas fa-envelope"></i>
         <span>Email</span>
       </a>
-      <a href="tel:+16032855188" class="contact-option">
+      <a href="tel:+16032855188" class="contact-option" aria-label="Call phone number">
         <i class="fas fa-phone"></i>
         <span>Call</span>
       </a>
-      <a href="https://calendar.app.google/mt8KLWDTcDcMwxAH9" target="_blank" class="contact-option">
+      <a href="https://calendar.app.google/mt8KLWDTcDcMwxAH9" target="_blank" rel="noopener noreferrer" class="contact-option" aria-label="Schedule a meeting on Google Calendar">
         <i class="fas fa-calendar"></i>
         <span>Schedule Meeting</span>
       </a>
-      <a href="https://www.linkedin.com/in/howard-wang/" target="_blank" class="contact-option">
+      <a href="https://www.linkedin.com/in/howard-wang/" target="_blank" rel="noopener noreferrer" class="contact-option" aria-label="Visit LinkedIn profile">
         <i class="fab fa-linkedin"></i>
         <span>LinkedIn</span>
       </a>
@@ -60,15 +60,15 @@
         <li><a href="#contact" class="nav-link" data-en="Contact" data-zh="联系">Contact</a></li>
       </ul>
       <div class="nav-controls">
-        <div class="language-switcher">
-          <button class="language-toggle active" data-lang="en">EN</button>
-          <button class="language-toggle" data-lang="zh">中文</button>
+        <div class="language-switcher" role="group" aria-label="Language selection">
+          <button class="language-toggle active" data-lang="en" aria-label="Switch to English">EN</button>
+          <button class="language-toggle" data-lang="zh" aria-label="Switch to Chinese">中文</button>
         </div>
-        <div class="hamburger" id="hamburger">
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
           <span></span>
           <span></span>
           <span></span>
-        </div>
+        </button>
       </div>
     </div>
   </nav>
@@ -76,10 +76,10 @@
   <!-- Hero Section - Engineering Focus with Photography Background -->
   <section id="home" class="hero-section fullscreen-bg">
     <div class="hero-bg-slider">
-      <div class="hero-slide active" style="background-image: url('dramatic-sunset.jpg')"></div>
-      <div class="hero-slide" style="background-image: url('golden-field.jpg')"></div>
-      <div class="hero-slide" style="background-image: url('sunset-ocean.jpg')"></div>
-      <div class="hero-slide" style="background-image: url('desert-landscape.jpg')"></div>
+      <div class="hero-slide active" style="background-image: url('images/dramatic-sunset.jpg')"></div>
+      <div class="hero-slide" style="background-image: url('images/golden-field.jpg')"></div>
+      <div class="hero-slide" style="background-image: url('images/sunset-ocean.jpg')"></div>
+      <div class="hero-slide" style="background-image: url('images/desert-landscape.jpg')"></div>
     </div>
     <div class="hero-overlay-dark"></div>
     <div class="hero-content-center">
@@ -114,7 +114,7 @@
 
   <!-- About Section - Engineering Focus -->
   <section id="about" class="about-section fullscreen-bg">
-    <div class="section-bg-full" style="background-image: url('coyote-landscape.jpg')"></div>
+    <div class="section-bg-full" style="background-image: url('images/coyote-landscape.jpg')"></div>
     <div class="section-overlay-gradient"></div>
     <div class="container-full">
       <div class="content-split">
@@ -148,7 +148,7 @@
         
         <div class="content-right">
           <div class="profile-image-large">
-            <img src="Howard-Wang.jpg" alt="Howard Wang" class="profile-img" />
+            <img src="images/Howard-Wang.jpg" alt="Howard Wang" class="profile-img" loading="lazy" />
             <div class="image-frame"></div>
           </div>
         </div>
@@ -158,7 +158,7 @@
 
   <!-- Research Section - Primary Focus -->
   <section id="research" class="research-section fullscreen-bg">
-    <div class="section-bg-full" style="background-image: url('winter-pine.jpg')"></div>
+    <div class="section-bg-full" style="background-image: url('images/winter-pine.jpg')"></div>
     <div class="section-overlay-light"></div>
     <div class="container-full">
       <div class="section-header-center">
@@ -176,6 +176,11 @@
               <span data-en="University of Delaware - Prof. Ryan Zurakowski" data-zh="特拉华大学 - Ryan Zurakowski教授">University of Delaware - Prof. Ryan Zurakowski</span>
             </p>
             <p class="research-description" data-en="Worked on developing a PDE-based spatial model to study CD4+ T cell and HIV reservoir dynamics under antiretroviral therapy. Used MATLAB to analyze steady-state behavior and create visualizations of treatment outcomes." data-zh="参与开发基于PDE的空间模型来研究抗逆转录病毒治疗下的CD4+ T细胞和HIV储库动力学。使用MATLAB分析稳态行为并创建治疗结果的可视化。">Worked on developing a PDE-based spatial model to study CD4+ T cell and HIV reservoir dynamics under antiretroviral therapy. Used MATLAB to analyze steady-state behavior and create visualizations of treatment outcomes.</p>
+            <div class="research-links-center">
+              <a href="documents/BMES Poster copy.pdf" target="_blank" rel="noopener noreferrer" class="research-link-large" aria-label="View BMES poster PDF">
+                <i class="fas fa-file-pdf"></i> BMES Poster
+              </a>
+            </div>
             <div class="research-tech-stack">
               <span class="tech-tag">MATLAB</span>
               <span class="tech-tag">PDE Modeling</span>
@@ -195,10 +200,10 @@
             </p>
             <p class="research-description" data-en="Applied Fast Fourier Transform to EEG data from infants and adults during object recognition tasks. Used SVM classification to analyze patterns and studied coherence across electrodes to examine developmental differences in visual processing." data-zh="将快速傅里叶变换应用于婴儿和成人在物体识别任务中的EEG数据。使用SVM分类分析模式，并研究电极间的相干性以检查视觉处理中的发育差异。">Applied Fast Fourier Transform to EEG data from infants and adults during object recognition tasks. Used SVM classification to analyze patterns and studied coherence across electrodes to examine developmental differences in visual processing.</p>
             <div class="research-links-center">
-              <a href="https://github.com/HowardWHSrun/EEGanalysis.git" target="_blank" class="research-link-large">
+              <a href="https://github.com/HowardWHSrun/EEGanalysis.git" target="_blank" rel="noopener noreferrer" class="research-link-large" aria-label="View EEG analysis code on GitHub">
                 <i class="fab fa-github"></i> Code
               </a>
-              <a href="EEG Poster.pdf" target="_blank" class="research-link-large">
+              <a href="documents/EEG Poster.pdf" target="_blank" rel="noopener noreferrer" class="research-link-large" aria-label="View EEG poster PDF">
                 <i class="fas fa-file-pdf"></i> Poster
               </a>
             </div>
@@ -221,7 +226,7 @@
             </p>
             <p class="research-description" data-en="Helped develop an opto-mechanical system to measure 3D thumb-tip trajectories in cadaveric specimens. Assisted with calibrating the motion capture system and analyzing variation in tip displacement across thumb muscles." data-zh="协助开发光机系统来测量尸体标本中的3D拇指尖轨迹。协助校准动作捕捉系统并分析拇指肌肉间尖端位移的变化。">Helped develop an opto-mechanical system to measure 3D thumb-tip trajectories in cadaveric specimens. Assisted with calibrating the motion capture system and analyzing variation in tip displacement across thumb muscles.</p>
             <div class="research-links-center">
-              <a href="NCUR Final Poster.pdf" target="_blank" class="research-link-large">
+              <a href="documents/NCUR Final Poster.pdf" target="_blank" rel="noopener noreferrer" class="research-link-large" aria-label="View NCUR poster PDF">
                 <i class="fas fa-trophy"></i> NCUR Poster
               </a>
             </div>
@@ -257,7 +262,7 @@
 
   <!-- Education Section -->
   <section id="education" class="education-section fullscreen-bg">
-    <div class="section-bg-full" style="background-image: url('cathedral-interior.jpg')"></div>
+    <div class="section-bg-full" style="background-image: url('images/cathedral-interior.jpg')"></div>
     <div class="section-overlay-dark"></div>
     <div class="container-full">
       <div class="section-header-center">
@@ -363,7 +368,7 @@
 
   <!-- Athletics Section -->
   <section id="athletics" class="athletics-section fullscreen-bg">
-    <div class="section-bg-full" style="background-image: url('country-road.jpg')"></div>
+    <div class="section-bg-full" style="background-image: url('images/country-road.jpg')"></div>
     <div class="section-overlay-gradient"></div>
     <div class="container-full">
       <div class="content-split-reverse">
@@ -392,10 +397,10 @@
             </div>
             
             <div class="achievement-links-large">
-              <a href="https://youtu.be/CgYqw3gE0VA?si=ILNlRleg_d4iXwxX" target="_blank" class="achievement-link-large">
+              <a href="https://youtu.be/CgYqw3gE0VA?si=ILNlRleg_d4iXwxX" target="_blank" rel="noopener noreferrer" class="achievement-link-large" aria-label="Watch ultramarathon documentary on YouTube">
                 <i class="fab fa-youtube"></i> Watch Documentary
               </a>
-              <a href="https://www.strava.com/athletes/35107207" target="_blank" class="achievement-link-large">
+              <a href="https://www.strava.com/athletes/35107207" target="_blank" rel="noopener noreferrer" class="achievement-link-large" aria-label="Follow on Strava">
                 <i class="fab fa-strava"></i> Follow on Strava
               </a>
             </div>
@@ -413,7 +418,7 @@
 
   <!-- Portfolio Section - Artistic Touch -->
   <section id="portfolio" class="portfolio-section fullscreen-bg">
-    <div class="section-bg-full" style="background-image: url('spring-flowers.jpg')"></div>
+    <div class="section-bg-full" style="background-image: url('images/spring-flowers.jpg')"></div>
     <div class="section-overlay-dark"></div>
     <div class="container-full">
       <div class="section-header-center">
@@ -423,12 +428,12 @@
       
       <div class="portfolio-grid-compact">
                 <div class="portfolio-item-compact">
-          <div class="portfolio-image-compact" style="background-image: url('lily-pond.jpg')">
+          <div class="portfolio-image-compact" style="background-image: url('images/lily-pond.jpg')">
             <div class="portfolio-overlay-hover">
               <div class="portfolio-info-center">
                 <h3 data-en="Photography" data-zh="摄影">Photography</h3>
                 <p data-en="Photos from travels and outdoor activities" data-zh="旅行和户外活动中的照片">Photos from travels and outdoor activities</p>
-                <a href="https://unsplash.com/@howardwhs" target="_blank" class="portfolio-link-compact">
+                <a href="https://unsplash.com/@howardwhs" target="_blank" rel="noopener noreferrer" class="portfolio-link-compact" aria-label="View photography on Unsplash">
                   <i class="fas fa-external-link-alt"></i> View on Unsplash
                 </a>
             </div>
@@ -437,12 +442,12 @@
         </div>
 
                 <div class="portfolio-item-compact">
-          <div class="portfolio-image-compact" style="background-image: url('golden-field.jpg')">
+          <div class="portfolio-image-compact" style="background-image: url('images/golden-field.jpg')">
             <div class="portfolio-overlay-hover">
               <div class="portfolio-info-center">
                 <h3 data-en="Art Portfolio" data-zh="艺术作品集">Art Portfolio</h3>
                 <p data-en="Art projects and creative work" data-zh="艺术项目和创意作品">Art projects and creative work</p>
-                <a href="Art Portfolio .pdf" target="_blank" class="portfolio-link-compact">
+                <a href="documents/Art Portfolio .pdf" target="_blank" rel="noopener noreferrer" class="portfolio-link-compact" aria-label="View art portfolio PDF">
                   <i class="fas fa-file-pdf"></i> View Portfolio
                 </a>
         </div>
@@ -463,7 +468,7 @@
 
   <!-- Contact Section -->
   <section id="contact" class="contact-section fullscreen-bg">
-    <div class="section-bg-full" style="background-image: url('lighthouse-dunes.jpg')"></div>
+    <div class="section-bg-full" style="background-image: url('images/lighthouse-dunes.jpg')"></div>
     <div class="section-overlay-dark"></div>
     <div class="container-full">
       <div class="section-header-center">
@@ -478,7 +483,7 @@
           </div>
           <h3 data-en="Download Resume" data-zh="下载简历">Download Resume</h3>
           <p data-en="Complete academic and professional background" data-zh="完整的学术和专业背景">Complete academic and professional background</p>
-          <a href="CV Research.pdf" target="_blank" class="contact-link-large">Download Resume</a>
+          <a href="documents/Howard's Research CV.pdf" target="_blank" rel="noopener noreferrer" class="contact-link-large" aria-label="Download research CV PDF">Download Resume</a>
         </div>
         
         <div class="contact-method-large">
@@ -496,7 +501,7 @@
           </div>
           <h3 data-en="Schedule a Meeting" data-zh="安排会议">Schedule a Meeting</h3>
           <p data-en="Available for conversations" data-zh="可以进行对话">Available for conversations</p>
-          <a href="https://calendar.app.google/mt8KLWDTcDcMwxAH9" target="_blank" class="contact-link-large">Schedule Meeting</a>
+          <a href="https://calendar.app.google/mt8KLWDTcDcMwxAH9" target="_blank" rel="noopener noreferrer" class="contact-link-large" aria-label="Schedule a meeting on Google Calendar">Schedule Meeting</a>
         </div>
         
         <div class="contact-method-large">
@@ -511,19 +516,19 @@
       
       <div class="social-connect-large">
         <div class="social-links-large">
-          <a href="https://www.linkedin.com/in/howard-wang/" target="_blank" class="social-link-large linkedin">
+          <a href="https://www.linkedin.com/in/howard-wang/" target="_blank" rel="noopener noreferrer" class="social-link-large linkedin" aria-label="Visit LinkedIn profile">
             <i class="fab fa-linkedin"></i>
           </a>
-          <a href="https://github.com/HowardWHSrun" target="_blank" class="social-link-large github">
+          <a href="https://github.com/HowardWHSrun" target="_blank" rel="noopener noreferrer" class="social-link-large github" aria-label="Visit GitHub profile">
             <i class="fab fa-github"></i>
           </a>
-          <a href="https://www.strava.com/athletes/35107207" target="_blank" class="social-link-large strava">
+          <a href="https://www.strava.com/athletes/35107207" target="_blank" rel="noopener noreferrer" class="social-link-large strava" aria-label="Follow on Strava">
             <i class="fab fa-strava"></i>
           </a>
-          <a href="https://unsplash.com/@howardwhs" target="_blank" class="social-link-large unsplash">
+          <a href="https://unsplash.com/@howardwhs" target="_blank" rel="noopener noreferrer" class="social-link-large unsplash" aria-label="View photography on Unsplash">
             <i class="fas fa-camera"></i>
           </a>
-          <a href="https://www.instagram.com/howardwhs" target="_blank" class="social-link-large instagram">
+          <a href="https://www.instagram.com/howardwhs" target="_blank" rel="noopener noreferrer" class="social-link-large instagram" aria-label="Visit Instagram profile">
             <i class="fab fa-instagram"></i>
           </a>
         </div>
@@ -542,7 +547,7 @@
   </footer>
 
   <!-- Back to Top Button -->
-  <button id="backToTop" class="back-to-top">
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">
     <i class="fas fa-chevron-up"></i>
   </button>
 

@@ -211,11 +211,25 @@ body {
   color: black;
 }
 
+.language-toggle:focus {
+  outline: 3px solid rgba(255, 255, 255, 0.5);
+  outline-offset: 2px;
+}
+
 .hamburger {
   display: none;
   flex-direction: column;
   cursor: pointer;
   gap: 4px;
+  background: none;
+  border: none;
+  padding: 0.5rem;
+}
+
+.hamburger:focus {
+  outline: 3px solid rgba(255, 255, 255, 0.5);
+  outline-offset: 2px;
+  border-radius: 4px;
 }
 
 .hamburger span {
@@ -249,6 +263,11 @@ body {
 .contact-fab:hover {
   transform: scale(1.1);
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+.contact-fab:focus {
+  outline: 3px solid rgba(255, 255, 255, 0.5);
+  outline-offset: 3px;
 }
 
 .contact-options {
@@ -285,6 +304,12 @@ body {
 
 .contact-option:hover {
   background: rgba(255, 255, 255, 0.1);
+  transform: translateX(-5px);
+}
+
+.contact-option:focus {
+  outline: 3px solid rgba(255, 255, 255, 0.5);
+  outline-offset: 2px;
 }
 
 /* Full Screen Background Sections */
@@ -478,6 +503,12 @@ body {
   background: transparent;
   color: white;
   border-color: white;
+}
+
+.primary-large:focus,
+.secondary-large:focus {
+  outline: 3px solid rgba(255, 255, 255, 0.5);
+  outline-offset: 3px;
 }
 
 .secondary-large {
@@ -883,6 +914,12 @@ body {
 .research-link-large:hover {
   background: var(--text-dark);
   color: white;
+  transform: translateY(-2px);
+}
+
+.research-link-large:focus {
+  outline: 3px solid var(--engineering-blue);
+  outline-offset: 2px;
 }
 
 /* Athletics Section */
@@ -959,6 +996,13 @@ body {
 .achievement-link-large:hover {
   background: white;
   color: black;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+}
+
+.achievement-link-large:focus {
+  outline: 3px solid rgba(255, 255, 255, 0.5);
+  outline-offset: 3px;
 }
 
 .quote-large {
@@ -1032,6 +1076,13 @@ body {
 .contact-link-large:hover {
   background: white;
   color: black;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+}
+
+.contact-link-large:focus {
+  outline: 3px solid rgba(255, 255, 255, 0.5);
+  outline-offset: 3px;
 }
 
 .social-connect-large {
@@ -1064,6 +1115,12 @@ body {
   color: black;
   border-color: white;
   transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+}
+
+.social-link-large:focus {
+  outline: 3px solid rgba(255, 255, 255, 0.5);
+  outline-offset: 3px;
 }
 
 .social-link-large.instagram:hover {
@@ -1139,6 +1196,11 @@ body {
 .back-to-top:hover {
   background: rgba(0, 0, 0, 0.9);
   transform: translateY(-5px);
+}
+
+.back-to-top:focus {
+  outline: 3px solid rgba(255, 255, 255, 0.5);
+  outline-offset: 3px;
 }
 
 /* Education Section */
@@ -1381,6 +1443,13 @@ body {
 .portfolio-link-compact:hover {
   background: white;
   color: black;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+}
+
+.portfolio-link-compact:focus {
+  outline: 3px solid rgba(255, 255, 255, 0.5);
+  outline-offset: 3px;
 }
 
 .portfolio-description {

@@ -60,8 +60,9 @@ function initializeNavigation() {
     // Mobile menu toggle
     if (hamburger && navMenu) {
         hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('active');
+            const isActive = hamburger.classList.toggle('active');
             navMenu.classList.toggle('active');
+            hamburger.setAttribute('aria-expanded', isActive);
         });
     }
 
@@ -87,6 +88,7 @@ function initializeNavigation() {
             if (navMenu.classList.contains('active')) {
                 hamburger.classList.remove('active');
                 navMenu.classList.remove('active');
+                hamburger.setAttribute('aria-expanded', 'false');
             }
         });
     });
@@ -147,13 +149,15 @@ function initializeFloatingContact() {
 
     if (contactFab && floatingContact) {
         contactFab.addEventListener('click', () => {
-            floatingContact.classList.toggle('active');
+            const isActive = floatingContact.classList.toggle('active');
+            contactFab.setAttribute('aria-expanded', isActive);
         });
 
         // Close when clicking outside
         document.addEventListener('click', (e) => {
             if (!floatingContact.contains(e.target)) {
                 floatingContact.classList.remove('active');
+                contactFab.setAttribute('aria-expanded', 'false');
             }
         });
     }
