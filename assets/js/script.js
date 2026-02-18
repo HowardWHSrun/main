@@ -260,7 +260,7 @@ function initializeContactForm() {
     const contactForm = document.getElementById('contactForm');
     
     if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
+        contactForm.addEventListener('submit', async (e) => {
             e.preventDefault();
             
             // Get form data
@@ -280,19 +280,38 @@ function initializeContactForm() {
                 return;
             }
 
-            // Simulate form submission
             const submitBtn = contactForm.querySelector('.submit-btn');
             const originalText = submitBtn.querySelector('.btn-text').textContent;
             
             submitBtn.disabled = true;
             submitBtn.querySelector('.btn-text').textContent = 'Sending...';
-            
-            setTimeout(() => {
-                alert('Thank you for your message! I\'ll get back to you soon.');
-                contactForm.reset();
+
+            try {
+                const response = await fetch(contactForm.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    alert('Thank you for your message! I\'ll get back to you soon.');
+                    contactForm.reset();
+                } else {
+                    const errorData = await response.json();
+                    if (Object.hasOwn(errorData, 'errors')) {
+                        alert(errorData["errors"].map(error => error["message"]).join(", "));
+                    } else {
+                        alert('Oops! There was a problem submitting your form');
+                    }
+                }
+            } catch (error) {
+                alert('Oops! There was a problem submitting your form');
+            } finally {
                 submitBtn.disabled = false;
                 submitBtn.querySelector('.btn-text').textContent = originalText;
-            }, 2000);
+            }
         });
 
         // Floating labels

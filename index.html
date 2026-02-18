@@ -1,15 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Howard Wang - Engineering and Applied Mathematics student at Swarthmore College, researcher, ultra runner, and photographer." />
+  <meta name="description"
+    content="Howard Wang - Engineering and Applied Mathematics student at Swarthmore College, researcher, ultra runner, and photographer." />
   <title>Howard Wang - Engineer & Researcher</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+  rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Howard Wang",
+      "url": "https://howardwang.me",
+      "jobTitle": "Engineering and Applied Mathematics Student",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "Swarthmore College"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/howard-wang-00758320a/",
+        "https://github.com/HowardWHSrun",
+        "https://www.strava.com/athletes/35107207",
+        "https://unsplash.com/@howardwhs",
+        "https://www.instagram.com/howardwhs"
+      ]
+    }
+  </script>
 </head>
+
 <body>
+  <a href="#home" class="skip-link">Skip to main content</a>
   <!-- Loading Screen -->
   <div id="loading-screen">
     <div class="loader">
@@ -32,11 +57,13 @@
         <i class="fas fa-phone"></i>
         <span>Call</span>
       </a>
-      <a href="https://calendar.app.google/mt8KLWDTcDcMwxAH9" target="_blank" rel="noopener noreferrer" class="contact-option" aria-label="Schedule a meeting on Google Calendar">
+      <a href="https://calendar.app.google/mt8KLWDTcDcMwxAH9" target="_blank" rel="noopener noreferrer"
+        class="contact-option" aria-label="Schedule a meeting on Google Calendar">
         <i class="fas fa-calendar"></i>
         <span>Schedule Meeting</span>
       </a>
-      <a href="https://www.linkedin.com/in/howard-wang-00758320a/" target="_blank" rel="noopener noreferrer" class="contact-option" aria-label="Visit LinkedIn profile">
+      <a href="https://www.linkedin.com/in/howard-wang-00758320a/" target="_blank" rel="noopener noreferrer"
+        class="contact-option" aria-label="Visit LinkedIn profile">
         <i class="fab fa-linkedin"></i>
         <span>LinkedIn</span>
       </a>
@@ -57,6 +84,7 @@
         <li><a href="#education" class="nav-link" data-en="Education" data-zh="教育">Education</a></li>
         <li><a href="#athletics" class="nav-link" data-en="Athletics" data-zh="体育">Athletics</a></li>
         <li><a href="#portfolio" class="nav-link" data-en="Portfolio" data-zh="作品集">Portfolio</a></li>
+        <li><a href="#blog" class="nav-link" data-en="Blog" data-zh="随笔">Blog</a></li>
         <li><a href="#contact" class="nav-link" data-en="Contact" data-zh="联系">Contact</a></li>
       </ul>
       <div class="nav-controls">
@@ -76,10 +104,10 @@
   <!-- Hero Section - Engineering Focus with Photography Background -->
   <section id="home" class="hero-section fullscreen-bg">
     <div class="hero-bg-slider">
-      <div class="hero-slide active" style="background-image: url('images/dramatic-sunset.jpg')"></div>
-      <div class="hero-slide" style="background-image: url('images/golden-field.jpg')"></div>
-      <div class="hero-slide" style="background-image: url('images/sunset-ocean.jpg')"></div>
-      <div class="hero-slide" style="background-image: url('images/desert-landscape.jpg')"></div>
+      <div class="hero-slide active" style="background-image: url('assets/images/dramatic-sunset.jpg')"></div>
+      <div class="hero-slide" style="background-image: url('assets/images/golden-field.jpg')"></div>
+      <div class="hero-slide" style="background-image: url('assets/images/sunset-ocean.jpg')"></div>
+      <div class="hero-slide" style="background-image: url('assets/images/desert-landscape.jpg')"></div>
     </div>
     <div class="hero-overlay-dark"></div>
     <div class="hero-content-center">
@@ -89,14 +117,17 @@
         </h1>
         <div class="hero-subtitle-large">
           <div class="subtitle-carousel">
-            <span class="subtitle-item active" data-en="Mathematics & Engineering Student" data-zh="数学与工程专业学生">Mathematics & Engineering Student</span>
-            <span class="subtitle-item" data-en="Undergraduate Researcher" data-zh="本科研究生">Undergraduate Researcher</span>
+            <span class="subtitle-item active" data-en="Mathematics & Engineering Student"
+              data-zh="数学与工程专业学生">Mathematics & Engineering Student</span>
+            <span class="subtitle-item" data-en="Undergraduate Researcher" data-zh="本科研究生">Undergraduate
+              Researcher</span>
             <span class="subtitle-item" data-en="Distance Runner" data-zh="长跑运动员">Distance Runner</span>
             <span class="subtitle-item" data-en="Photography Enthusiast" data-zh="摄影爱好者">Photography Enthusiast</span>
           </div>
         </div>
         <div class="hero-photography-credit">
-          <p class="photography-note" data-en="Background photography by Howard Wang" data-zh="背景摄影作品由王淏生拍摄">Background photography by Howard Wang</p>
+          <p class="photography-note" data-en="Background photography by Howard Wang" data-zh="背景摄影作品由王淏生拍摄">Background
+            photography by Howard Wang</p>
         </div>
         <div class="hero-cta-center">
           <a href="#research" class="cta-button primary-large" data-en="View Research" data-zh="查看研究">View Research</a>
@@ -114,22 +145,31 @@
 
   <!-- About Section - Engineering Focus -->
   <section id="about" class="about-section fullscreen-bg">
-    <div class="section-bg-full" style="background-image: url('images/coyote-landscape.jpg')"></div>
+    <div class="section-bg-full" style="background-image: url('assets/images/coyote-landscape.jpg')"></div>
     <div class="section-overlay-gradient"></div>
     <div class="container-full">
       <div class="content-split">
         <div class="content-left">
           <div class="section-header-large">
             <h2 class="section-title-large" data-en="About Me" data-zh="关于我">About Me</h2>
-            <p class="section-subtitle-large" data-en="Engineering and Mathematics Student" data-zh="工程与数学专业学生">Engineering and Mathematics Student</p>
+            <p class="section-subtitle-large" data-en="Engineering and Mathematics Student" data-zh="工程与数学专业学生">
+              Engineering and Mathematics Student</p>
           </div>
-          
+
           <div class="about-story-large">
-            <p class="story-text-large" data-en="I'm Howard Wang, a Mathematics and Engineering student at Swarthmore College. I'm interested in computational biology and enjoy working on research projects that combine mathematical modeling with practical applications." data-zh="我是王淏生，斯沃斯莫尔学院数学和工程专业学生。我对计算生物学感兴趣，喜欢从事结合数学建模和实际应用的研究项目。">I'm Howard Wang, a Mathematics and Engineering student at Swarthmore College. I'm interested in computational biology and enjoy working on research projects that combine mathematical modeling with practical applications.</p>
-            
-            <p class="story-text-large" data-en="Outside of academics, I enjoy distance running and photography. The background images throughout this website are photographs I've taken during my travels and outdoor activities." data-zh="除了学术之外，我喜欢长跑和摄影。整个网站的背景图片都是我在旅行和户外活动中拍摄的照片。">Outside of academics, I enjoy distance running and photography. The background images throughout this website are photographs I've taken during my travels and outdoor activities.</p>
+            <p class="story-text-large"
+              data-en="I'm Howard Wang, a Mathematics and Engineering student at Swarthmore College. I'm interested in computational biology and enjoy working on research projects that combine mathematical modeling with practical applications."
+              data-zh="我是王淏生，斯沃斯莫尔学院数学和工程专业学生。我对计算生物学感兴趣，喜欢从事结合数学建模和实际应用的研究项目。">I'm Howard Wang, a Mathematics and
+              Engineering student at Swarthmore College. I'm interested in computational biology and enjoy working on
+              research projects that combine mathematical modeling with practical applications.</p>
+
+            <p class="story-text-large"
+              data-en="Outside of academics, I enjoy distance running and photography. The background images throughout this website are photographs I've taken during my travels and outdoor activities."
+              data-zh="除了学术之外，我喜欢长跑和摄影。整个网站的背景图片都是我在旅行和户外活动中拍摄的照片。">Outside of academics, I enjoy distance running and
+              photography. The background images throughout this website are photographs I've taken during my travels
+              and outdoor activities.</p>
           </div>
-          
+
           <div class="stats-showcase">
             <div class="stat-item">
               <span class="stat-number">5</span>
@@ -145,10 +185,10 @@
             </div>
           </div>
         </div>
-        
+
         <div class="content-right">
           <div class="profile-image-large">
-            <img src="images/Howard-Wang.jpg" alt="Howard Wang" class="profile-img" loading="lazy" />
+            <img src="assets/images/Howard-Wang.jpg" alt="Howard Wang" class="profile-img" loading="lazy" />
             <div class="image-frame"></div>
           </div>
         </div>
@@ -158,14 +198,15 @@
 
   <!-- Research Section - Primary Focus -->
   <section id="research" class="research-section fullscreen-bg">
-    <div class="section-bg-full" style="background-image: url('images/winter-pine.jpg')"></div>
+    <div class="section-bg-full" style="background-image: url('assets/images/winter-pine.jpg')"></div>
     <div class="section-overlay-light"></div>
     <div class="container-full">
       <div class="section-header-center">
         <h2 class="section-title-large" data-en="Research & Projects" data-zh="研究与项目">Research & Projects</h2>
-        <p class="section-subtitle-large" data-en="Recent undergraduate research experiences" data-zh="最近的本科研究经历">Recent undergraduate research experiences</p>
+        <p class="section-subtitle-large" data-en="Recent undergraduate research experiences" data-zh="最近的本科研究经历">Recent
+          undergraduate research experiences</p>
       </div>
-      
+
       <div class="research-grid-enhanced">
         <div class="research-card-featured">
           <div class="research-content-center">
@@ -173,11 +214,17 @@
             <h3 data-en="HIV T Cell Dynamics Modeling" data-zh="HIV T细胞动力学建模">HIV T Cell Dynamics Modeling</h3>
             <p class="research-collab">
               <i class="fas fa-university"></i>
-              <span data-en="University of Delaware - Prof. Ryan Zurakowski" data-zh="特拉华大学 - Ryan Zurakowski教授">University of Delaware - Prof. Ryan Zurakowski</span>
+              <span data-en="University of Delaware - Prof. Ryan Zurakowski"
+                data-zh="特拉华大学 - Ryan Zurakowski教授">University of Delaware - Prof. Ryan Zurakowski</span>
             </p>
-            <p class="research-description" data-en="Worked on developing a PDE-based spatial model to study CD4+ T cell and HIV reservoir dynamics under antiretroviral therapy. Used MATLAB to analyze steady-state behavior and create visualizations of treatment outcomes." data-zh="参与开发基于PDE的空间模型来研究抗逆转录病毒治疗下的CD4+ T细胞和HIV储库动力学。使用MATLAB分析稳态行为并创建治疗结果的可视化。">Worked on developing a PDE-based spatial model to study CD4+ T cell and HIV reservoir dynamics under antiretroviral therapy. Used MATLAB to analyze steady-state behavior and create visualizations of treatment outcomes.</p>
+            <p class="research-description"
+              data-en="Worked on developing a PDE-based spatial model to study CD4+ T cell and HIV reservoir dynamics under antiretroviral therapy. Used MATLAB to analyze steady-state behavior and create visualizations of treatment outcomes."
+              data-zh="参与开发基于PDE的空间模型来研究抗逆转录病毒治疗下的CD4+ T细胞和HIV储库动力学。使用MATLAB分析稳态行为并创建治疗结果的可视化。">Worked on developing a
+              PDE-based spatial model to study CD4+ T cell and HIV reservoir dynamics under antiretroviral therapy. Used
+              MATLAB to analyze steady-state behavior and create visualizations of treatment outcomes.</p>
             <div class="research-links-center">
-              <a href="documents/BMES Poster copy.pdf" target="_blank" rel="noopener noreferrer" class="research-link-large" aria-label="View BMES poster PDF">
+              <a href="assets/documents/BMES Poster copy.pdf" target="_blank" rel="noopener noreferrer"
+                class="research-link-large" aria-label="View BMES poster PDF">
                 <i class="fas fa-file-pdf"></i> BMES Poster
               </a>
             </div>
@@ -196,14 +243,22 @@
             <h3 data-en="EEG Frequency Domain Analysis" data-zh="EEG频域分析">EEG Frequency Domain Analysis</h3>
             <p class="research-collab">
               <i class="fas fa-university"></i>
-              <span data-en="Swarthmore College - Prof. Moser & Prof. Zinszer" data-zh="斯沃斯莫尔学院 - Moser教授和Zinszer教授">Swarthmore College - Prof. Moser & Prof. Zinszer</span>
+              <span data-en="Swarthmore College - Prof. Moser & Prof. Zinszer"
+                data-zh="斯沃斯莫尔学院 - Moser教授和Zinszer教授">Swarthmore College - Prof. Moser & Prof. Zinszer</span>
             </p>
-            <p class="research-description" data-en="Applied Fast Fourier Transform to EEG data from infants and adults during object recognition tasks. Used SVM classification to analyze patterns and studied coherence across electrodes to examine developmental differences in visual processing." data-zh="将快速傅里叶变换应用于婴儿和成人在物体识别任务中的EEG数据。使用SVM分类分析模式，并研究电极间的相干性以检查视觉处理中的发育差异。">Applied Fast Fourier Transform to EEG data from infants and adults during object recognition tasks. Used SVM classification to analyze patterns and studied coherence across electrodes to examine developmental differences in visual processing.</p>
+            <p class="research-description"
+              data-en="Applied Fast Fourier Transform to EEG data from infants and adults during object recognition tasks. Used SVM classification to analyze patterns and studied coherence across electrodes to examine developmental differences in visual processing."
+              data-zh="将快速傅里叶变换应用于婴儿和成人在物体识别任务中的EEG数据。使用SVM分类分析模式，并研究电极间的相干性以检查视觉处理中的发育差异。">Applied Fast Fourier
+              Transform to EEG data from infants and adults during object recognition tasks. Used SVM classification to
+              analyze patterns and studied coherence across electrodes to examine developmental differences in visual
+              processing.</p>
             <div class="research-links-center">
-              <a href="https://github.com/HowardWHSrun/EEGanalysis.git" target="_blank" rel="noopener noreferrer" class="research-link-large" aria-label="View EEG analysis code on GitHub">
+              <a href="https://github.com/HowardWHSrun/EEGanalysis.git" target="_blank" rel="noopener noreferrer"
+                class="research-link-large" aria-label="View EEG analysis code on GitHub">
                 <i class="fab fa-github"></i> Code
               </a>
-              <a href="documents/EEG Poster.pdf" target="_blank" rel="noopener noreferrer" class="research-link-large" aria-label="View EEG poster PDF">
+              <a href="assets/documents/EEG Poster.pdf" target="_blank" rel="noopener noreferrer"
+                class="research-link-large" aria-label="View EEG poster PDF">
                 <i class="fas fa-file-pdf"></i> Poster
               </a>
             </div>
@@ -222,11 +277,17 @@
             <h3 data-en="Thumb Kinematics Motion Capture" data-zh="拇指运动学动作捕捉">Thumb Kinematics Motion Capture</h3>
             <p class="research-collab">
               <i class="fas fa-university"></i>
-              <span data-en="Swarthmore College - Prof. Towles" data-zh="斯沃斯莫尔学院 - Towles教授">Swarthmore College - Prof. Towles</span>
+              <span data-en="Swarthmore College - Prof. Towles" data-zh="斯沃斯莫尔学院 - Towles教授">Swarthmore College - Prof.
+                Towles</span>
             </p>
-            <p class="research-description" data-en="Helped develop an opto-mechanical system to measure 3D thumb-tip trajectories in cadaveric specimens. Assisted with calibrating the motion capture system and analyzing variation in tip displacement across thumb muscles." data-zh="协助开发光机系统来测量尸体标本中的3D拇指尖轨迹。协助校准动作捕捉系统并分析拇指肌肉间尖端位移的变化。">Helped develop an opto-mechanical system to measure 3D thumb-tip trajectories in cadaveric specimens. Assisted with calibrating the motion capture system and analyzing variation in tip displacement across thumb muscles.</p>
+            <p class="research-description"
+              data-en="Helped develop an opto-mechanical system to measure 3D thumb-tip trajectories in cadaveric specimens. Assisted with calibrating the motion capture system and analyzing variation in tip displacement across thumb muscles."
+              data-zh="协助开发光机系统来测量尸体标本中的3D拇指尖轨迹。协助校准动作捕捉系统并分析拇指肌肉间尖端位移的变化。">Helped develop an opto-mechanical system to
+              measure 3D thumb-tip trajectories in cadaveric specimens. Assisted with calibrating the motion capture
+              system and analyzing variation in tip displacement across thumb muscles.</p>
             <div class="research-links-center">
-              <a href="documents/NCUR Final Poster.pdf" target="_blank" rel="noopener noreferrer" class="research-link-large" aria-label="View NCUR poster PDF">
+              <a href="assets/documents/NCUR Final Poster.pdf" target="_blank" rel="noopener noreferrer"
+                class="research-link-large" aria-label="View NCUR poster PDF">
                 <i class="fas fa-trophy"></i> NCUR Poster
               </a>
             </div>
@@ -247,7 +308,11 @@
               <i class="fas fa-building"></i>
               <span data-en="Tenco Engineering Inc." data-zh="Tenco工程公司">Tenco Engineering Inc.</span>
             </p>
-            <p class="research-description" data-en="Worked on a Python data processing pipeline to extract and visualize radiated EMI frequency profiles from test logs. Helped build comparison tools for identifying emission peaks and created diagnostic plots." data-zh="参与Python数据处理管道的工作，从测试日志中提取和可视化辐射EMI频率配置文件。协助构建比较工具识别发射峰值并创建诊断图。">Worked on a Python data processing pipeline to extract and visualize radiated EMI frequency profiles from test logs. Helped build comparison tools for identifying emission peaks and created diagnostic plots.</p>
+            <p class="research-description"
+              data-en="Worked on a Python data processing pipeline to extract and visualize radiated EMI frequency profiles from test logs. Helped build comparison tools for identifying emission peaks and created diagnostic plots."
+              data-zh="参与Python数据处理管道的工作，从测试日志中提取和可视化辐射EMI频率配置文件。协助构建比较工具识别发射峰值并创建诊断图。">Worked on a Python data
+              processing pipeline to extract and visualize radiated EMI frequency profiles from test logs. Helped build
+              comparison tools for identifying emission peaks and created diagnostic plots.</p>
             <div class="research-tech-stack">
               <span class="tech-tag">Python</span>
               <span class="tech-tag">Data Visualization</span>
@@ -262,14 +327,15 @@
 
   <!-- Education Section -->
   <section id="education" class="education-section fullscreen-bg">
-    <div class="section-bg-full" style="background-image: url('images/cathedral-interior.jpg')"></div>
+    <div class="section-bg-full" style="background-image: url('assets/images/cathedral-interior.jpg')"></div>
     <div class="section-overlay-dark"></div>
     <div class="container-full">
       <div class="section-header-center">
         <h2 class="section-title-large white" data-en="Education & Skills" data-zh="教育与技能">Education & Skills</h2>
-        <p class="section-subtitle-large white" data-en="Academic background and technical experience" data-zh="学术背景和技术经验">Academic background and technical experience</p>
+        <p class="section-subtitle-large white" data-en="Academic background and technical experience"
+          data-zh="学术背景和技术经验">Academic background and technical experience</p>
       </div>
-      
+
       <div class="education-grid">
         <div class="education-card-main">
           <div class="education-header">
@@ -284,7 +350,9 @@
             </div>
           </div>
           <div class="education-details">
-            <p data-en="Double major studying mathematical theory and engineering applications. Currently learning theoretical and applied mathematics alongside engineering principles." data-zh="学习数学理论和工程应用的双专业。目前正在学习理论和应用数学以及工程原理。">Double major studying mathematical theory and engineering applications. Currently learning theoretical and applied mathematics alongside engineering principles.</p>
+            <p data-en="Double major studying mathematical theory and engineering applications. Currently learning theoretical and applied mathematics alongside engineering principles."
+              data-zh="学习数学理论和工程应用的双专业。目前正在学习理论和应用数学以及工程原理。">Double major studying mathematical theory and engineering
+              applications. Currently learning theoretical and applied mathematics alongside engineering principles.</p>
           </div>
         </div>
 
@@ -368,7 +436,7 @@
 
   <!-- Athletics Section -->
   <section id="athletics" class="athletics-section fullscreen-bg">
-    <div class="section-bg-full" style="background-image: url('images/country-road.jpg')"></div>
+    <div class="section-bg-full" style="background-image: url('assets/images/country-road.jpg')"></div>
     <div class="section-overlay-gradient"></div>
     <div class="container-full">
       <div class="content-split-reverse">
@@ -378,9 +446,14 @@
               <i class="fas fa-trophy"></i>
             </div>
             <h2 class="achievement-title" data-en="Distance Running" data-zh="长跑">Distance Running</h2>
-            <p class="achievement-subtitle" data-en="Completed 6 ultramarathons" data-zh="完成6次超级马拉松">Completed 6 ultramarathons</p>
-            <p class="achievement-description" data-en="I enjoy distance running and have completed several 100-mile races. Running helps me develop persistence and focus, which are useful qualities for academic work and research projects." data-zh="我喜欢长跑，已经完成了几次100英里比赛。跑步帮助我培养坚持和专注，这对学术工作和研究项目很有用。">I enjoy distance running and have completed several 100-mile races. Running helps me develop persistence and focus, which are useful qualities for academic work and research projects.</p>
-            
+            <p class="achievement-subtitle" data-en="Completed 6 ultramarathons" data-zh="完成6次超级马拉松">Completed 6
+              ultramarathons</p>
+            <p class="achievement-description"
+              data-en="I enjoy distance running and have completed several 100-mile races. Running helps me develop persistence and focus, which are useful qualities for academic work and research projects."
+              data-zh="我喜欢长跑，已经完成了几次100英里比赛。跑步帮助我培养坚持和专注，这对学术工作和研究项目很有用。">I enjoy distance running and have completed
+              several 100-mile races. Running helps me develop persistence and focus, which are useful qualities for
+              academic work and research projects.</p>
+
             <div class="achievement-stats-large">
               <div class="stat-large">
                 <span class="stat-number-large">600+</span>
@@ -395,19 +468,21 @@
                 <span class="stat-label-large">Years</span>
               </div>
             </div>
-            
+
             <div class="achievement-links-large">
-              <a href="https://youtu.be/CgYqw3gE0VA?si=ILNlRleg_d4iXwxX" target="_blank" rel="noopener noreferrer" class="achievement-link-large" aria-label="Watch ultramarathon documentary on YouTube">
+              <a href="https://youtu.be/CgYqw3gE0VA?si=ILNlRleg_d4iXwxX" target="_blank" rel="noopener noreferrer"
+                class="achievement-link-large" aria-label="Watch ultramarathon documentary on YouTube">
                 <i class="fab fa-youtube"></i> Watch Documentary
               </a>
-              <a href="https://www.strava.com/athletes/35107207" target="_blank" rel="noopener noreferrer" class="achievement-link-large" aria-label="Follow on Strava">
+              <a href="https://www.strava.com/athletes/35107207" target="_blank" rel="noopener noreferrer"
+                class="achievement-link-large" aria-label="Follow on Strava">
                 <i class="fab fa-strava"></i> Follow on Strava
               </a>
             </div>
           </div>
         </div>
-        
-                <div class="content-right">
+
+        <div class="content-right">
           <div class="athletics-visual">
             <!-- Content removed to maintain humble tone -->
           </div>
@@ -418,74 +493,141 @@
 
   <!-- Portfolio Section - Artistic Touch -->
   <section id="portfolio" class="portfolio-section fullscreen-bg">
-    <div class="section-bg-full" style="background-image: url('images/spring-flowers.jpg')"></div>
+    <div class="section-bg-full" style="background-image: url('assets/images/spring-flowers.jpg')"></div>
     <div class="section-overlay-dark"></div>
     <div class="container-full">
       <div class="section-header-center">
         <h2 class="section-title-large white" data-en="Creative Work" data-zh="创意作品">Creative Work</h2>
-        <p class="section-subtitle-large white" data-en="Photography and art projects" data-zh="摄影和艺术项目">Photography and art projects</p>
+        <p class="section-subtitle-large white" data-en="Photography and art projects" data-zh="摄影和艺术项目">Photography and
+          art projects</p>
       </div>
-      
+
       <div class="portfolio-grid-compact">
-                <div class="portfolio-item-compact">
-          <div class="portfolio-image-compact" style="background-image: url('images/lily-pond.jpg')">
+        <div class="portfolio-item-compact">
+          <div class="portfolio-image-compact" style="background-image: url('assets/images/lily-pond.jpg')">
             <div class="portfolio-overlay-hover">
               <div class="portfolio-info-center">
                 <h3 data-en="Photography" data-zh="摄影">Photography</h3>
-                <p data-en="Photos from travels and outdoor activities" data-zh="旅行和户外活动中的照片">Photos from travels and outdoor activities</p>
-                <a href="https://unsplash.com/@howardwhs" target="_blank" rel="noopener noreferrer" class="portfolio-link-compact" aria-label="View photography on Unsplash">
+                <p data-en="Photos from travels and outdoor activities" data-zh="旅行和户外活动中的照片">Photos from travels and
+                  outdoor activities</p>
+                <a href="https://unsplash.com/@howardwhs" target="_blank" rel="noopener noreferrer"
+                  class="portfolio-link-compact" aria-label="View photography on Unsplash">
                   <i class="fas fa-external-link-alt"></i> View on Unsplash
                 </a>
-            </div>
+              </div>
             </div>
           </div>
         </div>
 
-                <div class="portfolio-item-compact">
-          <div class="portfolio-image-compact" style="background-image: url('images/golden-field.jpg')">
+        <div class="portfolio-item-compact">
+          <div class="portfolio-image-compact" style="background-image: url('assets/images/golden-field.jpg')">
             <div class="portfolio-overlay-hover">
               <div class="portfolio-info-center">
                 <h3 data-en="Art Portfolio" data-zh="艺术作品集">Art Portfolio</h3>
                 <p data-en="Art projects and creative work" data-zh="艺术项目和创意作品">Art projects and creative work</p>
-                <a href="documents/Art Portfolio .pdf" target="_blank" rel="noopener noreferrer" class="portfolio-link-compact" aria-label="View art portfolio PDF">
+                <a href="assets/documents/Art Portfolio .pdf" target="_blank" rel="noopener noreferrer"
+                  class="portfolio-link-compact" aria-label="View art portfolio PDF">
                   <i class="fas fa-file-pdf"></i> View Portfolio
                 </a>
-        </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      
+
       <div class="portfolio-description">
-        <p class="portfolio-text" data-en="I enjoy photography and art as hobbies. These activities help me relax and see the world from different perspectives." data-zh="我喜欢摄影和艺术作为爱好。这些活动帮助我放松并从不同角度看世界。">I enjoy photography and art as hobbies. These activities help me relax and see the world from different perspectives.</p>
-        
+        <p class="portfolio-text"
+          data-en="I enjoy photography and art as hobbies. These activities help me relax and see the world from different perspectives."
+          data-zh="我喜欢摄影和艺术作为爱好。这些活动帮助我放松并从不同角度看世界。">I enjoy photography and art as hobbies. These activities help me
+          relax and see the world from different perspectives.</p>
+
         <div class="photography-showcase-note">
-          <p class="showcase-text" data-en="The background images throughout this website are photographs I've taken during my travels and outdoor activities. I enjoy capturing landscapes and nature scenes when I have free time." data-zh="整个网站的背景图片都是我在旅行和户外活动中拍摄的照片。我喜欢在空闲时间捕捉风景和自然场景。">The background images throughout this website are photographs I've taken during my travels and outdoor activities. I enjoy capturing landscapes and nature scenes when I have free time.</p>
+          <p class="showcase-text"
+            data-en="The background images throughout this website are photographs I've taken during my travels and outdoor activities. I enjoy capturing landscapes and nature scenes when I have free time."
+            data-zh="整个网站的背景图片都是我在旅行和户外活动中拍摄的照片。我喜欢在空闲时间捕捉风景和自然场景。">The background images throughout this website are
+            photographs I've taken during my travels and outdoor activities. I enjoy capturing landscapes and nature
+            scenes when I have free time.</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog / Writings Section -->
+  <section id="blog" class="blog-section fullscreen-bg">
+    <div class="section-bg-full" style="background-image: url('assets/images/spring-flowers.jpg')"></div>
+    <div class="section-overlay-dark"></div>
+    <div class="container-full">
+      <div class="section-header-center">
+        <h2 class="section-title-large white" data-en="Writings" data-zh="随笔">Writings</h2>
+        <p class="section-subtitle-large white" data-en="Essays and reflections" data-zh="文章与随想">Essays and reflections</p>
+      </div>
+      <div class="blog-grid">
+        <article class="blog-card">
+          <div class="blog-card-content">
+            <h3 class="blog-card-title" data-en="Prediction of 2031 in 2026" data-zh="2026年对2031年的预测">Prediction of 2031 in 2026</h3>
+            <p class="blog-card-subtitle" data-en="Five-year outlook on AI, work, and daily life" data-zh="对人工智能、工作与日常生活的五年展望">Five-year outlook on AI, work, and daily life</p>
+            <div class="blog-actions">
+              <a href="blog/prediction-2031-in-2026.html" class="blog-link" aria-label="Read essay">Read</a>
+            </div>
+          </div>
+        </article>
+        <article class="blog-card">
+          <div class="blog-card-content">
+            <h3 class="blog-card-title" data-en="Maximizing Your College Experience" data-zh="最大化你的大学体验">Maximizing Your College Experience</h3>
+            <p class="blog-card-subtitle" data-en="The Case for Taking Five Classes" data-zh="论一学期修五门课">The Case for Taking Five Classes</p>
+            <div class="blog-actions">
+              <a href="blog/maximizing-college-experience.html" class="blog-link" aria-label="Read essay">Read</a>
+              <a href="assets/documents/writings/Maximizing Your College Experience_ The Case for Taking Five Classes.pdf" target="_blank" rel="noopener noreferrer" class="blog-link-download" aria-label="Download PDF"><i class="fas fa-download"></i> PDF</a>
+            </div>
+          </div>
+        </article>
+        <article class="blog-card">
+          <div class="blog-card-content">
+            <h3 class="blog-card-title" data-en="The Pemi Loop Ultimate Daybreak Expedition" data-zh="佩米环线破晓远征">The Pemi Loop Ultimate Daybreak Expedition</h3>
+            <p class="blog-card-subtitle" data-en="A long run in the Whites" data-zh="怀特山长跑记">A long run in the Whites</p>
+            <div class="blog-actions">
+              <a href="blog/pemi-loop-expedition.html" class="blog-link" aria-label="Read essay">Read</a>
+              <a href="assets/documents/writings/The Pemi Loop Ultimate Daybreak Expedition.pdf" target="_blank" rel="noopener noreferrer" class="blog-link-download" aria-label="Download PDF"><i class="fas fa-download"></i> PDF</a>
+            </div>
+          </div>
+        </article>
+        <article class="blog-card">
+          <div class="blog-card-content">
+            <h3 class="blog-card-title" data-en="Beyond Pain" data-zh="超越痛苦">Beyond Pain</h3>
+            <p class="blog-card-subtitle" data-en="Rethinking the True Essence of Love" data-zh="重新思考爱的本质">Rethinking the True Essence of Love</p>
+            <div class="blog-actions">
+              <a href="blog/beyond-pain.html" class="blog-link" aria-label="Read essay">Read</a>
+              <a href="assets/documents/writings/Beyond Pain_ Rethinking the True Essence of Love.pdf" target="_blank" rel="noopener noreferrer" class="blog-link-download" aria-label="Download PDF"><i class="fas fa-download"></i> PDF</a>
+            </div>
+          </div>
+        </article>
       </div>
     </div>
   </section>
 
   <!-- Contact Section -->
   <section id="contact" class="contact-section fullscreen-bg">
-    <div class="section-bg-full" style="background-image: url('images/lighthouse-dunes.jpg')"></div>
+    <div class="section-bg-full" style="background-image: url('assets/images/lighthouse-dunes.jpg')"></div>
     <div class="section-overlay-dark"></div>
     <div class="container-full">
       <div class="section-header-center">
         <h2 class="section-title-large white" data-en="Contact" data-zh="联系方式">Contact</h2>
-        <p class="section-subtitle-large white" data-en="Feel free to reach out" data-zh="欢迎联系">Feel free to reach out</p>
+        <p class="section-subtitle-large white" data-en="Feel free to reach out" data-zh="欢迎联系">Feel free to reach out
+        </p>
       </div>
-      
+
       <div class="contact-grid-large">
         <div class="contact-method-large">
           <div class="method-icon-large">
             <i class="fas fa-file-pdf"></i>
           </div>
           <h3 data-en="Download Resume" data-zh="下载简历">Download Resume</h3>
-          <p data-en="Complete academic and professional background" data-zh="完整的学术和专业背景">Complete academic and professional background</p>
-          <a href="documents/Howard's Research CV.pdf" target="_blank" rel="noopener noreferrer" class="contact-link-large" aria-label="Download research CV PDF">Download Resume</a>
+          <p data-en="Complete academic and professional background" data-zh="完整的学术和专业背景">Complete academic and
+            professional background</p>
+          <a href="assets/documents/Howard's Research CV copy.pdf" target="_blank" rel="noopener noreferrer"
+            class="contact-link-large" aria-label="Download research CV PDF">Download Resume</a>
         </div>
-        
+
         <div class="contact-method-large">
           <div class="method-icon-large">
             <i class="fas fa-flask"></i>
@@ -494,16 +636,17 @@
           <p data-en="For questions or opportunities" data-zh="如有问题或机会">For questions or opportunities</p>
           <a href="mailto:howardwhsrun@gmail.com" class="contact-link-large">howardwhsrun@gmail.com</a>
         </div>
-            
+
         <div class="contact-method-large">
           <div class="method-icon-large">
             <i class="fas fa-calendar"></i>
           </div>
           <h3 data-en="Schedule a Meeting" data-zh="安排会议">Schedule a Meeting</h3>
           <p data-en="Available for conversations" data-zh="可以进行对话">Available for conversations</p>
-          <a href="https://calendar.app.google/mt8KLWDTcDcMwxAH9" target="_blank" rel="noopener noreferrer" class="contact-link-large" aria-label="Schedule a meeting on Google Calendar">Schedule Meeting</a>
+          <a href="https://calendar.app.google/mt8KLWDTcDcMwxAH9" target="_blank" rel="noopener noreferrer"
+            class="contact-link-large" aria-label="Schedule a meeting on Google Calendar">Schedule Meeting</a>
         </div>
-        
+
         <div class="contact-method-large">
           <div class="method-icon-large">
             <i class="fas fa-phone"></i>
@@ -513,22 +656,54 @@
           <a href="tel:+16032855188" class="contact-link-large">+1 (603)-285-5188</a>
         </div>
       </div>
-      
+
+      <div class="contact-form-container">
+        <form id="contactForm" class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <div class="form-group">
+            <input type="text" id="firstName" name="firstName" required placeholder=" " />
+            <label for="firstName">First Name</label>
+          </div>
+          <div class="form-group">
+            <input type="text" id="lastName" name="lastName" required placeholder=" " />
+            <label for="lastName">Last Name</label>
+          </div>
+          <div class="form-group">
+            <input type="email" id="email" name="email" required placeholder=" " />
+            <label for="email">Email Address</label>
+          </div>
+          <div class="form-group full-width">
+            <textarea id="message" name="message" required placeholder=" " rows="5"></textarea>
+            <label for="message">Message</label>
+          </div>
+          <div class="form-submit">
+            <button type="submit" class="submit-btn">
+              <span class="btn-text">Send Message</span>
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </div>
+        </form>
+      </div>
+
       <div class="social-connect-large">
         <div class="social-links-large">
-          <a href="https://www.linkedin.com/in/howard-wang-00758320a/" target="_blank" rel="noopener noreferrer" class="social-link-large linkedin" aria-label="Visit LinkedIn profile">
+          <a href="https://www.linkedin.com/in/howard-wang-00758320a/" target="_blank" rel="noopener noreferrer"
+            class="social-link-large linkedin" aria-label="Visit LinkedIn profile">
             <i class="fab fa-linkedin"></i>
           </a>
-          <a href="https://github.com/HowardWHSrun" target="_blank" rel="noopener noreferrer" class="social-link-large github" aria-label="Visit GitHub profile">
+          <a href="https://github.com/HowardWHSrun" target="_blank" rel="noopener noreferrer"
+            class="social-link-large github" aria-label="Visit GitHub profile">
             <i class="fab fa-github"></i>
           </a>
-          <a href="https://www.strava.com/athletes/35107207" target="_blank" rel="noopener noreferrer" class="social-link-large strava" aria-label="Follow on Strava">
+          <a href="https://www.strava.com/athletes/35107207" target="_blank" rel="noopener noreferrer"
+            class="social-link-large strava" aria-label="Follow on Strava">
             <i class="fab fa-strava"></i>
           </a>
-          <a href="https://unsplash.com/@howardwhs" target="_blank" rel="noopener noreferrer" class="social-link-large unsplash" aria-label="View photography on Unsplash">
+          <a href="https://unsplash.com/@howardwhs" target="_blank" rel="noopener noreferrer"
+            class="social-link-large unsplash" aria-label="View photography on Unsplash">
             <i class="fas fa-camera"></i>
           </a>
-          <a href="https://www.instagram.com/howardwhs" target="_blank" rel="noopener noreferrer" class="social-link-large instagram" aria-label="Visit Instagram profile">
+          <a href="https://www.instagram.com/howardwhs" target="_blank" rel="noopener noreferrer"
+            class="social-link-large instagram" aria-label="Visit Instagram profile">
             <i class="fab fa-instagram"></i>
           </a>
         </div>
@@ -541,7 +716,8 @@
     <div class="container">
       <div class="footer-content-center">
         <p>&copy; 2024 Howard Wang. All rights reserved.</p>
-                  <p class="footer-subtitle" data-en="Student • Runner • Photography Enthusiast" data-zh="学生 • 跑者 • 摄影爱好者">Student • Runner • Photography Enthusiast</p>
+        <p class="footer-subtitle" data-en="Student • Runner • Photography Enthusiast" data-zh="学生 • 跑者 • 摄影爱好者">Student
+          • Runner • Photography Enthusiast</p>
       </div>
     </div>
   </footer>
@@ -551,6 +727,7 @@
     <i class="fas fa-chevron-up"></i>
   </button>
 
-  <script src="script.js"></script>
+  <script src="assets/js/script.js"></script>
 </body>
+
 </html>
