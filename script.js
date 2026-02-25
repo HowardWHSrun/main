@@ -175,12 +175,16 @@ function initializeScrollEffects() {
         });
     }, observerOptions);
 
-    // Observe elements for scroll animations
-    const animatedElements = document.querySelectorAll('.story-card, .research-card, .portfolio-card, .athletics-card, .contact-method');
-    animatedElements.forEach(el => {
+    const animatedElements = document.querySelectorAll(
+        '.story-card, .research-card, .portfolio-card, .athletics-card, .contact-method, ' +
+        '.research-card-featured, .research-card-large, .experience-card, ' +
+        '.education-card-main, .coursework-section, .skills-section, .contact-method-large, ' +
+        '.portfolio-item-compact'
+    );
+    animatedElements.forEach((el, i) => {
         el.style.opacity = '0';
         el.style.transform = 'translateY(30px)';
-        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        el.style.transition = `opacity 0.6s ease ${i % 3 * 0.1}s, transform 0.6s ease ${i % 3 * 0.1}s`;
         observer.observe(el);
     });
 }
