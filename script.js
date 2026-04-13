@@ -131,12 +131,12 @@ function initializeSubtitleCarousel() {
     const subtitleItems = document.querySelectorAll('.subtitle-item');
     let currentSubtitle = 0;
 
-    if (subtitleItems.length > 1) {
+       if (subtitleItems.length > 1) {
         setInterval(() => {
             subtitleItems[currentSubtitle].classList.remove('active');
             currentSubtitle = (currentSubtitle + 1) % subtitleItems.length;
             subtitleItems[currentSubtitle].classList.add('active');
-        }, 3000); // Change subtitle every 3 seconds
+        }, 4000); // Change subtitle every 4 seconds (5 rotating lines)
     }
 }
 
@@ -383,5 +383,5 @@ window.addEventListener('error', (e) => {
 });
 
 // Console welcome message
-console.log('%c🚀 Howard Wang\'s Website', 'color: #2563eb; font-size: 20px; font-weight: bold;');
+console.log('%c Howard Wang\'s Website', 'color: #2563eb; font-size: 20px; font-weight: bold;');
 console.log('%cWelcome to my digital portfolio! Feel free to explore.', 'color: #6b7280; font-size: 14px;'); 
