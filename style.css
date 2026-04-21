@@ -907,6 +907,12 @@ body {
   color: white;
 }
 
+.writing-grid-tight {
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* Athletics Section */
 .achievement-showcase {
   color: white;
