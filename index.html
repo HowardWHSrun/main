@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Howard Wang - Engineering and Applied Mathematics student at Swarthmore College, researcher, ultra runner, and photographer." />
+  <title>Howard Wang - Engineer & Researcher</title>
+  <link
+  href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+  rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css?v=athletics-bg2" />
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Howard Wang",
+      "url": "https://howardwang.me",
+      "jobTitle": "Engineering and Applied Mathematics Student",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "Swarthmore College"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/howard-wang-00758320a/",
+        "https://github.com/HowardWHSrun",
+        "https://www.strava.com/athletes/35107207",
+        "https://unsplash.com/@howardwhs",
+        "https://www.instagram.com/howardwhs"
+      ]
+    }
+  </script>
+</head>
+
+<body>
+  <a href="#home" class="skip-link">Skip to main content</a>
+  <!-- Loading Screen -->
+  <div id="loading-screen">
+    <div class="loader">
+      <div class="loader-text">Howard Wang</div>
+      <div class="loader-bar"></div>
+    </div>
+  </div>
+
+  <!-- Floating Contact Button -->
+  <div class="floating-contact">
+    <button class="contact-fab" id="contactFab" aria-label="Open contact options" aria-expanded="false">
+      <i class="fas fa-envelope"></i>
+    </button>
+    <div class="contact-options" id="contactOptions">
+      <a href="mailto:howardwhsrun@gmail.com" class="contact-option" aria-label="Send email">
+        <i class="fas fa-envelope"></i>
+        <span>Email</span>
+      </a>
+      <a href="tel:+16032855188" class="contact-option" aria-label="Call phone number">
+        <i class="fas fa-phone"></i>
+        <span>Call</span>
+      </a>
+      <a href="https://calendar.app.google/mt8KLWDTcDcMwxAH9" target="_blank" rel="noopener noreferrer"
+        class="contact-option" aria-label="Schedule a meeting on Google Calendar">
+        <i class="fas fa-calendar"></i>
+        <span>Schedule Meeting</span>
+      </a>
+      <a href="https://www.linkedin.com/in/howard-wang-00758320a/" target="_blank" rel="noopener noreferrer"
+        class="contact-option" aria-label="Visit LinkedIn profile">
+        <i class="fab fa-linkedin"></i>
+        <span>LinkedIn</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <span class="logo-text">Howard Wang</span>
+        <span class="logo-subtitle">Engineer & Researcher</span>
+      </div>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#home" class="nav-link" data-en="Home" data-zh="首页">Home</a></li>
+        <li><a href="#about" class="nav-link" data-en="About" data-zh="关于">About</a></li>
+        <li><a href="#research" class="nav-link" data-en="Research" data-zh="研究">Research</a></li>
+        <li><a href="#education" class="nav-link" data-en="Education" data-zh="教育">Education</a></li>
+        <li><a href="#athletics" class="nav-link" data-en="Athletics" data-zh="体育">Athletics</a></li>
+        <li><a href="#portfolio" class="nav-link" data-en="Portfolio" data-zh="作品集">Portfolio</a></li>
+        <li><a href="#blog" class="nav-link" data-en="Blog" data-zh="随笔">Blog</a></li>
+        <li><a href="#contact" class="nav-link" data-en="Contact" data-zh="联系">Contact</a></li>
+      </ul>
+      <div class="nav-controls">
+        <div class="language-switcher" role="group" aria-label="Language selection">
+          <button class="language-toggle active" data-lang="en" aria-label="Switch to English">EN</button>
+          <button class="language-toggle" data-lang="zh" aria-label="Switch to Chinese">中文</button>
+        </div>
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section - Engineering Focus with Photography Background -->
+  <section id="home" class="hero-section fullscreen-bg">
+    <div class="hero-bg-slider">
+      <div class="hero-slide active" style="background-image: url('assets/images/dramatic-sunset.jpg')"></div>
+      <div class="hero-slide" style="background-image: url('assets/images/golden-field.jpg')"></div>
+      <div class="hero-slide" style="background-image: url('assets/images/sunset-ocean.jpg')"></div>
+      <div class="hero-slide" style="background-image: url('assets/images/desert-landscape.jpg')"></div>
+    </div>
+    <div class="hero-overlay-dark"></div>
+    <div class="hero-content-center">
+      <div class="hero-text-center">
+        <h1 class="hero-title-large">
+          <span class="title-line-main" data-en="Howard Wang" data-zh="王淏生">Howard Wang</span>
+        </h1>
+        <div class="hero-subtitle-large">
+          <div class="subtitle-carousel">
+            <span class="subtitle-item active" data-en="Mathematics & Engineering Student"
+              data-zh="数学与工程专业学生">Mathematics & Engineering Student</span>
+            <span class="subtitle-item" data-en="Undergraduate Researcher" data-zh="本科研究生">Undergraduate
+              Researcher</span>
+            <span class="subtitle-item" data-en="Distance Runner" data-zh="长跑运动员">Distance Runner</span>
+            <span class="subtitle-item" data-en="Photography Enthusiast" data-zh="摄影爱好者">Photography Enthusiast</span>
+          </div>
+        </div>
+        <div class="hero-photography-credit">
+          <p class="photography-note" data-en="Background photography by Howard Wang" data-zh="背景摄影作品由王淏生拍摄">Background
+            photography by Howard Wang</p>
+        </div>
+        <div class="hero-cta-center">
+          <a href="#research" class="cta-button primary-large" data-en="View Research" data-zh="查看研究">View Research</a>
+          <a href="#contact" class="cta-button secondary-large" data-en="Get In Touch" data-zh="联系我">Get In Touch</a>
+        </div>
+      </div>
+      <div class="scroll-indicator">
+        <div class="scroll-text" data-en="Scroll to explore" data-zh="滚动探索">Scroll to explore</div>
+        <div class="scroll-arrow">
+          <i class="fas fa-chevron-down"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section - Engineering Focus -->
+  <section id="about" class="about-section fullscreen-bg">
+    <div class="section-bg-full" style="background-image: url('assets/images/coyote-landscape.jpg')"></div>
+    <div class="section-overlay-gradient"></div>
+    <div class="container-full">
+      <div class="content-split">
+        <div class="content-left">
+          <div class="section-header-large">
+            <h2 class="section-title-large" data-en="About Me" data-zh="关于我">About Me</h2>
+            <p class="section-subtitle-large" data-en="Engineering and Mathematics Student" data-zh="工程与数学专业学生">
+              Engineering and Mathematics Student</p>
+          </div>
+
+          <div class="about-story-large">
+            <p class="story-text-large"
+              data-en="I'm Howard Wang, a Mathematics and Engineering student at Swarthmore College. My recent work spans WALTER, a 12-DOF bio-inspired hexapod capstone; spatial T-cell modeling with the University of Delaware; and multi-camera macaque behavior analysis at Ruten."
+              data-zh="我是王淏生，斯沃斯莫尔学院数学和工程专业学生。我近期的工作包括十二自由度仿生六足机器人毕业设计WALTER、与特拉华大学合作开展的空间T细胞建模，以及在Ruten进行的多相机猕猴行为分析。">I'm Howard Wang, a Mathematics and Engineering student at Swarthmore College. My recent work spans WALTER, a 12-DOF bio-inspired hexapod capstone; spatial T-cell modeling with the University of Delaware; and multi-camera macaque behavior analysis at Ruten.</p>
+
+            <p class="story-text-large"
+              data-en="Lab notebooks, long mountain days, and a camera sit side by side here. The backgrounds on this site are photographs I made on the road and on trail."
+              data-zh="实验记录、山地长跑与摄影在这里并肩呈现。网站背景图均来自我在旅途与山径上拍摄的照片。">Lab notebooks, long mountain days, and a camera sit side by side here. The backgrounds on this site are photographs I made on the road and on trail.</p>
+          </div>
+
+          <div class="stats-showcase facet-links" role="navigation" aria-label="Explore facets">
+            <a class="stat-item facet-link" href="#research">
+              <span class="stat-number">7</span>
+              <span class="stat-label" data-en="Research Projects" data-zh="研究项目">Research Projects</span>
+            </a>
+            <a class="stat-item facet-link" href="#athletics">
+              <span class="stat-number">6</span>
+              <span class="stat-label" data-en="100-Mile Finishes" data-zh="百英里完赛">100-Mile Finishes</span>
+            </a>
+            <a class="stat-item facet-link" href="#portfolio">
+              <span class="stat-number" data-en="Photo" data-zh="摄影">Photo</span>
+              <span class="stat-label" data-en="&amp; Art Practice" data-zh="与艺术实践">&amp; Art Practice</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="content-right">
+          <div class="profile-image-large">
+            <img src="assets/images/Howard-Wang.jpg" alt="Howard Wang" class="profile-img" width="6000" height="4000"
+              loading="lazy" />
+            <div class="image-frame"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Research Section - Primary Focus -->
+  <section id="research" class="research-section fullscreen-bg">
+    <div class="section-bg-full" style="background-image: url('assets/images/winter-pine.jpg')"></div>
+    <div class="section-overlay-light"></div>
+    <div class="container-full">
+      <div class="section-header-center">
+        <h2 class="section-title-large" data-en="Research & Projects" data-zh="研究与项目">Research & Projects</h2>
+        <p class="section-subtitle-large"
+          data-en="Selected work in computational modeling, robotics, and biomedical engineering"
+          data-zh="计算建模、机器人技术与生物医学工程精选项目">Selected work in computational modeling, robotics, and biomedical engineering</p>
+      </div>
+
+      <div class="research-grid-enhanced">
+        <article class="research-card-featured project-spotlight">
+          <figure class="project-media">
+            <img src="assets/images/ud-t-cell-spatial-model.png"
+              alt="Cross-sections of modeled activated T-cell density across a three-dimensional lymph node mesh"
+              loading="lazy" />
+            <figcaption data-en="Activated T-cell density across sagittal, coronal, and transverse mesh slices"
+              data-zh="矢状面、冠状面与横断面网格中的活化T细胞密度">Activated T-cell density across sagittal, coronal, and transverse mesh slices</figcaption>
+          </figure>
+          <div class="research-content-center">
+            <div class="project-status" data-en="CURRENT RESEARCH · 2024–PRESENT"
+              data-zh="在研项目 · 2024年至今">CURRENT RESEARCH · 2024–PRESENT</div>
+            <div class="research-category-tag featured">Computational Immunology</div>
+            <h3 data-en="Spatial Antigen-Driven T-Cell Dynamics" data-zh="空间抗原驱动的T细胞动力学">Spatial Antigen-Driven T-Cell Dynamics</h3>
+            <p class="research-collab">
+              <i class="fas fa-university"></i>
+              <span data-en="University of Delaware - Prof. Ryan Zurakowski"
+                data-zh="特拉华大学 - Ryan Zurakowski教授">University of Delaware - Prof. Ryan Zurakowski</span>
+            </p>
+            <p class="research-description"
+              data-en="Developed a finite-volume model on a reconstructed 3D murine lymph-node mesh to study how spatial antigen exposure shapes activated and memory T-cell dynamics. The current implementation treats antigen as a transported state concentrated near high endothelial venules and calibrates the response against longitudinal LCMV data."
+              data-zh="在重建的小鼠淋巴结三维网格上开发有限体积模型，研究空间抗原暴露如何影响活化与记忆T细胞动力学。当前模型将抗原视为靠近高内皮微静脉富集的传输状态，并使用纵向LCMV数据进行校准。">Developed a finite-volume model on a reconstructed 3D murine lymph-node mesh to study how spatial antigen exposure shapes activated and memory T-cell dynamics. The current implementation treats antigen as a transported state concentrated near high endothelial venules and calibrates the response against longitudinal LCMV data.</p>
+            <div class="project-metrics" aria-label="Project highlights">
+              <div><strong>12</strong><span data-en="fitted parameters" data-zh="拟合参数">fitted parameters</span></div>
+              <div><strong>16</strong><span data-en="LCMV time points" data-zh="LCMV时间点">LCMV time points</span></div>
+              <div><strong>200</strong><span data-en="bootstrap fits" data-zh="自助法拟合">bootstrap fits</span></div>
+            </div>
+            <div class="research-links-center">
+              <a href="assets/documents/BMES Poster copy.pdf" target="_blank" rel="noopener noreferrer"
+                class="research-link-large" aria-label="View BMES poster PDF">
+                <i class="fas fa-file-pdf"></i> BMES Poster
+              </a>
+            </div>
+            <div class="research-tech-stack">
+              <span class="tech-tag">MATLAB</span>
+              <span class="tech-tag">Finite Volume</span>
+              <span class="tech-tag">3D Meshes</span>
+              <span class="tech-tag">Uncertainty Quantification</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="research-card-large project-spotlight project-spotlight-reverse">
+          <figure class="project-media">
+            <img src="assets/images/walter-hexapod-hardware.png"
+              alt="WALTER, a white 3D-printed six-legged robot with servo motors and onboard electronics"
+              loading="lazy" />
+            <figcaption data-en="WALTER's fabricated 12-DOF hardware platform"
+              data-zh="WALTER十二自由度实体硬件平台">WALTER's fabricated 12-DOF hardware platform</figcaption>
+          </figure>
+          <div class="research-content-center">
+            <div class="project-status" data-en="SENIOR DESIGN · COMPLETED 2026"
+              data-zh="毕业设计 · 2026年完成">SENIOR DESIGN · COMPLETED 2026</div>
+            <div class="research-category-tag">Robotics, RL & Embedded Systems</div>
+            <h3 data-en="WALTER: Bio-Inspired Hexapod Locomotion" data-zh="WALTER：仿生六足机器人运动">WALTER: Bio-Inspired Hexapod Locomotion</h3>
+            <p class="research-collab">
+              <i class="fas fa-university"></i>
+              <span data-en="Swarthmore Engineering - with Matthew Shiley; advisor Allan Moser"
+                data-zh="斯沃斯莫尔工程系 - 与Matthew Shiley合作；导师Allan Moser">Swarthmore Engineering - with Matthew Shiley; advisor Allan Moser</span>
+            </p>
+            <p class="research-description"
+              data-en="Co-designed and fabricated WALTER (Walking Alternating Tripod for Evolutionary Research), a 12-DOF hexapod with CAD-designed parts, custom Hexapod V2 PCBs, Teensy control, and inertial sensing. Built optimized alternating-tripod gait workflows, deterministic MuJoCo terrain replay, and PPO training and evaluation with archived checkpoints and videos."
+              data-zh="共同设计并制造WALTER（进化研究交替三足步行机器人）：一台配有CAD设计部件、定制Hexapod V2电路板、Teensy控制器与惯性传感器的十二自由度六足机器人。完成交替三足步态优化流程、MuJoCo多地形确定性回放，以及带有存档模型与视频的PPO训练和评估。">Co-designed and fabricated WALTER (Walking Alternating Tripod for Evolutionary Research), a 12-DOF hexapod with CAD-designed parts, custom Hexapod V2 PCBs, Teensy control, and inertial sensing. Built optimized alternating-tripod gait workflows, deterministic MuJoCo terrain replay, and PPO training and evaluation with archived checkpoints and videos.</p>
+            <div class="project-metrics" aria-label="Project highlights">
+              <div><strong>12</strong><span data-en="degrees of freedom" data-zh="自由度">degrees of freedom</span></div>
+              <div><strong>3</strong><span data-en="PCB iterations" data-zh="电路板迭代">PCB iterations</span></div>
+              <div><strong>3</strong><span data-en="terrain tests" data-zh="地形测试">terrain tests</span></div>
+            </div>
+            <div class="research-links-center">
+              <a href="https://github.com/HowardWHSrun/WALTER" target="_blank" rel="noopener noreferrer"
+                class="research-link-large" aria-label="View WALTER repository on GitHub">
+                <i class="fab fa-github"></i> GitHub Repository
+              </a>
+              <a href="assets/documents/WALTER E90 Final Report.pdf" target="_blank" rel="noopener noreferrer"
+                class="research-link-large" aria-label="View WALTER E90 final report PDF">
+                <i class="fas fa-file-pdf"></i> Final Report
+              </a>
+            </div>
+            <div class="research-tech-stack">
+              <span class="tech-tag">MuJoCo</span>
+              <span class="tech-tag">PPO</span>
+              <span class="tech-tag">Teensy 4.1</span>
+              <span class="tech-tag">CAD & PCB</span>
+              <span class="tech-tag">Embedded C++</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="research-card-large project-spotlight">
+          <figure class="project-media">
+            <img src="assets/images/ruten-macaque-jaw-analysis.png"
+              alt="Plots showing macaque gape measurements, jaw positions, and individual landmark trajectories"
+              loading="lazy" />
+            <figcaption data-en="Jaw kinematics and gape analysis from tracked facial landmarks"
+              data-zh="基于面部关键点追踪的下颌运动学与张口分析">Jaw kinematics and gape analysis from tracked facial landmarks</figcaption>
+          </figure>
+          <div class="research-content-center">
+            <div class="project-status" data-en="RESEARCH EXPERIENCE · 2025–PRESENT"
+              data-zh="研究经历 · 2025年至今">RESEARCH EXPERIENCE · 2025–PRESENT</div>
+            <div class="research-category-tag">Computer Vision & Behavior</div>
+            <h3 data-en="Multi-Camera Macaque Behavior Analysis" data-zh="多相机猕猴行为分析">Multi-Camera Macaque Behavior Analysis</h3>
+            <p class="research-collab">
+              <i class="fas fa-flask"></i>
+              <span data-en="Ruten Inc. - Brain-Computer Interface Research"
+                data-zh="Ruten公司 - 脑机接口研究">Ruten Inc. - Brain-Computer Interface Research</span>
+            </p>
+            <p class="research-description"
+              data-en="Built analysis and validation tools for reconstructing macaque jaw motion from synchronized high-speed camera views. Extended the tracking pipeline with 3D trajectory quality control, CT-referenced geometry, chewing-sidedness analysis, and gape/feeding evaluation so behavioral conclusions are tied to measurable tracking quality."
+              data-zh="开发分析与验证工具，从同步高速相机画面中重建猕猴下颌运动。扩展追踪流程，加入三维轨迹质量控制、CT参考几何、咀嚼侧偏分析以及张口与进食评估，使行为结论建立在可量化的追踪质量之上。">Built analysis and validation tools for reconstructing macaque jaw motion from synchronized high-speed camera views. Extended the tracking pipeline with 3D trajectory quality control, CT-referenced geometry, chewing-sidedness analysis, and gape/feeding evaluation so behavioral conclusions are tied to measurable tracking quality.</p>
+            <div class="project-metrics" aria-label="Project highlights">
+              <div><strong>4</strong><span data-en="camera views" data-zh="相机视角">camera views</span></div>
+              <div><strong>4</strong><span data-en="pipeline phases" data-zh="流程阶段">pipeline phases</span></div>
+              <div><strong>±5 mm</strong><span data-en="spatial validation" data-zh="空间验证精度">spatial validation</span></div>
+            </div>
+            <div class="research-links-center">
+              <a href="https://github.com/HowardWHSrun/ruten-work" target="_blank" rel="noopener noreferrer"
+                class="research-link-large" aria-label="View ruten-work repository on GitHub">
+                <i class="fab fa-github"></i> GitHub Repository
+              </a>
+              <a href="https://howardwhsrun.github.io/ruten-work/" target="_blank" rel="noopener noreferrer"
+                class="research-link-large" aria-label="View ruten-work documentation">
+                <i class="fas fa-book"></i> Docs
+              </a>
+            </div>
+            <div class="research-tech-stack">
+              <span class="tech-tag">SLEAP</span>
+              <span class="tech-tag">DeepLabCut</span>
+              <span class="tech-tag">Pose Tracking</span>
+              <span class="tech-tag">3D Reconstruction</span>
+              <span class="tech-tag">Behavior Analysis</span>
+            </div>
+          </div>
+        </article>
+
+        <div class="research-card-large">
+          <div class="research-content-center">
+            <div class="research-category-tag">Neuroscience & ML</div>
+            <h3 data-en="EEG Frequency Domain Analysis" data-zh="EEG频域分析">EEG Frequency Domain Analysis</h3>
+            <p class="research-collab">
+              <i class="fas fa-university"></i>
+              <span data-en="Swarthmore College - Prof. Moser & Prof. Zinszer"
+                data-zh="斯沃斯莫尔学院 - Moser教授和Zinszer教授">Swarthmore College - Prof. Moser & Prof. Zinszer</span>
+            </p>
+            <p class="research-description"
+              data-en="Applied Fast Fourier Transform to EEG data from infants and adults during object recognition tasks. Used SVM classification to analyze patterns and studied coherence across electrodes to examine developmental differences in visual processing."
+              data-zh="将快速傅里叶变换应用于婴儿和成人在物体识别任务中的EEG数据。使用SVM分类分析模式，并研究电极间的相干性以检查视觉处理中的发育差异。">Applied Fast Fourier
+              Transform to EEG data from infants and adults during object recognition tasks. Used SVM classification to
+              analyze patterns and studied coherence across electrodes to examine developmental differences in visual
+              processing.</p>
+            <div class="research-links-center">
+              <a href="https://github.com/HowardWHSrun/EEGanalysis.git" target="_blank" rel="noopener noreferrer"
+                class="research-link-large" aria-label="View EEG analysis code on GitHub">
+                <i class="fab fa-github"></i> Code
+              </a>
+              <a href="assets/documents/EEG Poster.pdf" target="_blank" rel="noopener noreferrer"
+                class="research-link-large" aria-label="View EEG poster PDF">
+                <i class="fas fa-file-pdf"></i> Poster
+              </a>
+            </div>
+            <div class="research-tech-stack">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">SVM</span>
+              <span class="tech-tag">Signal Processing</span>
+              <span class="tech-tag">EEG Analysis</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="research-card-large">
+          <div class="research-content-center">
+            <div class="research-category-tag">Biomechanics</div>
+            <h3 data-en="Thumb Kinematics Motion Capture" data-zh="拇指运动学动作捕捉">Thumb Kinematics Motion Capture</h3>
+            <p class="research-collab">
+              <i class="fas fa-university"></i>
+              <span data-en="Swarthmore College - Prof. Towles" data-zh="斯沃斯莫尔学院 - Towles教授">Swarthmore College - Prof.
+                Towles</span>
+            </p>
+            <p class="research-description"
+              data-en="Helped develop an opto-mechanical system to measure 3D thumb-tip trajectories in cadaveric specimens. Assisted with calibrating the motion capture system and analyzing variation in tip displacement across thumb muscles."
+              data-zh="协助开发光机系统来测量尸体标本中的3D拇指尖轨迹。协助校准动作捕捉系统并分析拇指肌肉间尖端位移的变化。">Helped develop an opto-mechanical system to
+              measure 3D thumb-tip trajectories in cadaveric specimens. Assisted with calibrating the motion capture
+              system and analyzing variation in tip displacement across thumb muscles.</p>
+            <div class="research-links-center">
+              <a href="assets/documents/NCUR Final Poster.pdf" target="_blank" rel="noopener noreferrer"
+                class="research-link-large" aria-label="View NCUR poster PDF">
+                <i class="fas fa-trophy"></i> NCUR Poster
+              </a>
+            </div>
+            <div class="research-tech-stack">
+              <span class="tech-tag">Motion Capture</span>
+              <span class="tech-tag">3D Analysis</span>
+              <span class="tech-tag">Biomechanics</span>
+              <span class="tech-tag">MATLAB</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="research-card-large">
+          <div class="research-content-center">
+            <div class="research-category-tag">Engineering</div>
+            <h3 data-en="EMI Analysis System" data-zh="EMI分析系统">EMI Analysis System</h3>
+            <p class="research-collab">
+              <i class="fas fa-building"></i>
+              <span data-en="Tenco Engineering Inc." data-zh="Tenco工程公司">Tenco Engineering Inc.</span>
+            </p>
+            <p class="research-description"
+              data-en="Worked on a Python data processing pipeline to extract and visualize radiated EMI frequency profiles from test logs. Helped build comparison tools for identifying emission peaks and created diagnostic plots."
+              data-zh="参与Python数据处理管道的工作，从测试日志中提取和可视化辐射EMI频率配置文件。协助构建比较工具识别发射峰值并创建诊断图。">Worked on a Python data
+              processing pipeline to extract and visualize radiated EMI frequency profiles from test logs. Helped build
+              comparison tools for identifying emission peaks and created diagnostic plots.</p>
+            <div class="research-tech-stack">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Data Visualization</span>
+              <span class="tech-tag">Signal Analysis</span>
+              <span class="tech-tag">Quality Assurance</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education" class="education-section fullscreen-bg">
+    <div class="section-bg-full" style="background-image: url('assets/images/cathedral-interior.jpg')"></div>
+    <div class="section-overlay-dark"></div>
+    <div class="container-full">
+      <div class="section-header-center">
+        <h2 class="section-title-large white" data-en="Education & Skills" data-zh="教育与技能">Education & Skills</h2>
+        <p class="section-subtitle-large white" data-en="Academic background and technical experience"
+          data-zh="学术背景和技术经验">Academic background and technical experience</p>
+      </div>
+
+      <div class="education-grid">
+        <div class="education-card-main">
+          <div class="education-header">
+            <div class="school-logo">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <div class="school-info">
+              <h3>Swarthmore College</h3>
+              <p class="degree">B.A. in Mathematics • B.S. in Engineering</p>
+              <p class="timeline">2022 - 2026 (Expected)</p>
+              <p class="gpa">GPA: 3.82/4.00</p>
+            </div>
+          </div>
+          <div class="education-details">
+            <p data-en="Double major studying mathematical theory and engineering applications. Currently learning theoretical and applied mathematics alongside engineering principles."
+              data-zh="学习数学理论和工程应用的双专业。目前正在学习理论和应用数学以及工程原理。">Double major studying mathematical theory and engineering
+              applications. Currently learning theoretical and applied mathematics alongside engineering principles.</p>
+          </div>
+        </div>
+
+        <div class="coursework-section">
+          <h3 class="coursework-title" data-en="Relevant Coursework" data-zh="相关课程">Relevant Coursework</h3>
+          <div class="coursework-grid">
+            <div class="course-category">
+              <h4>Mathematics</h4>
+              <div class="course-tags">
+                <span class="course-tag">Multivariable Calculus</span>
+                <span class="course-tag">Linear Algebra</span>
+                <span class="course-tag">PDEs</span>
+                <span class="course-tag">Probability</span>
+                <span class="course-tag">Stochastic Processes</span>
+              </div>
+            </div>
+            <div class="course-category">
+              <h4>Engineering</h4>
+              <div class="course-tags">
+                <span class="course-tag">Engineering Mechanics</span>
+                <span class="course-tag">Thermofluids</span>
+                <span class="course-tag">Physical Systems & Optics</span>
+                <span class="course-tag">Electrical Circuits</span>
+              </div>
+            </div>
+            <div class="course-category">
+              <h4>Data Science & Analysis</h4>
+              <div class="course-tags">
+                <span class="course-tag">Biomedical Data Analysis</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skills-section">
+          <h3 class="skills-title" data-en="Technical Skills" data-zh="技术技能">Technical Skills</h3>
+          <div class="skills-grid">
+            <div class="skill-category">
+              <h4>Programming</h4>
+              <div class="skill-tags">
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">Java</span>
+                <span class="skill-tag">MATLAB</span>
+                <span class="skill-tag">R</span>
+                <span class="skill-tag">C/C++</span>
+                <span class="skill-tag">LabView</span>
+                <span class="skill-tag">Git</span>
+              </div>
+            </div>
+            <div class="skill-category">
+              <h4>Technical Skills</h4>
+              <div class="skill-tags">
+                <span class="skill-tag">Machine Learning</span>
+                <span class="skill-tag">Signal Processing</span>
+                <span class="skill-tag">EEG Analysis</span>
+                <span class="skill-tag">ODE/PDE Modeling</span>
+              </div>
+            </div>
+            <div class="skill-category">
+              <h4>Art & Media</h4>
+              <div class="skill-tags">
+                <span class="skill-tag">Chinese Calligraphy</span>
+                <span class="skill-tag">Ink Painting</span>
+                <span class="skill-tag">Studio Ghibli Illustration</span>
+                <span class="skill-tag">Documentary Filmmaking</span>
+                <span class="skill-tag">Photography</span>
+              </div>
+            </div>
+            <div class="skill-category">
+              <h4>Languages</h4>
+              <div class="skill-tags">
+                <span class="skill-tag">English (Fluent)</span>
+                <span class="skill-tag">Mandarin Chinese (Native)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Athletics Section — photo-first, from Xiaohongshu -->
+  <section id="athletics" class="athletics-section fullscreen-bg">
+    <div class="section-bg-full athletics-bg" style="background-image: url('assets/images/country-road.jpg')"></div>
+    <div class="athletics-photo-overlay"></div>
+    <div class="container-full athletics-content">
+      <div class="section-header-center athletics-header-tight">
+        <h2 class="section-title-large" data-en="Distance Running" data-zh="长跑">Distance Running</h2>
+        <p class="section-subtitle-large"
+          data-en="Trail · road · mountain"
+          data-zh="越野 · 公路 · 山地">Trail · road · mountain</p>
+      </div>
+
+      <div class="run-mosaic" aria-label="Running photographs from Xiaohongshu">
+        <figure class="run-tile run-tile-hero">
+          <img src="assets/images/running/xhs-01.jpg" alt="Night trail race, CP6 Beigao" loading="lazy" />
+          <figcaption>
+            <span class="run-tile-title">CP6 · 北高峰</span>
+            <span class="run-tile-meta" data-en="Night trail" data-zh="夜跑越野">Night trail</span>
+          </figcaption>
+        </figure>
+
+        <figure class="run-tile">
+          <img src="assets/images/running/xhs-02.jpg" alt="After CP6 Longjing finish" loading="lazy" />
+          <figcaption>
+            <span class="run-tile-title">CP6 · 龙井</span>
+            <span class="run-tile-meta" data-en="Finish" data-zh="完赛">Finish</span>
+          </figcaption>
+        </figure>
+
+        <figure class="run-tile">
+          <img src="assets/images/running/xhs-04.jpg" alt="CP6 Tianma loop race" loading="lazy" />
+          <figcaption>
+            <span class="run-tile-title">天马线 CP6</span>
+            <span class="run-tile-meta" data-en="Finish" data-zh="完赛">Finish</span>
+          </figcaption>
+        </figure>
+
+        <figure class="run-tile run-tile-wide">
+          <img src="assets/images/running/xhs-03.jpg" alt="Chongli 168 mountain trail" loading="lazy" />
+          <figcaption>
+            <span class="run-tile-title">崇礼 168</span>
+            <span class="run-tile-meta">120 km</span>
+          </figcaption>
+        </figure>
+
+        <figure class="run-tile run-tile-wide">
+          <img src="assets/images/running/xhs-06.jpg" alt="Fartlek training session" loading="lazy" />
+          <figcaption>
+            <span class="run-tile-title" data-en="Training" data-zh="训练">Training</span>
+            <span class="run-tile-meta">Fartlek</span>
+          </figcaption>
+        </figure>
+      </div>
+
+      <div class="run-facts">
+        <div class="run-fact"><strong>12</strong><span data-en="Marathon finishes" data-zh="马拉松完赛">Marathon finishes</span></div>
+        <div class="run-fact"><strong>5</strong><span data-en="50K finishes" data-zh="50K 完赛">50K finishes</span></div>
+        <div class="run-fact"><strong>2</strong><span data-en="100K finishes" data-zh="100K 完赛">100K finishes</span></div>
+        <div class="run-fact"><strong>6</strong><span data-en="100-mile finishes" data-zh="百英里完赛">100-mile finishes</span></div>
+      </div>
+
+      <div class="run-prs">
+        <div class="run-pr"><strong>2:44:37</strong><span data-en="Marathon PR · Delaware" data-zh="马拉松 PR · 特拉华">Marathon PR · Delaware</span></div>
+        <div class="run-pr"><strong>1:17:55</strong><span data-en="Half PR · Birthday" data-zh="半马 PR · 生日">Half PR · Birthday</span></div>
+        <div class="run-pr"><strong>3:57:45</strong><span data-en="50K PR · Swarthmore" data-zh="50K PR · Swarthmore">50K PR · Swarthmore</span></div>
+      </div>
+
+      <div class="research-links-center athletics-links">
+        <a href="https://xhslink.com/m/9a209UOXZug" target="_blank" rel="noopener noreferrer"
+          class="research-link-large" aria-label="Xiaohongshu profile">
+          <i class="fas fa-book-open"></i> 小红书
+        </a>
+        <a href="https://www.strava.com/athletes/35107207" target="_blank" rel="noopener noreferrer"
+          class="research-link-large" aria-label="Follow on Strava">
+          <i class="fab fa-strava"></i> Strava
+        </a>
+        <a href="https://youtu.be/CgYqw3gE0VA?si=ILNlRleg_d4iXwxX" target="_blank" rel="noopener noreferrer"
+          class="research-link-large" aria-label="Watch documentary">
+          <i class="fab fa-youtube"></i> <span data-en="Film" data-zh="纪录片">Film</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section - Artistic Touch -->
+  <section id="portfolio" class="portfolio-section fullscreen-bg">
+    <div class="section-bg-full" style="background-image: url('assets/images/spring-flowers.jpg')"></div>
+    <div class="section-overlay-dark"></div>
+    <div class="container-full">
+      <div class="section-header-center">
+        <h2 class="section-title-large white" data-en="Creative Work" data-zh="创意作品">Creative Work</h2>
+        <p class="section-subtitle-large white" data-en="Photography and art projects" data-zh="摄影和艺术项目">Photography and
+          art projects</p>
+      </div>
+
+      <div class="portfolio-grid-compact">
+        <div class="portfolio-item-compact">
+          <div class="portfolio-image-compact" style="background-image: url('assets/images/lily-pond.jpg')">
+            <div class="portfolio-overlay-hover">
+              <div class="portfolio-info-center">
+                <h3 data-en="Photography" data-zh="摄影">Photography</h3>
+                <p data-en="Photos from travels and outdoor activities" data-zh="旅行和户外活动中的照片">Photos from travels and
+                  outdoor activities</p>
+                <a href="https://unsplash.com/@howardwhs" target="_blank" rel="noopener noreferrer"
+                  class="portfolio-link-compact" aria-label="View photography on Unsplash">
+                  <i class="fas fa-external-link-alt"></i> View on Unsplash
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-item-compact">
+          <div class="portfolio-image-compact" style="background-image: url('assets/images/golden-field.jpg')">
+            <div class="portfolio-overlay-hover">
+              <div class="portfolio-info-center">
+                <h3 data-en="Art Portfolio" data-zh="艺术作品集">Art Portfolio</h3>
+                <p data-en="Art projects and creative work" data-zh="艺术项目和创意作品">Art projects and creative work</p>
+                <a href="assets/documents/Art Portfolio .pdf" target="_blank" rel="noopener noreferrer"
+                  class="portfolio-link-compact" aria-label="View art portfolio PDF">
+                  <i class="fas fa-file-pdf"></i> View Portfolio
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="portfolio-description">
+        <p class="portfolio-text"
+          data-en="I enjoy photography and art as hobbies. These activities help me relax and see the world from different perspectives."
+          data-zh="我喜欢摄影和艺术作为爱好。这些活动帮助我放松并从不同角度看世界。">I enjoy photography and art as hobbies. These activities help me
+          relax and see the world from different perspectives.</p>
+
+        <div class="photography-showcase-note">
+          <p class="showcase-text"
+            data-en="The background images throughout this website are photographs I've taken during my travels and outdoor activities. I enjoy capturing landscapes and nature scenes when I have free time."
+            data-zh="整个网站的背景图片都是我在旅行和户外活动中拍摄的照片。我喜欢在空闲时间捕捉风景和自然场景。">The background images throughout this website are
+            photographs I've taken during my travels and outdoor activities. I enjoy capturing landscapes and nature
+            scenes when I have free time.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog / Writings Section -->
+  <section id="blog" class="blog-section fullscreen-bg">
+    <div class="section-bg-full" style="background-image: url('assets/images/spring-flowers.jpg')"></div>
+    <div class="section-overlay-dark"></div>
+    <div class="container-full">
+      <div class="section-header-center">
+        <h2 class="section-title-large white" data-en="Writings" data-zh="随笔">Writings</h2>
+        <p class="section-subtitle-large white" data-en="Essays and reflections" data-zh="文章与随想">Essays and reflections</p>
+      </div>
+      <div class="blog-grid">
+        <article class="blog-card">
+          <div class="blog-card-content">
+            <h3 class="blog-card-title" data-en="Last Generation of Giants" data-zh="最后一代巨人">Last Generation of Giants</h3>
+            <p class="blog-card-subtitle" data-en="Rice, the arch, and the last generation of giants" data-zh="莱斯、拱门与最后一代巨人">Rice, the arch, and the last generation of giants</p>
+            <div class="blog-actions">
+              <a href="blog/last-generation-of-giants.html" class="blog-link" aria-label="Read essay">Read</a>
+            </div>
+          </div>
+        </article>
+        <article class="blog-card">
+          <div class="blog-card-content">
+            <h3 class="blog-card-title" data-en="What is Human good for?" data-zh="人有什么用？">What is Human good for?</h3>
+            <p class="blog-card-subtitle" data-en="AI, education, and what we're good at" data-zh="人工智能、教育与人之所长">AI, education, and what we're good at</p>
+            <div class="blog-actions">
+              <a href="blog/what-is-human-good-for.html" class="blog-link" aria-label="Read essay">Read</a>
+            </div>
+          </div>
+        </article>
+        <article class="blog-card">
+          <div class="blog-card-content">
+            <h3 class="blog-card-title" data-en="Prediction of 2031 in 2026" data-zh="2026年对2031年的预测">Prediction of 2031 in 2026</h3>
+            <p class="blog-card-subtitle" data-en="Five-year outlook on AI, work, and daily life" data-zh="对人工智能、工作与日常生活的五年展望">Five-year outlook on AI, work, and daily life</p>
+            <div class="blog-actions">
+              <a href="blog/prediction-2031-in-2026.html" class="blog-link" aria-label="Read essay">Read</a>
+            </div>
+          </div>
+        </article>
+        <article class="blog-card">
+          <div class="blog-card-content">
+            <h3 class="blog-card-title" data-en="Maximizing Your College Experience" data-zh="最大化你的大学体验">Maximizing Your College Experience</h3>
+            <p class="blog-card-subtitle" data-en="The Case for Taking Five Classes" data-zh="论一学期修五门课">The Case for Taking Five Classes</p>
+            <div class="blog-actions">
+              <a href="blog/maximizing-college-experience.html" class="blog-link" aria-label="Read essay">Read</a>
+              <a href="assets/documents/writings/Maximizing Your College Experience_ The Case for Taking Five Classes.pdf" target="_blank" rel="noopener noreferrer" class="blog-link-download" aria-label="Download PDF"><i class="fas fa-download"></i> PDF</a>
+            </div>
+          </div>
+        </article>
+        <article class="blog-card">
+          <div class="blog-card-content">
+            <h3 class="blog-card-title" data-en="The Pemi Loop Ultimate Daybreak Expedition" data-zh="佩米环线破晓远征">The Pemi Loop Ultimate Daybreak Expedition</h3>
+            <p class="blog-card-subtitle" data-en="A long run in the Whites" data-zh="怀特山长跑记">A long run in the Whites</p>
+            <div class="blog-actions">
+              <a href="blog/pemi-loop-expedition.html" class="blog-link" aria-label="Read essay">Read</a>
+              <a href="assets/documents/writings/The Pemi Loop Ultimate Daybreak Expedition.pdf" target="_blank" rel="noopener noreferrer" class="blog-link-download" aria-label="Download PDF"><i class="fas fa-download"></i> PDF</a>
+            </div>
+          </div>
+        </article>
+        <article class="blog-card">
+          <div class="blog-card-content">
+            <h3 class="blog-card-title" data-en="Beyond Pain" data-zh="超越痛苦">Beyond Pain</h3>
+            <p class="blog-card-subtitle" data-en="Rethinking the True Essence of Love" data-zh="重新思考爱的本质">Rethinking the True Essence of Love</p>
+            <div class="blog-actions">
+              <a href="blog/beyond-pain.html" class="blog-link" aria-label="Read essay">Read</a>
+              <a href="assets/documents/writings/Beyond Pain_ Rethinking the True Essence of Love.pdf" target="_blank" rel="noopener noreferrer" class="blog-link-download" aria-label="Download PDF"><i class="fas fa-download"></i> PDF</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section fullscreen-bg">
+    <div class="section-bg-full" style="background-image: url('assets/images/lighthouse-dunes.jpg')"></div>
+    <div class="section-overlay-dark"></div>
+    <div class="container-full">
+      <div class="section-header-center">
+        <h2 class="section-title-large white" data-en="Contact" data-zh="联系方式">Contact</h2>
+        <p class="section-subtitle-large white" data-en="Feel free to reach out" data-zh="欢迎联系">Feel free to reach out
+        </p>
+      </div>
+
+      <div class="contact-grid-large">
+        <div class="contact-method-large">
+          <div class="method-icon-large">
+            <i class="fas fa-file-pdf"></i>
+          </div>
+          <h3 data-en="Download Resume" data-zh="下载简历">Download Resume</h3>
+          <p data-en="Complete academic and professional background" data-zh="完整的学术和专业背景">Complete academic and
+            professional background</p>
+          <a href="assets/documents/Howard's Research CV copy.pdf" target="_blank" rel="noopener noreferrer"
+            class="contact-link-large" aria-label="Download research CV PDF">Download Resume</a>
+        </div>
+
+        <div class="contact-method-large">
+          <div class="method-icon-large">
+            <i class="fas fa-flask"></i>
+          </div>
+          <h3 data-en="Email" data-zh="邮箱">Email</h3>
+          <p data-en="For questions or opportunities" data-zh="如有问题或机会">For questions or opportunities</p>
+          <a href="mailto:howardwhsrun@gmail.com" class="contact-link-large">howardwhsrun@gmail.com</a>
+        </div>
+
+        <div class="contact-method-large">
+          <div class="method-icon-large">
+            <i class="fas fa-calendar"></i>
+          </div>
+          <h3 data-en="Schedule a Meeting" data-zh="安排会议">Schedule a Meeting</h3>
+          <p data-en="Available for conversations" data-zh="可以进行对话">Available for conversations</p>
+          <a href="https://calendar.app.google/mt8KLWDTcDcMwxAH9" target="_blank" rel="noopener noreferrer"
+            class="contact-link-large" aria-label="Schedule a meeting on Google Calendar">Schedule Meeting</a>
+        </div>
+
+        <div class="contact-method-large">
+          <div class="method-icon-large">
+            <i class="fas fa-phone"></i>
+          </div>
+          <h3 data-en="Direct Contact" data-zh="直接联系">Direct Contact</h3>
+          <p data-en="For urgent inquiries" data-zh="紧急咨询">For urgent inquiries</p>
+          <a href="tel:+16032855188" class="contact-link-large">+1 (603)-285-5188</a>
+        </div>
+      </div>
+
+      <div class="contact-form-container">
+        <form id="contactForm" class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <div class="form-group">
+            <input type="text" id="firstName" name="firstName" required placeholder=" " />
+            <label for="firstName">First Name</label>
+          </div>
+          <div class="form-group">
+            <input type="text" id="lastName" name="lastName" required placeholder=" " />
+            <label for="lastName">Last Name</label>
+          </div>
+          <div class="form-group">
+            <input type="email" id="email" name="email" required placeholder=" " />
+            <label for="email">Email Address</label>
+          </div>
+          <div class="form-group full-width">
+            <textarea id="message" name="message" required placeholder=" " rows="5"></textarea>
+            <label for="message">Message</label>
+          </div>
+          <div class="form-submit">
+            <button type="submit" class="submit-btn">
+              <span class="btn-text">Send Message</span>
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <div class="social-connect-large">
+        <div class="social-links-large">
+          <a href="https://www.linkedin.com/in/howard-wang-00758320a/" target="_blank" rel="noopener noreferrer"
+            class="social-link-large linkedin" aria-label="Visit LinkedIn profile">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/HowardWHSrun" target="_blank" rel="noopener noreferrer"
+            class="social-link-large github" aria-label="Visit GitHub profile">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.strava.com/athletes/35107207" target="_blank" rel="noopener noreferrer"
+            class="social-link-large strava" aria-label="Follow on Strava">
+            <i class="fab fa-strava"></i>
+          </a>
+          <a href="https://unsplash.com/@howardwhs" target="_blank" rel="noopener noreferrer"
+            class="social-link-large unsplash" aria-label="View photography on Unsplash">
+            <i class="fas fa-camera"></i>
+          </a>
+          <a href="https://www.instagram.com/howardwhs" target="_blank" rel="noopener noreferrer"
+            class="social-link-large instagram" aria-label="Visit Instagram profile">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer-minimal">
+    <div class="container">
+      <div class="footer-content-center">
+        <p>&copy; 2024 Howard Wang. All rights reserved.</p>
+        <p class="footer-subtitle" data-en="Student • Runner • Photography Enthusiast" data-zh="学生 • 跑者 • 摄影爱好者">Student
+          • Runner • Photography Enthusiast</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <script src="assets/js/script.js"></script>
+</body>
+
+</html>
