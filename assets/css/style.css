@@ -6,13 +6,13 @@
   --primary-color: #ffffff;
   --secondary-color: #050505;
   /* Slightly lighter than pure black for depth */
-  --accent-color: #3B82F6;
-  /* Vibrant Blue */
-  --accent-cyan: #06B6D4;
-  --accent-gradient: linear-gradient(135deg, #3B82F6 0%, #06B6D4 100%);
+  --accent-color: #e5e7eb;
+  /* Neutral light gray */
+  --accent-cyan: #cbd5e1;
+  --accent-gradient: linear-gradient(135deg, #ffffff 0%, #94a3b8 100%);
 
   /* Engineering Theme */
-  --engineering-blue: #3B82F6;
+  --engineering-blue: #e5e7eb;
   --engineering-dark: #0f172a;
   --grid-color: rgba(255, 255, 255, 0.03);
 
@@ -934,7 +934,7 @@ body {
 .research-card-large:hover,
 .research-card-featured:hover {
   border-color: var(--accent-color);
-  box-shadow: 0 0 30px rgba(59, 130, 246, 0.15);
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.12);
   transform: translateY(-5px);
 }
 
@@ -1043,7 +1043,7 @@ body {
 
 .project-status {
   margin-bottom: 1rem;
-  color: #67e8f9;
+  color: #cbd5e1;
   font-family: var(--font-mono);
   font-size: 0.72rem;
   font-weight: 600;
@@ -1150,9 +1150,9 @@ body {
 .tech-tag {
   display: inline-block;
   padding: 0.4rem 0.8rem;
-  background: rgba(59, 130, 246, 0.1);
+  background: rgba(255, 255, 255, 0.08);
   color: var(--accent-color);
-  border: 1px solid rgba(59, 130, 246, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 4px;
   font-family: var(--font-mono);
   font-size: 0.8rem;
@@ -1162,9 +1162,9 @@ body {
 }
 
 .tech-tag:hover {
-  background: rgba(59, 130, 246, 0.2);
+  background: rgba(255, 255, 255, 0.15);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.1);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.08);
 }
 
 .research-links-center {
@@ -1791,18 +1791,18 @@ body {
 }
 
 .course-tag {
-  background: rgba(37, 99, 235, 0.1);
+  background: rgba(255, 255, 255, 0.08);
   color: rgba(255, 255, 255, 0.9);
   padding: 0.4rem 0.8rem;
   border-radius: 15px;
   font-size: 0.85rem;
-  border: 1px solid rgba(37, 99, 235, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   transition: var(--transition);
 }
 
 .course-tag:hover {
-  background: rgba(37, 99, 235, 0.2);
-  border-color: rgba(37, 99, 235, 0.5);
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.35);
   transform: translateY(-2px);
 }
 
