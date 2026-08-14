@@ -6,9 +6,9 @@
 :root {
   --bg-base: #050505;
   --bg-deep: #0f172a;
-  --accent: #3B82F6;
-  --accent-cyan: #06B6D4;
-  --gradient: linear-gradient(135deg, #3B82F6 0%, #06B6D4 100%);
+  --accent: #ffffff;
+  --accent-cyan: #cbd5e1;
+  --gradient: linear-gradient(135deg, #ffffff 0%, #94a3b8 100%);
   --text-light: #f8fafc;
   --text-muted: #94a3b8;
   --text-faint: #64748b;
@@ -49,8 +49,8 @@ body::before {
   inset: 0;
   z-index: -2;
   background:
-    radial-gradient(1200px 600px at 50% -10%, rgba(59, 130, 246, 0.16), transparent 60%),
-    radial-gradient(900px 500px at 85% 20%, rgba(6, 182, 212, 0.08), transparent 55%),
+    radial-gradient(1200px 600px at 50% -10%, rgba(255, 255, 255, 0.05), transparent 60%),
+    radial-gradient(900px 500px at 85% 20%, rgba(255, 255, 255, 0.03), transparent 55%),
     var(--bg-base);
 }
 
@@ -190,7 +190,7 @@ body::after {
 
 .lang-toggle button.active {
   background: var(--gradient);
-  color: #fff;
+  color: #0a0a0a;
 }
 
 /* ============================ Article header ============================ */
@@ -367,7 +367,7 @@ body::after {
 .article-body a {
   color: var(--accent-cyan);
   text-decoration: none;
-  border-bottom: 1px solid rgba(6, 182, 212, 0.35);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.35);
   transition: var(--transition);
 }
 
@@ -425,13 +425,13 @@ body::after {
 
 .btn-primary {
   background: var(--gradient);
-  color: #fff;
-  box-shadow: 0 8px 24px rgba(59, 130, 246, 0.32);
+  color: #0a0a0a;
+  box-shadow: 0 8px 24px rgba(255, 255, 255, 0.18);
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 12px 30px rgba(59, 130, 246, 0.45);
+  box-shadow: 0 12px 30px rgba(255, 255, 255, 0.28);
 }
 
 .btn-ghost {
