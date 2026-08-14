@@ -314,16 +314,16 @@ function initializeContactForm() {
                     }
                 });
 
-                if (response.ok) {
+                const result = await response.json().catch(() => ({}));
+
+                if (response.ok && result.success !== 'false') {
                     alert('Thank you for your message! I\'ll get back to you soon.');
                     contactForm.reset();
                 } else {
-                    const errorData = await response.json();
-                    if (Object.hasOwn(errorData, 'errors')) {
-                        alert(errorData["errors"].map(error => error["message"]).join(", "));
-                    } else {
-                        alert('Oops! There was a problem submitting your form');
-                    }
+                    const errMsg = result.message
+                        || (result.errors && result.errors.map(e => e.message).join(', '))
+                        || 'Oops! There was a problem submitting your form';
+                    alert(errMsg);
                 }
             } catch (error) {
                 alert('Oops! There was a problem submitting your form');
