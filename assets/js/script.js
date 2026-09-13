@@ -148,6 +148,112 @@
         }));
     }
 
+    function initializeHeroSlideshow() {
+        const slides = Array.from(document.querySelectorAll('.hero-slide'));
+        if (slides.length < 2) return;
+        const hero = slides[0].closest('.hero') || document.getElementById('home');
+        const previous = document.getElementById('heroPrevious');
+        const next = document.getElementById('heroNext');
+        const pause = document.getElementById('heroPause');
+        const playbackLabel = document.getElementById('heroPlaybackLabel');
+        const counter = document.getElementById('heroSlideCounter');
+        let current = Math.max(0, slides.findIndex(slide => slide.classList.contains('active')));
+        let userPaused = !pause;
+        let motionPaused = reducedMotion.matches;
+        let inView = true;
+        let timer;
+
+        const isPaused = () => userPaused || motionPaused;
+        const localize = () => {
+            const language = document.documentElement.lang.startsWith('zh') ? 'zh' : 'en';
+            const setLabel = (button, english, chinese) => {
+                if (!button) return;
+                button.setAttribute('data-aria-en', english);
+                button.setAttribute('data-aria-zh', chinese);
+                button.setAttribute('aria-label', language === 'zh' ? chinese : english);
+            };
+            setLabel(previous, 'Previous background photo', '上一张背景照片');
+            setLabel(next, 'Next background photo', '下一张背景照片');
+            setLabel(pause, isPaused() ? 'Play background slideshow' : 'Pause background slideshow',
+                isPaused() ? '播放背景幻灯片' : '暂停背景幻灯片');
+            if (playbackLabel) {
+                playbackLabel.dataset.en = isPaused() ? 'Play' : 'Pause';
+                playbackLabel.dataset.zh = isPaused() ? '播放' : '暂停';
+                playbackLabel.textContent = playbackLabel.dataset[language];
+            }
+            if (pause) {
+                pause.dataset.paused = String(isPaused());
+                const icon = pause.querySelector('.fa-pause, .fa-play');
+                icon?.classList.toggle('fa-pause', !isPaused());
+                icon?.classList.toggle('fa-play', isPaused());
+            }
+        };
+        const render = () => {
+            slides.forEach((slide, index) => {
+                slide.classList.toggle('active', index === current);
+                slide.setAttribute('aria-hidden', 'true');
+            });
+            if (counter) {
+                counter.setAttribute('aria-hidden', 'true');
+                counter.textContent = `${String(current + 1).padStart(2, '0')} / ${String(slides.length).padStart(2, '0')}`;
+            }
+        };
+        const schedule = () => {
+            window.clearTimeout(timer);
+            if (isPaused() || document.hidden || !inView) return;
+            timer = window.setTimeout(() => {
+                current = (current + 1) % slides.length;
+                render();
+                schedule();
+            }, 7000);
+        };
+        const move = direction => {
+            current = (current + direction + slides.length) % slides.length;
+            render();
+            schedule();
+        };
+        previous?.addEventListener('click', () => move(-1));
+        next?.addEventListener('click', () => move(1));
+        pause?.addEventListener('click', () => {
+            if (isPaused()) {
+                userPaused = false;
+                motionPaused = false;
+            } else userPaused = true;
+            localize();
+            schedule();
+        });
+        reducedMotion.addEventListener('change', event => {
+            motionPaused = event.matches;
+            localize();
+            schedule();
+        });
+        document.addEventListener('visibilitychange', schedule);
+        new MutationObserver(localize).observe(document.documentElement, {
+            attributes: true, attributeFilter: ['lang']
+        });
+        if (hero) {
+            const updateVisibility = () => {
+                const bounds = hero.getBoundingClientRect();
+                inView = bounds.bottom > 0 && bounds.top < window.innerHeight;
+                schedule();
+            };
+            updateVisibility();
+            if ('IntersectionObserver' in window) {
+                new IntersectionObserver(entries => {
+                    inView = entries[0].isIntersecting;
+                    schedule();
+                }).observe(hero);
+            } else {
+                window.addEventListener('scroll', updateVisibility, { passive: true });
+                window.addEventListener('resize', updateVisibility);
+            }
+            hero.classList.add('slideshow-ready');
+        }
+        render();
+        localize();
+        schedule();
+    }
+
     function initializeBackToTop() {
         const button = document.getElementById('backToTop');
         if (!button) return;
@@ -169,6 +275,7 @@
     function initialize() {
         initializeLanguageSwitcher();
         initializeNavigation();
+        initializeHeroSlideshow();
         initializeBackToTop();
         alignInitialFragment();
     }

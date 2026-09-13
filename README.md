@@ -25,8 +25,9 @@ The Python check validates local links, anchor targets, image descriptions, uniq
 ## Editing
 
 - `index.html`: homepage and bilingual profile text. Keep translated attributes on text-only elements.
-- `assets/css/style.css`: responsive homepage styles; navigation switches at 900px.
-- `assets/js/script.js`: language selection, accessible navigation, and fragment alignment.
+- `assets/css/style.css`: responsive homepage layouts; navigation switches at 900px.
+- `assets/css/photo-backgrounds.css`: original full-page photo backgrounds, dark overlays, and slideshow controls. Keep the photographs as the site's visual identity.
+- `assets/js/script.js`: language selection, accessible navigation, fragment alignment, and a pausable photo slideshow that respects reduced motion.
 - `blog/*.html`: original essays; `blog/article.css` is their current stylesheet, and `blog/blog.js` handles reading progress and navigation language. `blog/blog.css` is legacy and is not loaded.
 - `assets/images/`: original photographs and project images. Keep intrinsic width/height attributes when changing images to avoid layout shifts.
 - `assets/documents/`: existing public résumés, research posters, reports, and artwork.
